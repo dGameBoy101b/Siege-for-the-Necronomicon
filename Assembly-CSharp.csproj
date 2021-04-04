@@ -36,8 +36,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Menu System\MenuManager.cs" />
-     <Compile Include="Assets\Menu System\Panel.cs" />
+     <Compile Include="Assets\Menu System\MenuManager\MenuManager.cs" />
+     <Compile Include="Assets\Menu System\Panel\Panel.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
