@@ -20,16 +20,23 @@ public class MenuManager : MonoBehaviour
     */
     private List<Panel> panelHistory = new List<Panel>();
 
+	/**
+	 * The menu managers canvas component which allows the menu to be opened or closed with the menu or escape key
+	 */
+	private Canvas canvas;
+
     /**
     * Calls SetupPanels on start
     */
     private void Start() 
     {
-        SetupPanels();   
+        SetupPanels();
+		canvas = GetComponent<Canvas>();
     }
 
     /**
     * Current way of checking if back button is pressed to go to previous panel, should be moved to a centralised input class
+	* also opens the menu if the start or esc key are pressed
     */
     private void Update() 
     {
@@ -37,6 +44,18 @@ public class MenuManager : MonoBehaviour
         {
             GoToPrevious();
         }
+
+        if(OVRInput.GetDown(OVRInput.Button.Start) || Input.GetKeyDown(KeyCode.Escape))
+		{
+			if(canvas.enabled)
+			{
+				canvas.enabled = false;
+			}
+			else
+			{
+				canvas.enabled = true;
+			}
+		}
     }
 
     /**
