@@ -594,7 +594,7 @@ GameObject:
   - component: {fileID: 8867191250797826765}
   - component: {fileID: 8867191250797729683}
   m_Layer: 0
-  m_Name: OVRPlayerController
+  m_Name: PlayerAvatar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

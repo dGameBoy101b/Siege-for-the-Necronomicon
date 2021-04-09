@@ -193,7 +193,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: MainCamera
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5968243520063431396, guid: e098be01eff45c145aeaabbbb261ee17, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e098be01eff45c145aeaabbbb261ee17, type: 3}
 --- !u!1 &1444637086
 GameObject:
