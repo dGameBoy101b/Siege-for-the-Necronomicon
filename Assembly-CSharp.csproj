@@ -108,6 +108,7 @@
      <Compile Include="Assets\Oculus\Avatar\Scripts\OvrAvatarSkinnedMeshRenderPBSV2Component.cs" />
      <Compile Include="Assets\Oculus\Avatar\Scripts\OvrAvatarTextureCopyManager.cs" />
      <Compile Include="Assets\Oculus\Avatar\Scripts\OvrAvatarTouchController.cs" />
+     <Compile Include="Assets\Oculus\Avatar\UI\Scripts\UITimer.cs" />
      <Compile Include="Assets\Oculus\LipSync\Scenes\Scripts\EnableSwitch.cs" />
      <Compile Include="Assets\Oculus\LipSync\Scenes\Scripts\LipSyncDemo_Control.cs" />
      <Compile Include="Assets\Oculus\LipSync\Scenes\Scripts\LipSyncDemo_SetCurrentTarget.cs" />
