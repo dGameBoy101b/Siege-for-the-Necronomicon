@@ -3,20 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+/**
+ * @author Rhys Mader 33705134
+ * @date 13/04/2021
+ * A class to randomly spawn waves of attacks.
+ */
 public sealed class WaveManager : MonoBehaviour
 {
+	[SerializeField()]
+	[Tooltip("The player object to target attacks on.")]
+	public GameObject PLAYER;
+	
 	[Header("Timing")]
 	
 	[SerializeField()]
 	[Tooltip("The minimum number of seconds between attacks.\n(Must be lesser than or equal to the maximum delay.)")]
+	[Min(0)]
 	public float MIN_DELAY;
 	
 	[SerializeField()]
 	[Tooltip("The maximum number of seconds between attacks.\n(Must be greater than or equal to the minimum delay.)")]
+	[Min(0)]
 	public float MAX_DELAY;
 	
 	[SerializeField()]
-	[Tooltip("The maximum number of active attacks allowed at any one time.")]
+	[Tooltip("The maximum number of active attacks allowed at any one time.\n(Can be infinity for any number of attacks.)")]
 	[Min(1)]
 	public int MAX_ACTIVE;
 	
@@ -36,9 +47,9 @@ public sealed class WaveManager : MonoBehaviour
 	private int total_weight;
 	
 	/**
-	 * The time at which the last wave was spawned.
+	 * The time at which the next wave can be spawned.
 	 */
-	private float last_spawn;
+	private float next_spawn;
 	
 	/**
 	 * The list of currently active attacks.
@@ -46,11 +57,30 @@ public sealed class WaveManager : MonoBehaviour
 	private List<List<ProjectileBase>> active_attacks;
 	
 	/**
+	 * Test if another wave can currently be spawned.
+	 */
+	public bool canSpawnWave()
+	{
+		return Time.time > this.next_spawn
+			&& this.active_attacks.Count < this.MAX_ACTIVE;
+	}
+	
+	/**
 	 * Spawn a wave.
 	 */
 	private void spawnWave()
 	{
-		this.last_spawn = Time.time;
+		System.Random rand = new System.Random();
+		this.next_spawn = Time.time + (float)rand.NextDouble() * (this.MAX_DELAY - this.MIN_DELAY) + this.MIN_DELAY;
+		this.active_attacks.Add(this.randomAttack());
+	}
+	
+	/**
+	 * Spawn a random attack and return the list of projectiles that make up that attack.
+	 * @return The list of projectiles spawned in the randomly selected attack.
+	 */
+	private List<ProjectileBase> randomAttack()
+	{
 		System.Random rand = new System.Random();
 		int r = rand.Next(this.total_weight);
 		int weight = 0;
@@ -59,10 +89,10 @@ public sealed class WaveManager : MonoBehaviour
 			weight += this.ATTACK_WEIGHTS[i];
 			if (r < weight)
 			{
-				List<ProjectileBase> wave = this.ATTACK_POOL[i].spawn();
-				this.active_attacks.Add(wave);
+				return this.ATTACK_POOL[i].spawn(this.PLAYER.transform.position, this.PLAYER.transform.rotation);
 			}
 		}
+		throw new Exception("No attack spawned.");
 	}
 	
 	/**
@@ -106,5 +136,13 @@ public sealed class WaveManager : MonoBehaviour
 		this.checkAttacks();
 		this.checkDelay();
 		this.calcTotalWeight();
+	}
+	
+	private void Update()
+	{
+		if (this.canSpawnWave())
+		{
+			this.spawnWave();
+		}
 	}
 }
