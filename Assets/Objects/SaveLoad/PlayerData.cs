@@ -14,7 +14,7 @@ public class PlayerData
 {
 
     public int[] health;
-    public int[] score;
+    public int[] highScore;
     public bool[] completed; 
     public float[] timeLeft;
 
@@ -29,17 +29,21 @@ public class PlayerData
         int size = SceneManager.sceneCountInBuildSettings - 1;
         
         health = new int[size];
-        score = new int[size];
+        highScore = new int[size];
         completed = new bool[size];
         timeLeft = new float[size];
         
         for(int i = 0; i < size; i++)
         {
-            //set variables for each level here
-            //health[i] = 
-            //score[i] =
-            //completed[i] = 
-            //timeLeft[i] = 
+            /*set variables for each level here
+            health[i] = 
+            completed[i] = 
+            if(completed[i] == true)
+            {
+                highScore[i] =
+            }
+            timeLeft[i] = 
+            */
         }
 
     }
