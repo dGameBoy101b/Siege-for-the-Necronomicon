@@ -3,12 +3,23 @@
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
+/**
+* @author Connor Burnside 33394927
+* @date 13/04/2021
+* this class opens a binary formatter and filestream to save or load the players data 
+*/
+
 public static class SaveLoad
 {
     //save path, persistentDataPath gives a path on any computer to a data file
     private static string path = Application.persistentDataPath + "/player.u";
     
-    public static void SavePlayer(TestPlayer player)
+    /**
+    *@param player this is the class that is going to be saved
+    * this fucntion saves the playerdata to a consistent filepath
+    */
+    //change param to class that has the players data to save
+    public static void SaveData(TestPlayer player)
     {
         BinaryFormatter formatter = new BinaryFormatter();
     
@@ -21,8 +32,11 @@ public static class SaveLoad
         stream.Close();
     }
 
-
-    public static PlayerData LoadPLayer()
+    /**
+    *@return PlayerData the data that has been loaded
+    * this function loads the saved data from the consistent filepath
+    */
+    public static PlayerData LoadData()
     {
         if(File.Exists(path))
         {

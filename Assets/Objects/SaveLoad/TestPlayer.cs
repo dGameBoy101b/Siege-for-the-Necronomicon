@@ -5,7 +5,7 @@ using UnityEngine;
 /**
 *@author Connor Burnside 33394927   
 *@date 9/04/2021
-* a testing class that holds variables for the saveload system to get and store REMOVE LATER
+* a testing class that holds variables for the saveload system to get and store REMOVE LATER 
 */
 
 public class TestPlayer : MonoBehaviour
