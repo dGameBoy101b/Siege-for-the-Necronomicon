@@ -32,7 +32,7 @@ public sealed class SimplePhysicalProjectile : PhysicalProjectileBase
 	 */
 	private void moveForward(float t)
 	{
-		this.transform.position += Vector3.forward * this.SPEED * t;
+		this.transform.position += this.transform.forward * this.SPEED * t;
 	}
 	
 	private void Start()

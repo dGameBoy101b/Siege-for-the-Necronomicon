@@ -27,8 +27,8 @@ public sealed class WaveManager : MonoBehaviour
 	public float MAX_DELAY;
 	
 	[SerializeField()]
-	[Tooltip("The maximum number of active attacks allowed at any one time.\n(Can be infinity for any number of attacks.)")]
-	[Min(1)]
+	[Tooltip("The maximum number of active attacks allowed at any one time.\n(Can be 0 for any number of attacks.)")]
+	[Min(0)]
 	public int MAX_ACTIVE;
 	
 	[Header("Attacks")]
@@ -62,7 +62,16 @@ public sealed class WaveManager : MonoBehaviour
 	public bool canSpawnWave()
 	{
 		return Time.time > this.next_spawn
-			&& this.active_attacks.Count < this.MAX_ACTIVE;
+			&& (this.MAX_ACTIVE == 0
+				|| this.active_attacks.Count < this.MAX_ACTIVE);
+	}
+	
+	/**
+	 * Reset the spawn timer to spawn an attack some time after now.
+	 */
+	private void resetTimer()
+	{
+		this.next_spawn = Time.time + (float)new System.Random().NextDouble() * (this.MAX_DELAY - this.MIN_DELAY) + this.MIN_DELAY;
 	}
 	
 	/**
@@ -71,7 +80,7 @@ public sealed class WaveManager : MonoBehaviour
 	private void spawnWave()
 	{
 		System.Random rand = new System.Random();
-		this.next_spawn = Time.time + (float)rand.NextDouble() * (this.MAX_DELAY - this.MIN_DELAY) + this.MIN_DELAY;
+		this.resetTimer();
 		this.active_attacks.Add(this.randomAttack());
 	}
 	
@@ -81,8 +90,7 @@ public sealed class WaveManager : MonoBehaviour
 	 */
 	private List<ProjectileBase> randomAttack()
 	{
-		System.Random rand = new System.Random();
-		int r = rand.Next(this.total_weight);
+		int r = new System.Random().Next(this.total_weight);
 		int weight = 0;
 		for (int i = 0; i < this.ATTACK_WEIGHTS.Count; i++)
 		{
@@ -131,15 +139,57 @@ public sealed class WaveManager : MonoBehaviour
 		}
 	}
 	
+	/**
+	 * Trim the currently active attacks to remove destroyed or inactive projectiles and attacks.
+	 */
+	private void updateActiveAttacks()
+	{
+		for (int i = this.active_attacks.Count - 1; i > -1; i--)
+		{
+			for (int j = this.active_attacks[i].Count - 1; j > -1; j--)
+			{
+				if (this.active_attacks[i][j] == null || !this.active_attacks[i][j].gameObject.activeInHierarchy)
+				{
+					this.active_attacks[i].RemoveAt(j);
+				}
+			}
+			if (this.active_attacks[i].Count < 1)
+			{
+				this.active_attacks.RemoveAt(i);
+			}
+		}
+	}
+	
+	/**
+	 * Test if the spawn timer should be reset.
+	 * @param prev_attacks The integer number of active attacks there were before trimming the inactive attacks.
+	 */
+	private bool shouldResetTimer(int prev_attacks)
+	{
+		return prev_attacks >= this.MAX_ACTIVE && this.active_attacks.Count < this.MAX_ACTIVE;
+	}
+	
 	private void Awake()
 	{
 		this.checkAttacks();
 		this.checkDelay();
 		this.calcTotalWeight();
+		this.active_attacks = new List<List<ProjectileBase>>();
+	}
+	
+	private void OnAwake()
+	{
+		this.spawnWave();
 	}
 	
 	private void Update()
 	{
+		int num_active = this.active_attacks.Count;
+		this.updateActiveAttacks();
+		if (this.shouldResetTimer(num_active))
+		{
+			this.resetTimer();
+		}
 		if (this.canSpawnWave())
 		{
 			this.spawnWave();

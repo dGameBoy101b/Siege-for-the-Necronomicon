@@ -78,7 +78,7 @@ public sealed class SingleSimpleAttack : AttackBase
 	{
 		List<ProjectileBase> projectiles = new List<ProjectileBase>(1);
 		System.Random rand = new System.Random();
-		if (rand.Next(1) == 0)
+		if (rand.Next(2) == 0)
 		{
 			projectiles.Add(this.spawnMagical(player_pos, player_rot));
 		}
@@ -143,9 +143,9 @@ public sealed class SingleSimpleAttack : AttackBase
 	 */
 	private Vector3 randStartPos(Vector3 player_pos, Quaternion player_rot)
 	{
-		return Quaternion.AngleAxis(this.randLon() / 180f * (float)Math.PI, Vector3.up)
-			* Quaternion.AngleAxis(this.randLat() / 180f * (float)Math.PI, Vector3.right)
-			* player_rot * Vector3.forward * this.randDist() + player_pos;
+		Quaternion lon = Quaternion.AngleAxis(this.randLon(), Vector3.up);
+		Quaternion lat = Quaternion.AngleAxis(this.randLat(), Vector3.right);
+		return lon * lat * player_rot * Vector3.forward * this.randDist() + player_pos;
 	}
 	
 	/**
