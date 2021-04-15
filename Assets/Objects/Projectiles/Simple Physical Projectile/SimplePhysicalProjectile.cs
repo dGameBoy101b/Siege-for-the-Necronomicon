@@ -9,33 +9,21 @@ using UnityEngine;
  */
 public sealed class SimplePhysicalProjectile : PhysicalProjectileBase
 {
-	/**
-	 * Construct a new simple physical projectile with the given attributes.
-	 * @param speed The float speed in units per second at which this projectile moves forward.
-	 * @param target The global position this simple physical protectile is aimed at.
-	 */
-	public SimplePhysicalProjectile(float speed, Vector3 target)
-	{
-		this.Speed = speed;
-		this.Target = target;
-	}
+	[SerializeField()]
+	[Tooltip("The global position this simple physical projectile will fly towards.")]
+	public Vector3 TARGET;
 	
-	/**
-	 * The global position this simple physical projectile willl fly towards.
-	 */
-	public Vector3 Target {get; private set;}
-	
-	/**
-	 * The speed in units per second at which this simple physical projectile moves forward.
-	 */
-	public float Speed {get; private set;}
+	[SerializeField()]
+	[Tooltip("The speed in units per second at which this simple physical projectile moves forward.")]
+	[Min(float.Epsilon)]
+	public float SPEED;
 	
 	/**
 	 * Rotate this simple physical projectile to face the target.
 	 */
 	private void faceTarget()
 	{
-		this.transform.rotation = Quaternion.LookRotation(this.Target - this.transform.position);
+		this.transform.rotation = Quaternion.LookRotation(this.TARGET - this.transform.position);
 	}
 	
 	/**
@@ -44,7 +32,7 @@ public sealed class SimplePhysicalProjectile : PhysicalProjectileBase
 	 */
 	private void moveForward(float t)
 	{
-		this.transform.position += Vector3.forward * this.Speed * t;
+		this.transform.position += this.transform.forward * this.SPEED * t;
 	}
 	
 	private void Start()
