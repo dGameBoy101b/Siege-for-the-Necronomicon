@@ -12,6 +12,7 @@ using UnityEngine;
 
 public class Panel : MonoBehaviour
 {
+
     /**
     * Stores the canvas object this script is attached to so the show property can be changed
     */

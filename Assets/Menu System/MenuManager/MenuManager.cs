@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /**
 * @author Connor Burnside 33394927  
@@ -32,6 +33,10 @@ public class MenuManager : MonoBehaviour
     {
         SetupPanels();
 		canvas = GetComponent<Canvas>();
+        if(SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            canvas.enabled = true;
+        }
     }
 
     /**
@@ -45,7 +50,7 @@ public class MenuManager : MonoBehaviour
             GoToPrevious();
         }
 
-        if(OVRInput.GetDown(OVRInput.Button.Start) || Input.GetKeyDown(KeyCode.Escape))
+        if((OVRInput.GetDown(OVRInput.Button.Start) || Input.GetKeyDown(KeyCode.Escape)) && SceneManager.GetActiveScene().name != "MainMenu" )
 		{
 			if(canvas.enabled)
 			{
@@ -115,5 +120,15 @@ public class MenuManager : MonoBehaviour
 
         currentPanel = newPanel;
         currentPanel.Show();
+    }
+
+    public void Play()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
     }
 }
