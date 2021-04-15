@@ -67,7 +67,6 @@
      <Compile Include="C:\Program Files\Unity\Hub\Editor\2019.4.17f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\EventSystem\InputModules\BaseInput.cs" />
      <Compile Include="C:\Program Files\Unity\Hub\Editor\2019.4.17f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\EventSystem\InputModules\BaseInputModule.cs" />
      <Compile Include="C:\Program Files\Unity\Hub\Editor\2019.4.17f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\EventSystem\InputModules\PointerInputModule.cs" />
-     <Compile Include="C:\Program Files\Unity\Hub\Editor\2019.4.17f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\EventSystem\InputModules\StandaloneInputModule.cs" />
      <Compile Include="C:\Program Files\Unity\Hub\Editor\2019.4.17f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\EventSystem\InputModules\TouchInputModule.cs" />
      <Compile Include="C:\Program Files\Unity\Hub\Editor\2019.4.17f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\EventSystem\MoveDirection.cs" />
      <Compile Include="C:\Program Files\Unity\Hub\Editor\2019.4.17f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\EventSystem\RaycastResult.cs" />
@@ -323,9 +322,6 @@
  </Reference>
  <Reference Include="UnityEditor">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.17f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.VR">
- <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.17f1/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.17f1/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>

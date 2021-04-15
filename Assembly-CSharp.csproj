@@ -55,6 +55,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Menu System\LevelSelector\LevelSelector.cs" />
+     <Compile Include="Assets\Menu System\MenuManager\MenuManager.cs" />
+     <Compile Include="Assets\Menu System\Panel\Panel.cs" />
      <Compile Include="Assets\Objects\Attacks\AttackBase.cs" />
      <Compile Include="Assets\Objects\Attacks\Single Simple Attack\SingleSimpleAttack.cs" />
      <Compile Include="Assets\Objects\Player\EquipmentBase.cs" />
@@ -65,6 +68,9 @@
      <Compile Include="Assets\Objects\Projectiles\ProjectileBase.cs" />
      <Compile Include="Assets\Objects\Projectiles\Simple Magical Projectile\SimpleMagicalProjectile.cs" />
      <Compile Include="Assets\Objects\Projectiles\Simple Physical Projectile\SimplePhysicalProjectile.cs" />
+     <Compile Include="Assets\Objects\SaveLoad\PlayerData.cs" />
+     <Compile Include="Assets\Objects\SaveLoad\SaveLoad.cs" />
+     <Compile Include="Assets\Objects\SaveLoad\TestPlayer.cs" />
      <Compile Include="Assets\Objects\Wave Manager\WaveManager.cs" />
      <Compile Include="Assets\Oculus\AudioManager\Scenes\Scripts\TestScript.cs" />
      <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\AmbienceEmitter.cs" />
@@ -854,21 +860,9 @@
       <Project>{21DA038D-9B8D-8E70-915A-CEEBF11696F7}</Project>
       <Name>Unity.Rider.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Oculus.VR.Editor.csproj">
-      <Project>{AB9E848C-797E-D1A6-A3A4-7F2FB4B20769}</Project>
-      <Name>Oculus.VR.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Oculus.VR.Scripts.Editor.csproj">
-      <Project>{6DC00D34-1266-78E1-08F8-FB3D5458DAF3}</Project>
-      <Name>Oculus.VR.Scripts.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
       <Project>{80D31E39-4540-E0DB-4BBB-E5AE31D9A373}</Project>
       <Name>Unity.Postprocessing.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Oculus.VR.csproj">
-      <Project>{4127A39B-D1F5-7289-132D-87192AEBBB5D}</Project>
-      <Name>Oculus.VR</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.SpatialTracking.csproj">
       <Project>{C1DE3D40-871B-D674-112D-11B522A4459E}</Project>

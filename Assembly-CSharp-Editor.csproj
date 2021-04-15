@@ -263,9 +263,6 @@
  <Reference Include="UnityEditor">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.17f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.VR">
- <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.17f1/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.17f1/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
@@ -713,21 +710,9 @@
       <Project>{21DA038D-9B8D-8E70-915A-CEEBF11696F7}</Project>
       <Name>Unity.Rider.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Oculus.VR.Editor.csproj">
-      <Project>{AB9E848C-797E-D1A6-A3A4-7F2FB4B20769}</Project>
-      <Name>Oculus.VR.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Oculus.VR.Scripts.Editor.csproj">
-      <Project>{6DC00D34-1266-78E1-08F8-FB3D5458DAF3}</Project>
-      <Name>Oculus.VR.Scripts.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
       <Project>{80D31E39-4540-E0DB-4BBB-E5AE31D9A373}</Project>
       <Name>Unity.Postprocessing.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Oculus.VR.csproj">
-      <Project>{4127A39B-D1F5-7289-132D-87192AEBBB5D}</Project>
-      <Name>Oculus.VR</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.SpatialTracking.csproj">
       <Project>{C1DE3D40-871B-D674-112D-11B522A4459E}</Project>
