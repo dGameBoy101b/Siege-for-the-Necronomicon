@@ -1,7 +1,14 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
+/**
+ * @author Kai Sweeting 33268787
+ * @date 14/04/2021
+ * A count down timer for the UI
+ */
+
 
 public class UITimer : MonoBehaviour
 {
