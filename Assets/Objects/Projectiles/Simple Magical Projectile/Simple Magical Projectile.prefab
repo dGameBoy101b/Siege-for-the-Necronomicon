@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5642295611237875794}
   - component: {fileID: 5829109217905912564}
   - component: {fileID: 1742435687239860331}
-  m_Layer: 0
-  m_Name: Simple Magic Projectile
-  m_TagString: Untagged
+  m_Layer: 8
+  m_Name: Simple Magical Projectile
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 709704402371370588}
   - component: {fileID: 1050162883199264311}
   - component: {fileID: 23559186352173123}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
