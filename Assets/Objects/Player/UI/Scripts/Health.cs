@@ -29,7 +29,12 @@ public class Health : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if(col.tag == "Projectile"){
+        if(col.tag == "Physical"){
+            currentHealth -= 1;
+            Debug.Log("You have been hit!");
+        }
+
+        if(col.tag == "Magic"){
             currentHealth -= 1;
             Debug.Log("You have been hit!");
         }
