@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 5771935312851297728}
   m_Layer: 0
   m_Name: Simple Physical Projectile
-  m_TagString: Projectile
+  m_TagString: Physical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -168,3 +168,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8da3469ada698644a870315a57f4754b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TARGET: {x: 0, y: 0, z: 0}
+  SPEED: 0
