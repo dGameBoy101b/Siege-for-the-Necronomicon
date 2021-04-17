@@ -42,6 +42,7 @@
      <Compile Include="Assets\Objects\Attacks\AttackBase.cs" />
      <Compile Include="Assets\Objects\Attacks\Single Simple Attack\SingleSimpleAttack.cs" />
      <Compile Include="Assets\Objects\Player\EquipmentBase.cs" />
+     <Compile Include="Assets\Objects\Player\Gauntlet\Gauntlet.cs" />
      <Compile Include="Assets\Objects\Player\Sword Slash\SwordSlash.cs" />
      <Compile Include="Assets\Objects\Player\Sword\Sword.cs" />
      <Compile Include="Assets\Objects\Projectiles\MagicalProjectileBase.cs" />
