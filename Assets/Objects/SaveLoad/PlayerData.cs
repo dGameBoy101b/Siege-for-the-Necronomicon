@@ -17,6 +17,7 @@ public class PlayerData
     public int[] highScore;
     public bool[] completed; 
     public float[] timeLeft;
+    private string[] scenes;
 
     /**
     * @param player this is the class that is going to be saved 
@@ -25,8 +26,7 @@ public class PlayerData
     */
     public PlayerData(TestPlayer player)
     {
-        //size is the amount of levels,the arrays will correspond with levels in order its -1 to not include main menu
-        int size = SceneManager.sceneCountInBuildSettings - 1;
+        int size = scenes.Length;
         
         health = new int[size];
         highScore = new int[size];
@@ -34,7 +34,7 @@ public class PlayerData
         timeLeft = new float[size];
         
         for(int i = 0; i < size; i++)
-        {
+        {  
             /*set variables for each level here
             health[i] = 
             completed[i] = 
@@ -46,5 +46,15 @@ public class PlayerData
             */
         }
 
+    }
+
+    private void ReadScenes()
+    {
+        string[] scenes = new string[SceneManager.sceneCountInBuildSettings];
+
+        for(int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
+        {
+            scenes[i] = SceneManager.GetSceneByBuildIndex(i).name;
+        }
     }
 }
