@@ -9,41 +9,29 @@ public class Health : MonoBehaviour
     public int maxHealth;
     public Text currentHealthLabel;
     public int currentHealth;
+
     
-    void Start()
+    void Awake()
     {
         currentHealth = maxHealth;
         UpdateGUI();
         
     }
 
-    void UpdateGUI()
+    public void UpdateGUI()
     {
         currentHealthLabel.text = currentHealth.ToString();
-         if ( currentHealth == 0)
+        
+         if (currentHealth == 0)
         {
             Debug.Log("Game Over!");
         }
         
     }
 
-    void OnTriggerEnter(Collider col)
+    public void TakeDamage(int damage)
     {
-        if(col.tag == "Physical"){
-            currentHealth -= 1;
-            Debug.Log("You have been hit!");
-        }
-
-        if(col.tag == "Magic"){
-            currentHealth -= 1;
-            Debug.Log("You have been hit!");
-        }
-    }
-
-    public void UpdateHealth(int damage)
-    {
-        currentHealth += damage;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        currentHealth -= damage;
         UpdateGUI();
     }
 }

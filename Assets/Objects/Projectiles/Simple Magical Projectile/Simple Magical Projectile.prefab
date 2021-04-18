@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 5642295611237875794}
   - component: {fileID: 5829109217905912564}
   - component: {fileID: 1742435687239860331}
-  m_Layer: 9
+  - component: {fileID: 8094862097645924169}
+  m_Layer: 8
   m_Name: Simple Magical Projectile
   m_TagString: Magic
   m_Icon: {fileID: 0}
@@ -77,6 +78,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TARGET: {x: 0, y: 0, z: 0}
   SPEED: 0
+--- !u!114 &8094862097645924169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056943459528801698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4746ae0456579644fa62aa2161251d7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 9105077945127954468, guid: a69fa0598830aab43a3e850315a5b29c, type: 3}
+  damage: 1
 --- !u!1 &7053109871663252699
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,7 +104,7 @@ GameObject:
   - component: {fileID: 709704402371370588}
   - component: {fileID: 1050162883199264311}
   - component: {fileID: 23559186352173123}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
