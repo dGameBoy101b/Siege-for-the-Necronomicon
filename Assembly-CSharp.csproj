@@ -62,7 +62,6 @@
      <Compile Include="Assets\Objects\Player\Sword\Sword.cs" />
      <Compile Include="Assets\Objects\Player\UI\Scripts\Health.cs" />
      <Compile Include="Assets\Objects\Player\UI\Scripts\PlayerDamaged.cs" />
-     <Compile Include="Assets\Objects\Player\UI\Scripts\ProjectileDamage.cs" />
      <Compile Include="Assets\Objects\Player\UI\Scripts\ScoreSystem.cs" />
      <Compile Include="Assets\Objects\Player\UI\Scripts\UITimer.cs" />
      <Compile Include="Assets\Objects\Projectiles\MagicalProjectileBase.cs" />
