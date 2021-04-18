@@ -6,13 +6,16 @@ using UnityEngine.UI;
 public class ScoreSystem : MonoBehaviour
 {
 
+
     public Text currentScoreLabel;
     public int currentScore;
 
 
     void Start()
     {
+
         currentScore = 0;
+        ScoreUpdate();
         
     }
 
@@ -23,21 +26,14 @@ public class ScoreSystem : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.tag == "Physical")
+        if (col.gameObject.tag == "Projectile")
         {
             currentScore += 10;
             ScoreUpdate();
+            Destroy(col.gameObject);
+
         }
 
-        if (col.tag == "Magic")
-        {
-            currentScore += 20;
-            ScoreUpdate();
-        }
     }
 
-    void Update()
-    {
-        
-    }
 }

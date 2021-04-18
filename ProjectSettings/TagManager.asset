@@ -7,6 +7,8 @@ TagManager:
   - Magic
   - Undefined
   - Physical
+  - Sword
+  - Projectile
   layers:
   - Default
   - TransparentFX
