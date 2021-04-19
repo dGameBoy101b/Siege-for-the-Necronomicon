@@ -41,7 +41,7 @@ public abstract class ProjectileBase : MonoBehaviour
 	 */
 	protected abstract void setCollisionLayer();
 	
-	protected void OnTriggerEnter(Collider col)
+	protected virtual void OnTriggerEnter(Collider col)
 	{
 		if (ProjectileBase.shouldBeDestroyed(col))
 		{
@@ -49,7 +49,7 @@ public abstract class ProjectileBase : MonoBehaviour
 		}
 	}
 	
-	protected void Awake()
+	protected virtual void Awake()
 	{
 		this.setCollisionLayer();
 		this.setTriggers();

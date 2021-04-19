@@ -35,6 +35,14 @@ public sealed class SimpleMagicalProjectile : MagicalProjectileBase
 		this.transform.position += this.transform.forward * this.SPEED * t;
 	}
 	
+	/**
+	 * Destroy this projectile when it hits the gauntlet.
+	 */
+	public override void hit()
+	{
+		Object.Destroy(this.gameObject);
+	}
+	
 	private void Start()
 	{
 		this.faceTarget();
