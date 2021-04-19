@@ -19,8 +19,10 @@ public class UITimer : MonoBehaviour
 
     [HideInInspector]
     public bool timerIsRunning;
+
     [HideInInspector]
     public GameObject player;
+
 
     private GameObject projectile;
 
@@ -33,10 +35,9 @@ public class UITimer : MonoBehaviour
          */
 
         timerIsRunning = true;
-	    player = GameObject.FindWithTag("Player");
-		health = player.GetComponent<Health>();
         projectile = GameObject.FindWithTag("ProjectileSpawn");
-        gameOver = health.gameOver;
+        player = GameObject.FindWithTag("Player");
+		health = player.GetComponent<Health>();
     }
 
     void Update()
@@ -46,7 +47,7 @@ public class UITimer : MonoBehaviour
          * only execute if-statement if timer is set to true
          */
 
-         gameOver.gameObject.SetActive(!timerIsRunning);
+         gameOver.gameObject.SetActive(!timerIsRunning && health.currentHealth > 0);
 
         if (timerIsRunning)
         {
@@ -100,6 +101,7 @@ public class UITimer : MonoBehaviour
         if(!timerIsRunning)
         {
             projectile.GetComponent<WaveManager>().enabled = false;
+            Update();
         }
 
     }

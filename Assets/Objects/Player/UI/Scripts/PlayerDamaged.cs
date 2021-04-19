@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,13 +16,6 @@ public class PlayerDamaged : MonoBehaviour
 			health = player.GetComponent<Health>();
 	    }
 
-		void Update()
-		{
-			//if(health.currentHealth == 0)
-			//{
-				health.PlayerDead();
-			//}
-		}
 
 		void OnTriggerEnter(Collider col)
 		{

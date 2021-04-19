@@ -9,11 +9,13 @@ public class ScoreSystem : MonoBehaviour
 
     public Text currentScoreLabel;
     public Text endScoreLabel;
+    public Text endTimeScoreLabel;
 
     [HideInInspector]
     public int currentScore;
     [HideInInspector]
     public int endScore;
+    
 
 
     void Start()
@@ -29,6 +31,7 @@ public class ScoreSystem : MonoBehaviour
     {
         currentScoreLabel.text = currentScore.ToString();
         endScoreLabel.text = currentScore.ToString();
+        endTimeScoreLabel.text = currentScore.ToString();
     }
 
     void OnTriggerEnter(Collider col)
