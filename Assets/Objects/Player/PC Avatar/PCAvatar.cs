@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 /**
  * @author Rhys Mader 33705134
@@ -59,9 +60,39 @@ public sealed class PCAvatar : MonoBehaviour
 	private float look_lat;
 	
 	/**
-	 * The longitude in degree of the player camera's rotation.
+	 * The longitude in degrees of the player camera's rotation.
 	 */
 	private float look_lon;
+	
+	/**
+	 * The latitude in degrees of the player camera's rotation.
+	 */
+	public float LookLatitude
+	{
+		get
+		{
+			return this.look_lat;
+		}
+		private set
+		{
+			this.look_lat = (value % 180f) - 90f;
+		}
+	}
+	
+	/**
+	 * The longitude in degrees of the player camera's rotation.
+	 */
+	public float LookLongitude
+	{
+		get
+		{
+			return this.look_lon;
+		}
+		private set
+		{
+			this.look_lon = (value % 360f) - 180f;
+		}
+	}
 	
 	/**
 	 * Return the projectile that is closest to this player from the given list.
@@ -94,7 +125,7 @@ public sealed class PCAvatar : MonoBehaviour
 	 */
 	private void extendEquipment(EquipmentBase equip, Vector3 targ)
 	{
-		Vector3 vec = (targ - this.transform.position).normalized * this.EXTENT;
+		Vector3 vec = (targ - this.transform.position).normalized * Math.Min(Vector3.Distance(targ, this.transform.position), this.EXTENT);
 		equip.transform.position = vec + this.transform.position;
 		equip.transform.rotation = Quaternion.LookRotation(vec);
 	}
@@ -105,7 +136,7 @@ public sealed class PCAvatar : MonoBehaviour
 	 */
 	private PhysicalProjectileBase swingSword()
 	{
-		PhysicalProjectileBase targ = (PhysicalProjectileBase)this.closest(Object.FindObjectsOfType<PhysicalProjectileBase>());
+		PhysicalProjectileBase targ = (PhysicalProjectileBase)this.closest(UnityEngine.Object.FindObjectsOfType<PhysicalProjectileBase>());
 		if (targ == null)
 		{
 			return null;
@@ -120,7 +151,7 @@ public sealed class PCAvatar : MonoBehaviour
 	 */
 	private MagicalProjectileBase raiseGauntlet()
 	{
-		MagicalProjectileBase targ = (MagicalProjectileBase)this.closest(Object.FindObjectsOfType<MagicalProjectileBase>());
+		MagicalProjectileBase targ = (MagicalProjectileBase)this.closest(UnityEngine.Object.FindObjectsOfType<MagicalProjectileBase>());
 		if (targ == null)
 		{
 			return null;
@@ -136,8 +167,8 @@ public sealed class PCAvatar : MonoBehaviour
 	{
 		this.look_lat += Input.GetAxis(this.LOOK_VERTICAL) * this.LOOK_SENSITIVITY;
 		this.look_lon += Input.GetAxis(this.LOOK_HORIZONTAL) * this.LOOK_SENSITIVITY;
-		this.CAMERA.transform.localRotation = Quaternion.AngleAxis(this.look_lon, Vector3.up)
-			* Quaternion.AngleAxis(this.look_lat, Vector3.left);
+		this.CAMERA.transform.localRotation = Quaternion.AngleAxis(this.LookLongitude, Vector3.up)
+			* Quaternion.AngleAxis(this.LookLatitude, Vector3.left);
 	}
 	
 	private void Update()
