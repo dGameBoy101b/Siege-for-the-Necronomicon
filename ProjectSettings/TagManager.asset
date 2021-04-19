@@ -9,6 +9,7 @@ TagManager:
   - Physical
   - Sword
   - Projectile
+  - ProjectileSpawn
   layers:
   - Default
   - TransparentFX

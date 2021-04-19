@@ -12,9 +12,18 @@ using UnityEngine.UI;
 
 public class UITimer : MonoBehaviour
 {
-    public float timeRemaining = 10;
-    public bool timerIsRunning = false;
+    public float timeRemaining;
     public Text timeText;
+    public Image gameOver;
+    Health health;
+
+    [HideInInspector]
+    public bool timerIsRunning;
+    [HideInInspector]
+    public GameObject player;
+
+    private GameObject projectile;
+
 
     private void Start()
     {
@@ -24,6 +33,10 @@ public class UITimer : MonoBehaviour
          */
 
         timerIsRunning = true;
+	    player = GameObject.FindWithTag("Player");
+		health = player.GetComponent<Health>();
+        projectile = GameObject.FindWithTag("ProjectileSpawn");
+        gameOver = health.gameOver;
     }
 
     void Update()
@@ -32,6 +45,8 @@ public class UITimer : MonoBehaviour
          * Check if timer is set to true
          * only execute if-statement if timer is set to true
          */
+
+         gameOver.gameObject.SetActive(!timerIsRunning);
 
         if (timerIsRunning)
         {
@@ -53,9 +68,9 @@ public class UITimer : MonoBehaviour
                  * set timerIsRunning to false and lock timer 
                  */
                 
-                Debug.Log("Game Over!");
                 timeRemaining = 0;
                 timerIsRunning = false;
+                TimerOver();
             }
         }
     }
@@ -78,5 +93,14 @@ public class UITimer : MonoBehaviour
          * display remaining minutes and seconds values in text
          */
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+    void TimerOver()
+    {
+        if(!timerIsRunning)
+        {
+            projectile.GetComponent<WaveManager>().enabled = false;
+        }
+
     }
 }

@@ -9,11 +9,20 @@ public class PlayerDamaged : MonoBehaviour
 		public int damage;
 		Health health;
 
+
 	    void Start()
 	    {
 	        player = GameObject.FindWithTag("Player");
 			health = player.GetComponent<Health>();
 	    }
+
+		void Update()
+		{
+			//if(health.currentHealth == 0)
+			//{
+				health.PlayerDead();
+			//}
+		}
 
 		void OnTriggerEnter(Collider col)
 		{
@@ -32,6 +41,7 @@ public class PlayerDamaged : MonoBehaviour
 	            health.TakeDamage(damage);
 				health.UpdateGUI();
 	        }
+			
 	    }
 	
 }

@@ -8,20 +8,27 @@ public class ScoreSystem : MonoBehaviour
 
 
     public Text currentScoreLabel;
+    public Text endScoreLabel;
+
+    [HideInInspector]
     public int currentScore;
+    [HideInInspector]
+    public int endScore;
 
 
     void Start()
     {
 
         currentScore = 0;
+        endScore = currentScore;
         ScoreUpdate();
         
     }
 
-    private void ScoreUpdate()
+    void ScoreUpdate()
     {
         currentScoreLabel.text = currentScore.ToString();
+        endScoreLabel.text = currentScore.ToString();
     }
 
     void OnTriggerEnter(Collider col)
