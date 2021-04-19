@@ -111,7 +111,7 @@ public sealed class PCAvatar : MonoBehaviour
 			return null;
 		}
 		this.extendEquipment(this.SWORD, targ.transform.position);
-		this.SWORD.createSlash(this.transform.position + Vector3.up, this.transform.position + Vector3.down);
+		this.SWORD.createSlash(this.SWORD.transform.position + Vector3.up, this.SWORD.transform.position + Vector3.down);
 		return targ;
 	}
 	
