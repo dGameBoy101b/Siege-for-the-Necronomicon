@@ -44,16 +44,16 @@ public class PlayerData
             //if its current level save new data
             if(i == index)
             {
-                health[i] = ;
-                completed[i] = ;
+                health[i] = 0 ;
+                completed[i] = false;
                 if(completed[i] == true)
                 {
-                    highScore[i] = ;
+                    highScore[i] = 0;
                     timeLeft[i] = 0f;
                 }
                 else
-                {
-                    timeLeft[i] =
+                {   
+                    timeLeft[i] = 0;
                     highScore[i] = 0;
                 }
                 
