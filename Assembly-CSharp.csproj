@@ -36,11 +36,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Menu System\LevelSelector\LevelSelector.cs" />
-     <Compile Include="Assets\Menu System\MenuManager\MenuManager.cs" />
-     <Compile Include="Assets\Menu System\Panel\Panel.cs" />
      <Compile Include="Assets\Objects\Attacks\AttackBase.cs" />
      <Compile Include="Assets\Objects\Attacks\Single Simple Attack\SingleSimpleAttack.cs" />
+     <Compile Include="Assets\Objects\Menu System\LevelSelector\LevelSelector.cs" />
+     <Compile Include="Assets\Objects\Menu System\MenuManager\MenuManager.cs" />
+     <Compile Include="Assets\Objects\Menu System\Panel\Panel.cs" />
      <Compile Include="Assets\Objects\Player\EquipmentBase.cs" />
      <Compile Include="Assets\Objects\Player\Gauntlet\Gauntlet.cs" />
      <Compile Include="Assets\Objects\Player\Sword Slash\SwordSlash.cs" />
