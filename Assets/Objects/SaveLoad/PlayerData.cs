@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -26,7 +26,13 @@ public class PlayerData
     */
     public PlayerData(TestPlayer player)
     {
+        ReadScenes();
+       
         int size = scenes.Length;
+
+        int index = FindIndex(SceneManager.GetActiveScene().name);
+
+        PlayerData temp = SaveLoad.LoadData();
         
         health = new int[size];
         highScore = new int[size];
@@ -35,19 +41,35 @@ public class PlayerData
         
         for(int i = 0; i < size; i++)
         {  
-            /*set variables for each level here
-            health[i] = 
-            completed[i] = 
-            if(completed[i] == true)
+            //if its current level save new data
+            if(i == index)
             {
-                highScore[i] =
+                health[i] = ;
+                completed[i] = ;
+                if(completed[i] == true)
+                {
+                    highScore[i] = ;
+                    timeLeft[i] = 0f;
+                }
+                else
+                {
+                    timeLeft[i] =
+                    highScore[i] = 0;
+                }
+                
+            }else //else resave the old data
+            {
+                health[i] = temp.health[i];
+                completed[i] = temp.completed[i];
+                highScore[i] = temp.highScore[i];
+                timeLeft[i] = temp.timeLeft[i];
             }
-            timeLeft[i] = 
-            */
         }
-
     }
 
+    /**
+    *this reads the scenes in the game build and stores them as an array so that the save data for each can be found
+    */
     private void ReadScenes()
     {
         string[] scenes = new string[SceneManager.sceneCountInBuildSettings];
@@ -56,5 +78,22 @@ public class PlayerData
         {
             scenes[i] = SceneManager.GetSceneByBuildIndex(i).name;
         }
+    }
+
+    /**
+    * a function that returns the index of a specific scene
+    */
+    public int FindIndex(string levelName)
+    {
+        for(int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
+        {
+            if(scenes[i] == levelName)
+            {
+                return(i);
+            }
+        }
+
+        Debug.LogError("level doesnt exist");
+        return(-1);
     }
 }
