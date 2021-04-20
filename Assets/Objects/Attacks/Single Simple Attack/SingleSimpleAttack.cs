@@ -72,19 +72,21 @@ public sealed class SingleSimpleAttack : AttackBase
 	 * Spawn either a simple magical prjectile or a simple physical projectile.
 	 * @param player_pos The current world position of the player.
 	 * @param player_rot The current world rotation of the player.
+	 * @param player_health The health of the player.
+	 * @param player_score The score of the player.
 	 * @return The list of spawned projectiles.
 	 */
-	public override List<ProjectileBase> spawn(Vector3 player_pos, Quaternion player_rot)
+	public override List<ProjectileBase> spawn(Vector3 player_pos, Quaternion player_rot, Health player_health, ScoreSystem player_score)
 	{
 		List<ProjectileBase> projectiles = new List<ProjectileBase>(1);
 		System.Random rand = new System.Random();
 		if (rand.Next(2) == 0)
 		{
-			projectiles.Add(this.spawnMagical(player_pos, player_rot));
+			projectiles.Add(this.spawnMagical(player_pos, player_rot, player_health, player_score));
 		}
 		else
 		{
-			projectiles.Add(this.spawnPhysical(player_pos, player_rot));
+			projectiles.Add(this.spawnPhysical(player_pos, player_rot, player_health, player_score));
 		}
 		return projectiles;
 	}
@@ -152,13 +154,17 @@ public sealed class SingleSimpleAttack : AttackBase
 	 * Spawn a simple magical projectile.
 	 * @param player_pos The current world position of the player.
 	 * @param player_rot The current world rotation of the player.
+	 * @param player_health The health of the player.
+	 * @param player_score The score of the player.
 	 * @return The script attached to the simple magical projectile.
 	 */
-	private SimpleMagicalProjectile spawnMagical(Vector3 player_pos, Quaternion player_rot)
+	private SimpleMagicalProjectile spawnMagical(Vector3 player_pos, Quaternion player_rot, Health player_health, ScoreSystem player_score)
 	{
 		SimpleMagicalProjectile proj = GameObject.Instantiate(this.MAGIC_PROJ, this.randStartPos(player_pos, player_rot), Quaternion.identity).GetComponent<SimpleMagicalProjectile>();
 		proj.SPEED = this.randSpeed();
 		proj.TARGET = player_pos;
+		proj.PLAYER_HEALTH = player_health;
+		proj.PLAYER_SCORE = player_score;
 		return proj;
 	}
 	
@@ -166,13 +172,17 @@ public sealed class SingleSimpleAttack : AttackBase
 	 * Spawn a simple physical projectile.
 	 * @param player_pos The current world position of the player.
 	 * @param player_rot The current world rotation of the player.
+	 * @param player_health The health of the player.
+	 * @param player_score The score of the player.
 	 * @return The script attached to the simple physcial projectile.
 	 */
-	private SimplePhysicalProjectile spawnPhysical(Vector3 player_pos, Quaternion player_rot)
+	private SimplePhysicalProjectile spawnPhysical(Vector3 player_pos, Quaternion player_rot, Health player_health, ScoreSystem player_score)
 	{
 		SimplePhysicalProjectile proj = GameObject.Instantiate(this.PHYSICS_PROJ, this.randStartPos(player_pos, player_rot), Quaternion.identity).GetComponent<SimplePhysicalProjectile>();
 		proj.SPEED = this.randSpeed();
 		proj.TARGET = player_pos;
+		proj.PLAYER_HEALTH = player_health;
+		proj.PLAYER_SCORE = player_score;
 		return proj;
 	}
 	
