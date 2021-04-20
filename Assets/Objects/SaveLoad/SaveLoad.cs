@@ -19,14 +19,14 @@ public static class SaveLoad
     * this fucntion saves the playerdata to a consistent filepath
     */
     //change param to class that has the players data to save
-    public static void SaveData()
+    public static void SaveData(Player player)
     {
         BinaryFormatter formatter = new BinaryFormatter();
     
         FileStream stream = new FileStream(path, FileMode.Create);
 
         //pass the player into the playerdata constructor
-        PlayerData data = new PlayerData();
+        PlayerData data = new PlayerData(player);
 
         formatter.Serialize(stream, data);
         stream.Close();

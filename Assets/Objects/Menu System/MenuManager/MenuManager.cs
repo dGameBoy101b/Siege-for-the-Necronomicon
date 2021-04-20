@@ -30,12 +30,7 @@ public class MenuManager : MonoBehaviour
     * Calls SetupPanels on start
     */
     private void Awake() 
-    {  
-        PlayerData temp = new PlayerData();
-        temp.Empty();
-        SaveLoad.SaveData();
-        Debug.Log("saved");
-
+    { 
         SetupPanels();
 		canvas = GetComponent<Canvas>();
         if(SceneManager.GetActiveScene().name == "MainMenu")

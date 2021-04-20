@@ -11,15 +11,15 @@ public class DisplayScore : MonoBehaviour
     void Start()
     {
         levelName = this.name;
-        this.GetComponent<Text>().text = levelName + "\n" + "High Score: " + GetScore();
+        this.GetComponentInChildren<Text>().text = levelName + "\n" + "High Score: " + GetScore();
     }
 
   
     private int GetScore()
     {   
-        PlayerData scores = SaveLoad.LoadData();
-        int i = scores.FindIndex(levelName);
-        return(scores.highScore[i]);
+        int i = GameObject.FindObjectOfType<Player>().FindIndex(levelName);
+        
+        return(GameObject.FindObjectOfType<Player>().highScore[i]);
     }
     
 }
