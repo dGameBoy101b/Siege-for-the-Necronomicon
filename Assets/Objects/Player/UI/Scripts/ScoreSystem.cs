@@ -12,55 +12,40 @@ using UnityEngine.UI;
 public class ScoreSystem : MonoBehaviour
 {
 
+	public Text currentScoreLabel;
+	public Text endScoreLabel;
+	public Text endTimeScoreLabel;
 
-    public Text currentScoreLabel;
-    public Text endScoreLabel;
-    public Text endTimeScoreLabel;
+	[HideInInspector]
+	public int currentScore;
+	[HideInInspector]
+	public int endScore;
 
-    [HideInInspector]
-    public int currentScore;
-    [HideInInspector]
-    public int endScore;
-    
+	void Start()
+	{
+		currentScore = 0;
+		endScore = currentScore;
+		ScoreUpdate();
+		
+	}
 
+	/**
+	 * set the public text variables to store the current player score in a string
+	 * this is so it can be displayed on game over on during gameplay
+	 */
+	void ScoreUpdate()
+	{
+		currentScoreLabel.text = currentScore.ToString();
+		endScoreLabel.text = currentScore.ToString();
+		endTimeScoreLabel.text = currentScore.ToString();
+	}
 
-    void Start()
-    {
-
-        currentScore = 0;
-        endScore = currentScore;
-        ScoreUpdate();
-        
-    }
-
-    /**
-     * set the public text variables to store the current player score in a string
-     * this is so it can be displayed on game over on during gameplay
-     */
-
-    void ScoreUpdate()
-    {
-        currentScoreLabel.text = currentScore.ToString();
-        endScoreLabel.text = currentScore.ToString();
-        endTimeScoreLabel.text = currentScore.ToString();
-    }
-
-    /**
-     * @param col The collider projectile that is hitting the player sword and adding score points
-     * score increases by 10 on every successful hit of projectile
-     * destroys the projectile on hit
-     */
-
-    void OnTriggerEnter(Collider col)
-    {
-        if (col.gameObject.tag == "Projectile")
-        {
-            currentScore += 10;
-            ScoreUpdate();
-            Destroy(col.gameObject);
-
-        }
-
-    }
-
+	/**
+	 * Add given score to total current score.
+	 */
+	public void AddScore(int score)
+	{
+		currentScore += score;
+		ScoreUpdate();
+	}
 }

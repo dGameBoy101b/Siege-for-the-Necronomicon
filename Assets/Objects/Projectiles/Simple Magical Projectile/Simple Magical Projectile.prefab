@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2147643103949105286}
   - component: {fileID: 5829109217905912564}
   - component: {fileID: 1742435687239860331}
-  - component: {fileID: 8094862097645924169}
   m_Layer: 8
   m_Name: Simple Magical Projectile
   m_TagString: Projectile
@@ -59,22 +58,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a75d2db1ba340a4cad44efc6003abb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PLAYER_HEALTH: {fileID: 0}
+  PLAYER_SCORE: {fileID: 0}
+  DAMAGE: 1
+  POINTS: 10
   TARGET: {x: 0, y: 0, z: 0}
   SPEED: 0
---- !u!114 &8094862097645924169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1056943459528801698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4746ae0456579644fa62aa2161251d7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 9105077945127954468, guid: a69fa0598830aab43a3e850315a5b29c, type: 3}
-  damage: 1
 --- !u!1 &7053109871663252699
 GameObject:
   m_ObjectHideFlags: 0

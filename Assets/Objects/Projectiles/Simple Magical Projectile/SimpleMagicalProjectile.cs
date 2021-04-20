@@ -10,6 +10,16 @@ using UnityEngine;
 public sealed class SimpleMagicalProjectile : MagicalProjectileBase
 {
 	[SerializeField()]
+	[Tooltip("The amount of damage to do to the player when hit.")]
+	[Min(0)]
+	public int DAMAGE;
+	
+	[SerializeField()]
+	[Tooltip("The number of point to add to the score when this projectile is blocked.")]
+	[Min(0)]
+	public int POINTS;
+	
+	[SerializeField()]
 	[Tooltip("The global position this simple magical projectile will fly towards.")]
 	public Vector3 TARGET;
 	
@@ -40,6 +50,13 @@ public sealed class SimpleMagicalProjectile : MagicalProjectileBase
 	 */
 	public override void hit()
 	{
+		this.PLAYER_SCORE?.AddScore(this.POINTS);
+		Object.Destroy(this.gameObject);
+	}
+	
+	public override void attack()
+	{
+		this.PLAYER_HEALTH?.TakeDamage(DAMAGE);
 		Object.Destroy(this.gameObject);
 	}
 	

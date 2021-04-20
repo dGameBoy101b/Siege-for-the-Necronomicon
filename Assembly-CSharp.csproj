@@ -55,6 +55,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Audio\Audio Scripts\AudioManager.cs" />
+     <Compile Include="Assets\Audio\Audio Scripts\Sound.cs" />
      <Compile Include="Assets\Objects\Attacks\AttackBase.cs" />
      <Compile Include="Assets\Objects\Attacks\Single Simple Attack\SingleSimpleAttack.cs" />
      <Compile Include="Assets\Objects\Menu System\LevelSelector\LevelSelector.cs" />
@@ -66,6 +68,9 @@
      <Compile Include="Assets\Objects\Player\PlatformSelector.cs" />
      <Compile Include="Assets\Objects\Player\Sword Slash\SwordSlash.cs" />
      <Compile Include="Assets\Objects\Player\Sword\Sword.cs" />
+     <Compile Include="Assets\Objects\Player\UI\Scripts\Health.cs" />
+     <Compile Include="Assets\Objects\Player\UI\Scripts\ScoreSystem.cs" />
+     <Compile Include="Assets\Objects\Player\UI\Scripts\UITimer.cs" />
      <Compile Include="Assets\Objects\Projectiles\MagicalProjectileBase.cs" />
      <Compile Include="Assets\Objects\Projectiles\PhysicalProjectileBase.cs" />
      <Compile Include="Assets\Objects\Projectiles\ProjectileBase.cs" />

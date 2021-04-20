@@ -10,9 +10,19 @@ using System;
  */
 public sealed class WaveManager : MonoBehaviour
 {
+	[Header("Player Information")]
+	
 	[SerializeField()]
 	[Tooltip("The player object to target attacks on.")]
 	public GameObject PLAYER;
+	
+	[SerializeField()]
+	[Tooltip("The player's health that projectiles damage.")]
+	public Health PLAYER_HEALTH;
+	
+	[SerializeField()]
+	[Tooltip("The player's score that projectiles add to when defeated.")]
+	public ScoreSystem PLAYER_SCORE;
 	
 	[Header("Timing")]
 	
@@ -97,7 +107,7 @@ public sealed class WaveManager : MonoBehaviour
 			weight += this.ATTACK_WEIGHTS[i];
 			if (r < weight)
 			{
-				return this.ATTACK_POOL[i].spawn(this.PLAYER.transform.position, this.PLAYER.transform.rotation);
+				return this.ATTACK_POOL[i].spawn(this.PLAYER.transform.position, this.PLAYER.transform.rotation, this.PLAYER_HEALTH, this.PLAYER_SCORE);
 			}
 		}
 		throw new Exception("No attack spawned.");
@@ -169,6 +179,24 @@ public sealed class WaveManager : MonoBehaviour
 		return prev_attacks >= this.MAX_ACTIVE && this.active_attacks.Count < this.MAX_ACTIVE;
 	}
 	
+	/**
+	 * Destroy all currently active attacks and projectiles.
+	 */
+	public void clearAttacks()
+	{
+		foreach (List<ProjectileBase> attack in this.active_attacks)
+		{
+			foreach (ProjectileBase proj in attack)
+			{
+				if (proj.gameObject != null)
+				{
+					UnityEngine.Object.Destroy(proj.gameObject);
+				}
+			}
+		}
+		this.active_attacks.Clear();
+	}
+	
 	private void Awake()
 	{
 		this.checkAttacks();
@@ -180,6 +208,11 @@ public sealed class WaveManager : MonoBehaviour
 	private void OnAwake()
 	{
 		this.spawnWave();
+	}
+	
+	private void OnDisable()
+	{
+		this.clearAttacks();
 	}
 	
 	private void Update()
