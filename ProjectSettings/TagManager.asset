@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Magic
+  - Undefined
+  - Physical
+  - Sword
+  - Projectile
+  - ProjectileSpawn
   layers:
   - Default
   - TransparentFX
