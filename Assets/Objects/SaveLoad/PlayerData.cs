@@ -17,14 +17,35 @@ public class PlayerData
     public int[] highScore;
     public bool[] completed; 
     public float[] timeLeft;
-    private string[] scenes;
+    public string[] scenes;
+
+    public void Empty() 
+    {
+        ReadScenes();
+       
+        int size = scenes.Length;
+
+        int index = FindIndex(SceneManager.GetActiveScene().name);
+        
+        health = new int[size];
+        highScore = new int[size];
+        completed = new bool[size];
+        timeLeft = new float[size];
+        for(int i = 0; i < size; i++)
+        {
+            health[i] = 3;
+            highScore[i] = 0;
+            completed[i] = false;
+            timeLeft[i] = 10f;
+        }
+    }
 
     /**
     * @param player this is the class that is going to be saved 
     * constructor for the playerdata class, param should be changed to tha class that has the data to save 
     * data is saved for each level, arrays index corresponds to the level
     */
-    public PlayerData(TestPlayer player)
+    public PlayerData()
     {
         ReadScenes();
        
@@ -42,25 +63,20 @@ public class PlayerData
         for(int i = 0; i < size; i++)
         {  
             //if its current level save new data
+            completed[i] = false;
+
             if(i == index)
             {
-                health[i] = 0 ;
-                completed[i] = false;
-                if(completed[i] == true)
+                health[i] = GameObject.FindObjectOfType<Health>().currentHealth;
+                timeLeft[i] = GameObject.FindObjectOfType<UITimer>().timeRemaining;
+                if(timeLeft[i] == 0)
                 {
-                    highScore[i] = 0;
-                    timeLeft[i] = 0f;
+                    completed[i] = true;
                 }
-                else
-                {   
-                    timeLeft[i] = 0;
-                    highScore[i] = 0;
-                }
-                
+                highScore[i] = GameObject.FindObjectOfType<ScoreSystem>().currentScore;
             }else //else resave the old data
             {
                 health[i] = temp.health[i];
-                completed[i] = temp.completed[i];
                 highScore[i] = temp.highScore[i];
                 timeLeft[i] = temp.timeLeft[i];
             }

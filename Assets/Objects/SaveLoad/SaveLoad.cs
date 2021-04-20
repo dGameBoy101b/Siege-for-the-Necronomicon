@@ -19,17 +19,19 @@ public static class SaveLoad
     * this fucntion saves the playerdata to a consistent filepath
     */
     //change param to class that has the players data to save
-    public static void SaveData(TestPlayer player)
+    public static void SaveData()
     {
         BinaryFormatter formatter = new BinaryFormatter();
     
         FileStream stream = new FileStream(path, FileMode.Create);
 
         //pass the player into the playerdata constructor
-        PlayerData data = new PlayerData(player);
+        PlayerData data = new PlayerData();
 
         formatter.Serialize(stream, data);
         stream.Close();
+
+        Debug.Log("file saved");
     }
 
     /**
@@ -50,7 +52,7 @@ public static class SaveLoad
             return data;
         }else
         {
-            Debug.LogError("Save file nto found in " + path);
+            Debug.LogError("Save file not found in " + path);
             return null;
         }
     }

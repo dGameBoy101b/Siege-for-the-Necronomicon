@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1793274403797198657}
   - component: {fileID: 6411969575847064461}
   - component: {fileID: 7059539435876220199}
+  - component: {fileID: 5531858280236176491}
   m_Layer: 5
   m_Name: Level03
   m_TagString: Untagged
@@ -130,6 +131,19 @@ MonoBehaviour:
           m_StringArgument: Level03
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5531858280236176491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410476314397074849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3661e2488077749806e32da2bf809b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelName: 
 --- !u!1 &564230864455706967
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,6 +286,7 @@ GameObject:
   - component: {fileID: 6636606529069318893}
   - component: {fileID: 8903372459005545411}
   - component: {fileID: 4700656045552519012}
+  - component: {fileID: 7774567336899396198}
   m_Layer: 5
   m_Name: Level02
   m_TagString: Untagged
@@ -390,6 +405,19 @@ MonoBehaviour:
           m_StringArgument: Level02
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7774567336899396198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659102731444105805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3661e2488077749806e32da2bf809b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelName: 
 --- !u!1 &669348694327398665
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,7 +631,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918316238358089888}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
   m_Camera: {fileID: 0}
@@ -1019,7 +1047,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918316238782099904}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -1399,7 +1427,7 @@ GameObject:
   - component: {fileID: 1918316239505068314}
   - component: {fileID: 1918316239505068309}
   m_Layer: 5
-  m_Name: Menu System
+  m_Name: Main Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2603,6 +2631,7 @@ GameObject:
   - component: {fileID: 4463956450890974778}
   - component: {fileID: 6973343498139944944}
   - component: {fileID: 3745644006173407603}
+  - component: {fileID: 6675345354628531579}
   m_Layer: 5
   m_Name: Level01
   m_TagString: Untagged
@@ -2721,6 +2750,19 @@ MonoBehaviour:
           m_StringArgument: Level01
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6675345354628531579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6390785547976302673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3661e2488077749806e32da2bf809b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelName: 
 --- !u!1 &8895371954467252024
 GameObject:
   m_ObjectHideFlags: 0
