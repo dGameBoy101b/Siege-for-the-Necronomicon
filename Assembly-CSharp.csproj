@@ -61,6 +61,8 @@
      <Compile Include="Assets\Objects\Menu System\MenuManager\MenuManager.cs" />
      <Compile Include="Assets\Objects\Menu System\Panel\Panel.cs" />
      <Compile Include="Assets\Objects\Player\EquipmentBase.cs" />
+     <Compile Include="Assets\Objects\Player\Gauntlet\Gauntlet.cs" />
+     <Compile Include="Assets\Objects\Player\PC Avatar\PCAvatar.cs" />
      <Compile Include="Assets\Objects\Player\PlatformSelector.cs" />
      <Compile Include="Assets\Objects\Player\Sword Slash\SwordSlash.cs" />
      <Compile Include="Assets\Objects\Player\Sword\Sword.cs" />
