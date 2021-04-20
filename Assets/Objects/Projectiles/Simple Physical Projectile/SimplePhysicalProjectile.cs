@@ -35,6 +35,14 @@ public sealed class SimplePhysicalProjectile : PhysicalProjectileBase
 		this.transform.position += this.transform.forward * this.SPEED * t;
 	}
 	
+	/**
+	 * Destroy this projectile when it is hit by a sword slash.
+	 */
+	public override void hit()
+	{
+		Object.Destroy(this.gameObject);
+	}
+	
 	private void Start()
 	{
 		this.faceTarget();
