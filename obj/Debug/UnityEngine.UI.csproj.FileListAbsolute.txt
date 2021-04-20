@@ -237,4 +237,3 @@ C:\Users\rhysm\OneDrive\Documents\Education\2021 S1\ICT288\assignments\Siege-for
 C:\Users\rhysm\OneDrive\Documents\Education\2021 S1\ICT288\assignments\Siege-for-the-Necronomicon\obj\Debug\UnityEngine.UI.csprojResolveAssemblyReference.cache
 C:\Users\rhysm\OneDrive\Documents\Education\2021 S1\ICT288\assignments\Siege-for-the-Necronomicon\obj\Debug\UnityEngine.UI.dll
 C:\Users\rhysm\OneDrive\Documents\Education\2021 S1\ICT288\assignments\Siege-for-the-Necronomicon\obj\Debug\UnityEngine.UI.pdb
-C:\Users\rhysm\OneDrive\Documents\Education\2021 S1\ICT288\assignments\Siege-for-the-Necronomicon\Temp\bin\Debug\UnityEditor.VR.dll

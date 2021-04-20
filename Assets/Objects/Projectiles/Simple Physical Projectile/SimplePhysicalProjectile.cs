@@ -10,16 +10,6 @@ using UnityEngine;
 public sealed class SimplePhysicalProjectile : PhysicalProjectileBase
 {
 	[SerializeField()]
-	[Tooltip("The amount of damage to do to the player when hit.")]
-	[Min(0)]
-	public int DAMAGE;
-	
-	[SerializeField()]
-	[Tooltip("The number of points to add to the player's score when this projectile is defeated.")]
-	[Min(0)]
-	public int POINTS;
-	
-	[SerializeField()]
 	[Tooltip("The global position this simple physical projectile will fly towards.")]
 	public Vector3 TARGET;
 	
@@ -43,24 +33,6 @@ public sealed class SimplePhysicalProjectile : PhysicalProjectileBase
 	private void moveForward(float t)
 	{
 		this.transform.position += this.transform.forward * this.SPEED * t;
-	}
-	
-	/**
-	 * Destroy this projectile when it is hit by a sword slash.
-	 */
-	public override void hit()
-	{
-		this.PLAYER_SCORE.AddScore(this.POINTS);
-		Object.Destroy(this.gameObject);
-	}
-	
-	/**
-	 * The damage the player and destroy itself when this projectile hits the player.
-	 */
-	public override void attack()
-	{
-		this.PLAYER_HEALTH.TakeDamage(this.DAMAGE);
-		Object.Destroy(this.gameObject);
 	}
 	
 	private void Start()

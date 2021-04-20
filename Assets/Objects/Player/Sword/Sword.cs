@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public sealed class Sword : EquipmentBase
+public class Sword : EquipmentBase
 {
 	[Header("Slashing")]
 	
