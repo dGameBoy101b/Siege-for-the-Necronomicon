@@ -29,10 +29,6 @@ public class UITimer : MonoBehaviour
 
     private void Start()
     {
-        /**
-         * Set timer to true on application start
-         * automatically starts if true
-         */
 
         timerIsRunning = true;
         projectile = GameObject.FindWithTag("ProjectileSpawn");
@@ -40,35 +36,27 @@ public class UITimer : MonoBehaviour
 		health = player.GetComponent<Health>();
     }
 
+    /**
+     * Check if timer is enabled and running
+     * If timer hits zero display game over and disable wave manager spawning projectiles
+     * @param timerIsRunning The bool that checks if timer is running or not
+     * @param timeRemaining The float that shows in minutes and seconds the timer left on the timer
+     * @return timeRemaining To DisplayTimer to show countdown on UI
+     */
+
     void Update()
     {
-        /**
-         * Check if timer is set to true
-         * only execute if-statement if timer is set to true
-         */
-
          gameOver.gameObject.SetActive(!timerIsRunning && health.currentHealth > 0);
 
         if (timerIsRunning)
         {
-            /** 
-             * If true and greater than 0 start counting down from specified seconds
-             */
             if (timeRemaining > 0)
             {
                 timeRemaining -= Time.deltaTime;
-                /**
-                 * @return timeRemaining To DisplayTimer to show countdown on UI
-                 */
                 DisplayTimer(timeRemaining);
             }
             else
             {
-                /**
-                 * If timer hits zero display game over
-                 * set timerIsRunning to false and lock timer 
-                 */
-                
                 timeRemaining = 0;
                 timerIsRunning = false;
                 TimerOver();
@@ -97,7 +85,8 @@ public class UITimer : MonoBehaviour
     }
 
     void TimerOver()
-    {
+    {   /** if the timer has stopped, stop wave manager from spawning more projectiles and show game over screen
+        */
         if(!timerIsRunning)
         {
             projectile.GetComponent<WaveManager>().enabled = false;
