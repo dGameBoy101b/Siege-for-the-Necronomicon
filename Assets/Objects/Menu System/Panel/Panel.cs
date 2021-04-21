@@ -13,14 +13,10 @@ using UnityEngine;
 public class Panel : MonoBehaviour
 {
 
-    /**
-    * Stores the canvas object this script is attached to so the show property can be changed
-    */
+    [Tooltip("Stores the canvas object this script is attached to so the show property can be changed")]
     private Canvas canvas;
 
-    /**
-    * Stores the menu manager that this panel should be a child of
-    */
+    [Tooltip("Stores the menu manager that this panel should be a child of")]
     private MenuManager menuManager;
 
     /**

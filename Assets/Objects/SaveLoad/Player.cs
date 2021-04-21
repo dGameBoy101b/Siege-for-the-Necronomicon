@@ -3,15 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/**
+* @author Connor Burnside 33394927  
+* @date 20/04/2021
+* The class that should store all variables to save and load
+*/
+
 public class Player : MonoBehaviour
 {
+   
+    [HideInInspector]
     public int[] health;
+    [HideInInspector]
     public int[] highScore;
-    public bool[] completed; 
+    [HideInInspector]
+    public bool[] completed;
+    [HideInInspector] 
     public float[] timeLeft;
+    [HideInInspector]
     public string[] scenes;
+    [HideInInspector]
     public string currentscene;
+    [HideInInspector]
     public int size;
+    [HideInInspector]
     public int j;
     
     // Start is called before the first frame update
@@ -58,7 +73,8 @@ public class Player : MonoBehaviour
     }
 
     /**
-    *this reads the scenes in the game build and stores them as an array so that the save data for each can be found
+    *this reads the scenes in the game build and stores them as an array so
+    * that the save data for each can be found
     */
     private void ReadScenes()
     {
@@ -74,6 +90,11 @@ public class Player : MonoBehaviour
         }
     }
 
+    /**
+    * given the name of a level will get the index of that level in the scenes array, 
+    * this can be used to find the relevant data from the other array
+    * @param levelName the name of the level that you are trying to find
+    */
     public int FindIndex(string levelName)
     {
         for(int i = 0; i < size; i++)
@@ -88,11 +109,17 @@ public class Player : MonoBehaviour
         return(-1);
     }
 
+    /**
+    * gives this instance to the savedata script for serialisation and saving
+    */
     public void SavePlayer()
     {
         SaveLoad.SaveData(this);
     }
 
+    /**
+    * calls the saveload load function and sets the variables
+    */
     public void LoadPlayer()
     {
         PlayerData data = SaveLoad.LoadData();
