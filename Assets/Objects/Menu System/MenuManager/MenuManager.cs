@@ -63,13 +63,15 @@ public class MenuManager : MonoBehaviour
 		{
 			if(canvas.enabled)
 			{
-				canvas.enabled = false;
+				Cursor.lockState = CursorLockMode.Locked;
+                canvas.enabled = false;
                 //timescale pauses or resumes the gameplay
                 Time.timeScale = 1;
 			}
 			else
 			{
-				canvas.enabled = true;
+				Cursor.lockState = CursorLockMode.Confined;
+                canvas.enabled = true;
                 Time.timeScale = 0;
 			}
 		}
