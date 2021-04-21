@@ -11,9 +11,16 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
+	[Tooltip("The prefab that spawns waves of projectiles.")]
 	public WaveManager WAVE_MANAGER;
+
+	[Tooltip("The maximum amount of health the player has.")]
 	public int maxHealth;
+
+	[Tooltip("The text object that stores the health of the player.")]
 	public Text currentHealthLabel;
+
+	[Tooltip("The image that displays at the game over screen.")]
 	public Image gameOver;
 
 	[HideInInspector]

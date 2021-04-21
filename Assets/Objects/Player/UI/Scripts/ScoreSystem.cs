@@ -12,12 +12,15 @@ using UnityEngine.UI;
 public class ScoreSystem : MonoBehaviour
 {
 
-
+    [Tooltip("The text object that stores the player's current score.")]
     public Text currentScoreLabel;
+
+    [Tooltip("The text object that stores the player's final score to display on game over.")]
     public Text endScoreLabel;
 
     [HideInInspector]
     public int currentScore;
+    
     [HideInInspector]
     public int endScore;
     
