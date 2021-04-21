@@ -11,20 +11,17 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    /**
-    * The current menu panel, this is the only panel that is shown at any given time
-    */
+    [Tooltip("The current menu panel, this is the only panel that is shown at any given time")]
     public Panel currentPanel;
 
-    /**
-    * The history of panels that the user has clicked through
-    */
+    [Tooltip("The history of panels that the user has clicked through")]
     private List<Panel> panelHistory = new List<Panel>();
 
-	/**
-	 * The menu managers canvas component which allows the menu to be opened or closed with the menu or escape key
-	 */
+    [Tooltip("The menu managers canvas component which allows the menu to be opened or closed with the menu or escape key")]
 	private Canvas canvas;
+
+    [Tooltip("a static menumanager variable that is used to enforce singleton property")]
+    public static MenuManager instance = null;
 
     /**
     * Calls SetupPanels on start
@@ -36,8 +33,19 @@ public class MenuManager : MonoBehaviour
         if(SceneManager.GetActiveScene().name == "MainMenu")
         {
             canvas.enabled = true;
+        }else
+        {
+            DontDestroyOnLoad(this);
         }
-        DontDestroyOnLoad(this);
+        
+
+        if(instance == null)
+        {
+            instance = this;
+        }else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
     }
 
     /**
@@ -123,11 +131,17 @@ public class MenuManager : MonoBehaviour
         currentPanel.Show();
     }
 
+    /**
+    * function that plays the game from the first level
+    */
     public void Play()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    /**
+    * function that quits the application
+    */
     public void Exit()
     {
         Application.Quit();

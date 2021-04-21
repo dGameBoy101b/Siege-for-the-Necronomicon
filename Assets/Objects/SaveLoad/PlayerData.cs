@@ -13,10 +13,15 @@ using UnityEngine.SceneManagement;
 public class PlayerData 
 {
 
+    [HideInInspector]
     public int[] health;
+    [HideInInspector]
     public int[] highScore;
-    public bool[] completed; 
+    [HideInInspector]
+    public bool[] completed;
+    [HideInInspector] 
     public float[] timeLeft;
+    [HideInInspector]
     public string[] scenes;
 
     /**
