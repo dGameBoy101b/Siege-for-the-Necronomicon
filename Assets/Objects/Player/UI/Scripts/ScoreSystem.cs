@@ -34,7 +34,7 @@ public class ScoreSystem : MonoBehaviour
 
     /**
      * set the public text variables to store the current player score in a string
-     * this is so it can be displayed on game over on during gameplay
+     * this is so it can be displayed on game over or during gameplay
      */
 
     void ScoreUpdate()
