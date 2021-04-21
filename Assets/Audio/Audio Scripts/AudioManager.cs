@@ -25,7 +25,7 @@ public class AudioManager : MonoBehaviour
     {
         if (StayActive == true)
         {
-            if (instance == null) //Ensures that when changing to a new scene, there will also be a SINGLE audio manager.
+            if (instance == null) 
             {
                 instance = this;
             }
@@ -35,7 +35,7 @@ public class AudioManager : MonoBehaviour
                 return;
             }
 
-            DontDestroyOnLoad(gameObject); //Allows the audio manager to stay active when changing between scenes.
+            DontDestroyOnLoad(gameObject); 
         }
 
         foreach (Sound s in sounds)
@@ -60,6 +60,7 @@ public class AudioManager : MonoBehaviour
 
     /*
     * Will start playing what ever audio track is string name in the AudioManager
+    * @parem string name - represents the name of the soundtrack in the AudioManager
     */
     public void Play(string name)
     {
@@ -76,6 +77,7 @@ public class AudioManager : MonoBehaviour
 
     /*
     * Will stop playing what ever audio track is string name in the AudioManager
+    * @parem string name - represents the name of the soundtrack in the AudioManager
     */
     public void Stop(string name)
     {
@@ -92,6 +94,7 @@ public class AudioManager : MonoBehaviour
 
     /*
     * Will pause playing what ever audio track is string name in the AudioManager
+    * @parem string name - represents the name of the soundtrack in the AudioManager
     */
     public void Pause(string name)
     {
