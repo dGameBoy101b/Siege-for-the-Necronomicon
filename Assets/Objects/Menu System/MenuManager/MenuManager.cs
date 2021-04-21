@@ -26,6 +26,8 @@ public class MenuManager : MonoBehaviour
 	 */
 	private Canvas canvas;
 
+    public static MenuManager instance = null;
+
     /**
     * Calls SetupPanels on start
     */
@@ -38,6 +40,14 @@ public class MenuManager : MonoBehaviour
             canvas.enabled = true;
         }
         DontDestroyOnLoad(this);
+
+        if(instance == null)
+        {
+            instance = this;
+        }else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
     }
 
     /**
