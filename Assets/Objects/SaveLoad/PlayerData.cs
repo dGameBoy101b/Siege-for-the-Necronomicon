@@ -14,8 +14,6 @@ public class PlayerData
 {
 
     [HideInInspector]
-    public int[] health;
-    [HideInInspector]
     public int[] highScore;
     [HideInInspector]
     public bool[] completed;
@@ -31,14 +29,12 @@ public class PlayerData
     */
     public PlayerData(Player player)
     { 
-        health = new int[player.size];
         highScore = new int[player.size];
         completed = new bool[player.size];
         timeLeft = new float[player.size];
         
         for(int i = 0; i < player.size; i++)
         {  
-            health[i] = player.health[i];
             highScore[i] = player.highScore[i];
             completed[i] = player.completed[i];
             timeLeft[i] = player.timeLeft[i];
@@ -50,7 +46,6 @@ public class PlayerData
         int size = GameObject.FindObjectOfType<Player>().size;
         for(int i = 0; i < size; i++)
         {  
-            health[i] = 3;
             highScore[i] = 0;
             completed[i] = false;
             timeLeft[i] = 10f;

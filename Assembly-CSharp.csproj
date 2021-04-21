@@ -42,6 +42,7 @@
      <Compile Include="Assets\Objects\Attacks\Single Simple Attack\SingleSimpleAttack.cs" />
      <Compile Include="Assets\Objects\Menu System\LevelSelector\DisplayScore.cs" />
      <Compile Include="Assets\Objects\Menu System\LevelSelector\LevelSelector.cs" />
+     <Compile Include="Assets\Objects\Menu System\MenuManager\MenuDoNotDestroy.cs" />
      <Compile Include="Assets\Objects\Menu System\MenuManager\MenuManager.cs" />
      <Compile Include="Assets\Objects\Menu System\Panel\Panel.cs" />
      <Compile Include="Assets\Objects\Player\EquipmentBase.cs" />

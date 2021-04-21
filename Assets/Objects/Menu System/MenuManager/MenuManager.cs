@@ -33,9 +33,6 @@ public class MenuManager : MonoBehaviour
         if(SceneManager.GetActiveScene().name == "MainMenu")
         {
             canvas.enabled = true;
-        }else
-        {
-            DontDestroyOnLoad(this);
         }
         
 
@@ -70,7 +67,8 @@ public class MenuManager : MonoBehaviour
 			}
 			else
 			{
-				Cursor.lockState = CursorLockMode.Confined;
+				GameObject.FindObjectOfType<Player>().UpdateStats();
+                Cursor.lockState = CursorLockMode.Confined;
                 canvas.enabled = true;
                 Time.timeScale = 0;
 			}

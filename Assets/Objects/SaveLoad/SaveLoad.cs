@@ -48,15 +48,13 @@ public static class SaveLoad
             BinaryFormatter formatter = new BinaryFormatter();
             PlayerData data = formatter.Deserialize(stream) as PlayerData;
             stream.Close();
-
-            return data;
+            return(data);
         }else
         {
             Debug.LogError("Save file not found in " + path);
-            PlayerData data = new PlayerData();
+            //PlayerData data = new PlayerData();
             stream.Close();
-            
-            return data;
+            return(null);
         }
     }
 }

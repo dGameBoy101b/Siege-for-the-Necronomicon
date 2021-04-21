@@ -13,10 +13,10 @@ EditorBuildSettings:
     guid: 281d783131a06894eb1e6c3ef44f5646
   - enabled: 1
     path: Assets/Scenes/Level02.unity
-    guid: 7ced407ccdb157048b2d4248a2f24db7
+    guid: 7f67457a63856274b94f7907dfef4f25
   - enabled: 1
     path: Assets/Scenes/Level03.unity
-    guid: c1f937ccf9863be4aa7af156912c84ed
+    guid: 80ffad2cfaa631b47942499f1b585830
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: f29d39f739e04aa49b3c913a177f8ed0,
       type: 2}

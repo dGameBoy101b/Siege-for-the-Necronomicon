@@ -7,22 +7,46 @@ public class DisplayScore : MonoBehaviour
 {
     public string levelName;
     public int score;
-    public int i;
+    public bool complete;
+    public int index;
+    public float timeLeft;
     
-    // Start is called before the first frame update
     void Update()
     {
         levelName = this.name;
-        score = GetScore();
-        this.GetComponentInChildren<Text>().text = levelName + "\n" + "High Score: " + score;
+        index = GetIndex();
+        complete = GetComplete(index);
+
+        if(complete == true)
+        {
+            score = GetScore(index);
+            this.GetComponentInChildren<Text>().text = levelName + "\n" + "High Score: " + score;
+        }else
+        {
+            timeLeft = GetTimeLeft(index);
+            this.GetComponentInChildren<Text>().text = levelName + "\n" + "Time Left: " + timeLeft;
+        }
+        
     }
 
-  
-    private int GetScore()
+    private int GetIndex()
+    {
+        int i = GameObject.FindObjectOfType<Player>().FindIndex(levelName);
+        return(i);
+    }
+
+    private int GetScore(int i)
     {   
-        i = GameObject.FindObjectOfType<Player>().FindIndex(levelName);
-        
         return(GameObject.FindObjectOfType<Player>().highScore[i]);
     }
+
+    private bool GetComplete(int i)
+    {
+        return(GameObject.FindObjectOfType<Player>().completed[i]);
+    }
     
+    private float GetTimeLeft(int i) 
+    {
+        return(GameObject.FindObjectOfType<Player>().timeLeft[i]);
+    }
 }
