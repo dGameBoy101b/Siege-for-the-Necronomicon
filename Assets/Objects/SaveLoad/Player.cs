@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     public int j;
     
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         ReadScenes();
         currentscene = SceneManager.GetActiveScene().name;
@@ -33,6 +33,8 @@ public class Player : MonoBehaviour
             completed[i] = false;
             timeLeft[i] = 10f;
         }
+
+        this.LoadPlayer();
 
         for(int i = 0; i < size; i++)
         {
@@ -74,7 +76,7 @@ public class Player : MonoBehaviour
 
     public int FindIndex(string levelName)
     {
-        for(int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
+        for(int i = 0; i < size; i++)
         {
             if(scenes[i] == levelName)
             {

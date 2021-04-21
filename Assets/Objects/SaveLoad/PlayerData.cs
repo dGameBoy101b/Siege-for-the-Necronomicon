@@ -25,9 +25,7 @@ public class PlayerData
     * data is saved for each level, arrays index corresponds to the level
     */
     public PlayerData(Player player)
-    {
-        PlayerData temp = SaveLoad.LoadData();
-        
+    { 
         health = new int[player.size];
         highScore = new int[player.size];
         completed = new bool[player.size];
@@ -42,8 +40,17 @@ public class PlayerData
         }
     }
 
-
-
+    public PlayerData()
+    {
+        int size = GameObject.FindObjectOfType<Player>().size;
+        for(int i = 0; i < size; i++)
+        {  
+            health[i] = 3;
+            highScore[i] = 0;
+            completed[i] = false;
+            timeLeft[i] = 10f;
+        }
+    }
 
     /**
     * a function that returns the index of a specific scene

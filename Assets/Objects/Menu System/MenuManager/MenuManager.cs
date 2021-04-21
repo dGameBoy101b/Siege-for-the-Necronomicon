@@ -37,6 +37,7 @@ public class MenuManager : MonoBehaviour
         {
             canvas.enabled = true;
         }
+        DontDestroyOnLoad(this);
     }
 
     /**
