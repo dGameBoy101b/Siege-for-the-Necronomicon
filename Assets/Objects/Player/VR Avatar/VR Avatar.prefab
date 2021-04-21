@@ -458,6 +458,11 @@ PrefabInstance:
       propertyPath: DEFAULT_HAND
       value: 
       objectReference: {fileID: 2644973660947225146}
+    - target: {fileID: 8803981874312920709, guid: d6e7c83eba41a274c93dcf902bccb773,
+        type: 3}
+      propertyPath: SLASH_BUTTON
+      value: 2097152
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6e7c83eba41a274c93dcf902bccb773, type: 3}
 --- !u!4 &2378486200253882860 stripped

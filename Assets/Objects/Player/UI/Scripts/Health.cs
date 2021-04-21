@@ -40,7 +40,7 @@ public class Health : MonoBehaviour
 	public void UpdateGUI()
 	{
 		currentHealthLabel.text = currentHealth.ToString();
-		gameOver.gameObject.SetActive(isDead); 
+		gameOver.gameObject.SetActive(isDead);
 	}
 
 	/** 
