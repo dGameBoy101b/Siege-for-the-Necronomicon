@@ -1525,7 +1525,7 @@ GameObject:
   - component: {fileID: 821015555}
   - component: {fileID: 821015554}
   m_Layer: 0
-  m_Name: Player
+  m_Name: PlayerData
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1877,7 +1877,7 @@ PrefabInstance:
     - target: {fileID: 4972514100821167999, guid: ffd8c5d3353ed284fa54483cfcb0bd29,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffd8c5d3353ed284fa54483cfcb0bd29, type: 3}
@@ -2233,7 +2233,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1069723396}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -2963,6 +2963,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1490922666}
+    - target: {fileID: 2126284205197550887, guid: e9f8ff9a828b1e342a166a18091cedc4,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2126284205197551066, guid: e9f8ff9a828b1e342a166a18091cedc4,
         type: 3}
       propertyPath: m_Pivot.x
@@ -3086,7 +3091,12 @@ PrefabInstance:
     - target: {fileID: 2126284206134809504, guid: e9f8ff9a828b1e342a166a18091cedc4,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 52.200012
+      value: 131
+      objectReference: {fileID: 0}
+    - target: {fileID: 2126284206134809504, guid: e9f8ff9a828b1e342a166a18091cedc4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 66
       objectReference: {fileID: 0}
     - target: {fileID: 2126284206134809519, guid: e9f8ff9a828b1e342a166a18091cedc4,
         type: 3}
@@ -3309,6 +3319,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6612826068784298295, guid: e9f8ff9a828b1e342a166a18091cedc4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 159.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6612826068784298295, guid: e9f8ff9a828b1e342a166a18091cedc4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -71
       objectReference: {fileID: 0}
     - target: {fileID: 7629903869498031232, guid: e9f8ff9a828b1e342a166a18091cedc4,
         type: 3}
