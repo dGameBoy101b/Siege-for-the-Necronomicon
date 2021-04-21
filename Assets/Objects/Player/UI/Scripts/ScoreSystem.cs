@@ -54,13 +54,9 @@ public class ScoreSystem : MonoBehaviour
 
     public void AddScore(int points)
     {
-        if (this.gameObject.tag == "Projectile")
-        {
-            currentScore += 10;
-            ScoreUpdate();
-
-        }
-
+        Debug.Log("adding points " + points);
+        currentScore += points;
+        ScoreUpdate();
     }
 
 }
