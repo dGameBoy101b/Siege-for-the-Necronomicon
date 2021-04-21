@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,40 +12,52 @@ using UnityEngine.UI;
 public class ScoreSystem : MonoBehaviour
 {
 
-	public Text currentScoreLabel;
-	public Text endScoreLabel;
-	public Text endTimeScoreLabel;
 
-	[HideInInspector]
-	public int currentScore;
-	[HideInInspector]
-	public int endScore;
+    public Text currentScoreLabel;
+    public Text endScoreLabel;
 
-	void Start()
-	{
-		currentScore = 0;
-		endScore = currentScore;
-		ScoreUpdate();
-		
-	}
+    [HideInInspector]
+    public int currentScore;
+    [HideInInspector]
+    public int endScore;
+    
 
-	/**
-	 * set the public text variables to store the current player score in a string
-	 * this is so it can be displayed on game over on during gameplay
-	 */
-	void ScoreUpdate()
-	{
-		currentScoreLabel.text = currentScore.ToString();
-		endScoreLabel.text = currentScore.ToString();
-		endTimeScoreLabel.text = currentScore.ToString();
-	}
 
-	/**
-	 * Add given score to total current score.
-	 */
-	public void AddScore(int score)
-	{
-		currentScore += score;
-		ScoreUpdate();
-	}
+    void Start()
+    {
+
+        currentScore = 0;
+        endScore = currentScore;
+        ScoreUpdate();
+        
+    }
+
+    /**
+     * set the public text variables to store the current player score in a string
+     * this is so it can be displayed on game over on during gameplay
+     */
+
+    void ScoreUpdate()
+    {
+        currentScoreLabel.text = currentScore.ToString();
+        endScoreLabel.text = currentScore.ToString();
+    }
+
+    /**
+     * @param col The collider projectile that is hitting the player sword and adding score points
+     * score increases by 10 on every successful hit of projectile
+     * destroys the projectile on hit
+     */
+
+    public void AddScore(int points)
+    {
+        if (this.gameObject.tag == "Projectile")
+        {
+            currentScore += 10;
+            ScoreUpdate();
+
+        }
+
+    }
+
 }

@@ -13,15 +13,11 @@ public class UITimer : MonoBehaviour
 	public WaveManager WAVE_MANAGER;
 	public float timeRemaining;
 	public Text timeText;
-	public Image gameOver;
 
 	[HideInInspector]
 	public bool timerIsRunning;
 
-	[HideInInspector]
-	public GameObject player;
 
-	private GameObject projectile;
 
 	private void Start()
 	{
@@ -37,8 +33,6 @@ public class UITimer : MonoBehaviour
 	 */
 	void Update()
 	{
-		//null ref on time up
-		 gameOver.gameObject.SetActive(!timerIsRunning);
 		if (timerIsRunning)
 		{
 			if (timeRemaining > 0)
