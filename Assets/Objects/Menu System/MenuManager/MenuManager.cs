@@ -18,7 +18,7 @@ public class MenuManager : MonoBehaviour
     private List<Panel> panelHistory = new List<Panel>();
 
     [Tooltip("The menu managers canvas component which allows the menu to be opened or closed with the menu or escape key")]
-	private Canvas canvas;
+	public Canvas canvas;
 
     [Tooltip("a static menumanager variable that is used to enforce singleton property")]
     public static MenuManager instance = null;
@@ -28,14 +28,12 @@ public class MenuManager : MonoBehaviour
     */
     private void Awake() 
     { 
-        SetupPanels();
+       
 		canvas = GetComponent<Canvas>();
         if(SceneManager.GetActiveScene().name == "MainMenu")
         {
             canvas.enabled = true;
-        }else
-        {
-            DontDestroyOnLoad(this);
+            Cursor.lockState = CursorLockMode.Confined;
         }
         
 
@@ -45,6 +43,15 @@ public class MenuManager : MonoBehaviour
         }else if (instance != this)
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void Start() 
+    {
+        SetupPanels();
+        if(canvas.enabled == true)
+        {
+            Cursor.lockState = CursorLockMode.Confined;
         }
     }
 
@@ -59,17 +66,20 @@ public class MenuManager : MonoBehaviour
             GoToPrevious();
         }
 
-        if((OVRInput.GetDown(OVRInput.Button.Start) || Input.GetKeyDown(KeyCode.Escape)) && SceneManager.GetActiveScene().name != "MainMenu" )
+        if((OVRInput.GetDown(OVRInput.Button.Start) || Input.GetKeyDown(KeyCode.Escape)) && SceneManager.GetActiveScene().name != "MainMenu")
 		{
 			if(canvas.enabled)
 			{
-				canvas.enabled = false;
+				Cursor.lockState = CursorLockMode.Locked;
+                canvas.enabled = false;
                 //timescale pauses or resumes the gameplay
                 Time.timeScale = 1;
 			}
 			else
 			{
-				canvas.enabled = true;
+                Cursor.lockState = CursorLockMode.Confined;
+                GameObject.FindObjectOfType<Player>().UpdateStats();
+                canvas.enabled = true;
                 Time.timeScale = 0;
 			}
 		}

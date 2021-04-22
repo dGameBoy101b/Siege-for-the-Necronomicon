@@ -12,45 +12,55 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
    
-    [HideInInspector]
-    public int[] health;
-    [HideInInspector]
+
     public int[] highScore;
-    [HideInInspector]
+    
     public bool[] completed;
-    [HideInInspector] 
+    
     public float[] timeLeft;
-    [HideInInspector]
+    
     public string[] scenes;
-    [HideInInspector]
+    
     public string currentscene;
-    [HideInInspector]
+    
     public int size;
-    [HideInInspector]
+    
     public int j;
     
+    [Tooltip("a static Player variable that is used to enforce singleton property")]
+    public static Player instance = null;
+
     // Start is called before the first frame update
     void Awake()
     {
+        //singleton pr
+        if(instance == null)
+        {
+            instance = this;
+        }else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+        
         ReadScenes();
         currentscene = SceneManager.GetActiveScene().name;
         Debug.Log(currentscene);
 
-        health = new int[size];
+
         highScore = new int[size];
         completed = new bool[size];
         timeLeft = new float[size];
+    }
+    
+    private void Start() 
+    {
+        //DontDestroyOnLoad(this);
+        LoadPlayer();
+    }
 
-        for(int i = 0; i < size; i++)
-        {
-            health[i] = 3;
-            highScore[i] = 0;
-            completed[i] = false;
-            timeLeft[i] = 10f;
-        }
 
-        this.LoadPlayer();
-
+    public void UpdateStats()
+    { 
         for(int i = 0; i < size; i++)
         {
             if(scenes[i] == currentscene)
@@ -58,18 +68,17 @@ public class Player : MonoBehaviour
                 j = i;
             }
         }
-    }
 
-    // Update is called once per frame
-    void Update()
-    { 
-        health[j] = GameObject.FindObjectOfType<Health>().currentHealth;
         timeLeft[j] = GameObject.FindObjectOfType<UITimer>().timeRemaining;
         if(timeLeft[j] == 0)
         {
             completed[j] = true;
         }
-        highScore[j] = GameObject.FindObjectOfType<ScoreSystem>().currentScore;
+        if( GameObject.FindObjectOfType<ScoreSystem>().currentScore > highScore[j])
+        {
+            highScore[j] = GameObject.FindObjectOfType<ScoreSystem>().currentScore;
+        }
+        
     }
 
     /**
@@ -123,13 +132,17 @@ public class Player : MonoBehaviour
     public void LoadPlayer()
     {
         PlayerData data = SaveLoad.LoadData();
-
-        for(int i = 0; i < size; i++)
+        if(data != null)
         {
-            health[i] = data.health[i];
-            highScore[i] = data.highScore[i];
-            completed[i] = data.completed[i];
-            timeLeft[i] = data.timeLeft[i];
+            for(int i = 0; i < size; i++)
+            {
+                if(data.highScore[i] > highScore[i])
+                {
+                    highScore[i] = data.highScore[i];
+                }
+                completed[i] = data.completed[i];
+                timeLeft[i] = data.timeLeft[i];
+            }
         }
     }
 }

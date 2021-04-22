@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class LevelSelector : MonoBehaviour
 {
     
@@ -11,14 +12,10 @@ public class LevelSelector : MonoBehaviour
     {
         //load data and get index for the level to load
         int i = GameObject.FindObjectOfType<Player>().FindIndex(levelName);
+        GameObject.FindObjectOfType<Player>().SavePlayer();
         SceneManager.LoadScene(levelName);
-
-        //should set the game variables to the save instances but doesnt work
-        GameObject.FindObjectOfType<Player>().LoadPlayer();
-        GameObject.FindObjectOfType<Health>().currentHealth = GameObject.FindObjectOfType<Player>().health[i];
-        GameObject.FindObjectOfType<ScoreSystem>().currentScore = GameObject.FindObjectOfType<Player>().highScore[i];
-        GameObject.FindObjectOfType<UITimer>().timeRemaining = GameObject.FindObjectOfType<Player>().timeLeft[i];
-
+        Time.timeScale = 1;
+        GameObject.FindObjectOfType<MenuManager>().canvas.enabled = false;
     }
     
 }

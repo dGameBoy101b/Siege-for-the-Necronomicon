@@ -10,8 +10,13 @@ using UnityEngine.UI;
  */
 public class UITimer : MonoBehaviour
 {
+	[Tooltip("The prefab that spawns waves of projectiles.")]
 	public WaveManager WAVE_MANAGER;
+
+	[Tooltip("The amount of time left on the timer (seconds).")]
 	public float timeRemaining;
+
+	[Tooltip("The text object the timer is displayed on.")]
 	public Text timeText;
 
 	[HideInInspector]

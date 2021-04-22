@@ -203,6 +203,9 @@ public sealed class WaveManager : MonoBehaviour
 		this.checkDelay();
 		this.calcTotalWeight();
 		this.active_attacks = new List<List<ProjectileBase>>();
+
+		PLAYER_HEALTH = GameObject.FindObjectOfType<Health>();
+		PLAYER_SCORE = GameObject.FindObjectOfType<ScoreSystem>();
 	}
 	
 	private void OnAwake()
