@@ -40,20 +40,17 @@ public static class SaveLoad
     */
     public static PlayerData LoadData()
     {
-       
-        FileStream stream = new FileStream(path, FileMode.Open);
-
-        if(File.Exists(path) && stream.Length != 0)
+        if(File.Exists(path))
         {
+            FileStream stream = new FileStream(path, FileMode.Open);
             BinaryFormatter formatter = new BinaryFormatter();
             PlayerData data = formatter.Deserialize(stream) as PlayerData;
             stream.Close();
             return(data);
         }else
         {
-            Debug.LogError("Save file not found in " + path);
+            Debug.LogWarning("Save file not found in " + path);
             //PlayerData data = new PlayerData();
-            stream.Close();
             return(null);
         }
     }
