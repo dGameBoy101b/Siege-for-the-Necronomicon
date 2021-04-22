@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class LevelSelector : MonoBehaviour
 {
     
@@ -13,6 +14,8 @@ public class LevelSelector : MonoBehaviour
         int i = GameObject.FindObjectOfType<Player>().FindIndex(levelName);
         GameObject.FindObjectOfType<Player>().SavePlayer();
         SceneManager.LoadScene(levelName);
+        Time.timeScale = 1;
+        GameObject.FindObjectOfType<MenuManager>().canvas.enabled = false;
     }
     
 }

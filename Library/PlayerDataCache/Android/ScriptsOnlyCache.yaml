@@ -319,6 +319,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13952}
     - Class: 114
+      Script: {instanceID: 14088}
+    - Class: 114
       Script: {instanceID: 14184}
     - Class: 114
       Script: {instanceID: 14490}
@@ -453,6 +455,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13822}
     - Class: 114
       Script: {instanceID: 13952}
+    - Class: 114
+      Script: {instanceID: 14088}
     - Class: 114
       Script: {instanceID: 14184}
     - Class: 114
@@ -2037,7 +2041,7 @@ ScriptsOnlyBuild:
     className: DebugUIBuilder
   - hash:
       serializedVersion: 2
-      Hash: ca5e6a8f48d354d3e30342e1ccd336f3
+      Hash: 1b2d640c65e7cc956b80cee659b84647
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MenuManager

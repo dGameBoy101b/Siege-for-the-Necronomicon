@@ -2645,6 +2645,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 955413154939176894, guid: ffd8c5d3353ed284fa54483cfcb0bd29,
         type: 3}
+      propertyPath: SLASH_OFFSET.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 955413154939176894, guid: ffd8c5d3353ed284fa54483cfcb0bd29,
+        type: 3}
       propertyPath: SLASH_OFFSET.y
       value: 0
       objectReference: {fileID: 0}
@@ -2702,6 +2707,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115493426025221271, guid: ffd8c5d3353ed284fa54483cfcb0bd29,
+        type: 3}
+      propertyPath: PLATFORMS.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115493426025221271, guid: ffd8c5d3353ed284fa54483cfcb0bd29,
+        type: 3}
+      propertyPath: PLATFORMS.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115493426025221271, guid: ffd8c5d3353ed284fa54483cfcb0bd29,
+        type: 3}
+      propertyPath: PLATFORMS.Array.data[3]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115493426025221271, guid: ffd8c5d3353ed284fa54483cfcb0bd29,
+        type: 3}
+      propertyPath: PLATFORMS.Array.data[4]
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115493426025221271, guid: ffd8c5d3353ed284fa54483cfcb0bd29,
+        type: 3}
+      propertyPath: PLATFORMS.Array.data[5]
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4972514100821167999, guid: ffd8c5d3353ed284fa54483cfcb0bd29,
         type: 3}

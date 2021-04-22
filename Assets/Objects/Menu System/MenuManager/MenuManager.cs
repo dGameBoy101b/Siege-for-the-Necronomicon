@@ -18,7 +18,7 @@ public class MenuManager : MonoBehaviour
     private List<Panel> panelHistory = new List<Panel>();
 
     [Tooltip("The menu managers canvas component which allows the menu to be opened or closed with the menu or escape key")]
-	private Canvas canvas;
+	public Canvas canvas;
 
     [Tooltip("a static menumanager variable that is used to enforce singleton property")]
     public static MenuManager instance = null;
