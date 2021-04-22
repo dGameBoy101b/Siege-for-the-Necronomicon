@@ -23,6 +23,9 @@ public class Health : MonoBehaviour
 	[Tooltip("The image that displays at the game over screen.")]
 	public Image gameOver;
 
+	[Tooltip("The player's emergency shield")]
+	public EmergencyShield EMERGENCY_SHIELD;
+
 	[HideInInspector]
 	public int currentHealth;
 
@@ -58,6 +61,7 @@ public class Health : MonoBehaviour
 		currentHealth -= damage;
 		PlayerDead();
 		UpdateGUI();
+		EMERGENCY_SHIELD.ActivateInvincibility();
 	}
 	
 	/** 
