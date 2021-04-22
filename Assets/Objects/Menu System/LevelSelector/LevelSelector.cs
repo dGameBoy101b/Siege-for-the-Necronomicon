@@ -16,6 +16,9 @@ public class LevelSelector : MonoBehaviour
         SceneManager.LoadScene(levelName);
         Time.timeScale = 1;
         GameObject.FindObjectOfType<MenuManager>().canvas.enabled = false;
+
+        //Added by Allan for Audio Manager
+        FindObjectOfType<AudioManager>().Play("Level FX");
     }
     
 }

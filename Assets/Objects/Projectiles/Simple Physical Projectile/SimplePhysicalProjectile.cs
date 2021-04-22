@@ -59,6 +59,8 @@ public sealed class SimplePhysicalProjectile : PhysicalProjectileBase
 	 */
 	public override void attack()
 	{
+		//Added by Allan for Audio Reasons
+		FindObjectOfType<AudioManager>().Play("Hurt");
 		this.PLAYER_HEALTH.TakeDamage(this.DAMAGE);
 		Object.Destroy(this.gameObject);
 	}
