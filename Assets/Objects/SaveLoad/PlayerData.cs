@@ -41,7 +41,7 @@ public class PlayerData
         }
     }
 
-    public PlayerData()
+    /*public PlayerData()
     {
         int size = GameObject.FindObjectOfType<Player>().size;
         for(int i = 0; i < size; i++)
@@ -50,7 +50,7 @@ public class PlayerData
             completed[i] = false;
             timeLeft[i] = 10f;
         }
-    }
+    }*/
 
     /**
     * a function that returns the index of a specific scene

@@ -50,8 +50,6 @@ public class Player : MonoBehaviour
         highScore = new int[size];
         completed = new bool[size];
         timeLeft = new float[size];
-
-        
     }
     
     private void Start() 
@@ -60,7 +58,7 @@ public class Player : MonoBehaviour
         LoadPlayer();
     }
 
-    // Update is called once per frame
+
     public void UpdateStats()
     { 
         for(int i = 0; i < size; i++)
@@ -76,7 +74,11 @@ public class Player : MonoBehaviour
         {
             completed[j] = true;
         }
-        highScore[j] = GameObject.FindObjectOfType<ScoreSystem>().currentScore;
+        if( GameObject.FindObjectOfType<ScoreSystem>().currentScore > highScore[j])
+        {
+            highScore[j] = GameObject.FindObjectOfType<ScoreSystem>().currentScore;
+        }
+        
     }
 
     /**
@@ -134,7 +136,7 @@ public class Player : MonoBehaviour
         {
             if(data.highScore[i] > highScore[i])
             {
-            highScore[i] = data.highScore[i];
+                highScore[i] = data.highScore[i];
             }
             completed[i] = data.completed[i];
             timeLeft[i] = data.timeLeft[i];

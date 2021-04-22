@@ -11,6 +11,7 @@ public class LevelSelector : MonoBehaviour
     {
         //load data and get index for the level to load
         int i = GameObject.FindObjectOfType<Player>().FindIndex(levelName);
+        GameObject.FindObjectOfType<Player>().SavePlayer();
         SceneManager.LoadScene(levelName);
     }
     

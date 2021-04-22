@@ -28,11 +28,12 @@ public class MenuManager : MonoBehaviour
     */
     private void Awake() 
     { 
-        SetupPanels();
+       
 		canvas = GetComponent<Canvas>();
         if(SceneManager.GetActiveScene().name == "MainMenu")
         {
             canvas.enabled = true;
+            Cursor.lockState = CursorLockMode.Confined;
         }
         
 
@@ -42,6 +43,15 @@ public class MenuManager : MonoBehaviour
         }else if (instance != this)
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void Start() 
+    {
+        SetupPanels();
+        if(canvas.enabled == true)
+        {
+            Cursor.lockState = CursorLockMode.Confined;
         }
     }
 
@@ -56,7 +66,7 @@ public class MenuManager : MonoBehaviour
             GoToPrevious();
         }
 
-        if((OVRInput.GetDown(OVRInput.Button.Start) || Input.GetKeyDown(KeyCode.Escape)) && SceneManager.GetActiveScene().name != "MainMenu" )
+        if((OVRInput.GetDown(OVRInput.Button.Start) || Input.GetKeyDown(KeyCode.Escape)) && SceneManager.GetActiveScene().name != "MainMenu")
 		{
 			if(canvas.enabled)
 			{
@@ -67,8 +77,8 @@ public class MenuManager : MonoBehaviour
 			}
 			else
 			{
-				GameObject.FindObjectOfType<Player>().UpdateStats();
                 Cursor.lockState = CursorLockMode.Confined;
+                GameObject.FindObjectOfType<Player>().UpdateStats();
                 canvas.enabled = true;
                 Time.timeScale = 0;
 			}
