@@ -180,6 +180,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PCUI
       objectReference: {fileID: 0}
+    - target: {fileID: 5580203992570655878, guid: 72ed81bbcd551cc46831b7ddabaf2d04,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72ed81bbcd551cc46831b7ddabaf2d04, type: 3}
 --- !u!1 &6776411530847715677 stripped

@@ -7,7 +7,7 @@ public sealed class SwordSlash : MonoBehaviour
 	/**
 	 * The collision layer names that sword slashes should be destroyed against.
 	 */
-	public static string[] DESTROY_LAYERS {get;} = {"Default", "Magical Projectile"};
+	public static string[] DESTROY_LAYERS {get;} = {"Default", "Physical Projectile"};
 	
 	[SerializeField()]
 	[Tooltip("The speed in units per second this sword slash moves forward.")]
