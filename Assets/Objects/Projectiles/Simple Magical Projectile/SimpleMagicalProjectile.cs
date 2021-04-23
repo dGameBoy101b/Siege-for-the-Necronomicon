@@ -56,6 +56,9 @@ public sealed class SimpleMagicalProjectile : MagicalProjectileBase
 	
 	public override void attack()
 	{
+		//Added by Allan for Audio reasons
+		FindObjectOfType<AudioManager>().Play("Hurt");
+
 		this.PLAYER_HEALTH?.TakeDamage(DAMAGE);
 		Object.Destroy(this.gameObject);
 	}
