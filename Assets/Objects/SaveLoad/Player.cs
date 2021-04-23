@@ -123,21 +123,24 @@ public class Player : MonoBehaviour
 	{
 		SaveLoad.SaveData(this);
 	}
-
+	
 	/**
 	* calls the saveload load function and sets the variables
 	*/
 	public void LoadPlayer()
 	{
 		PlayerData data = SaveLoad.LoadData();
-		for(int i = 0; i < size; i++)
+		if(data != null)
 		{
-			if(data.highScore[i] > highScore[i])
+			for(int i = 0; i < size; i++)
 			{
-				highScore[i] = data.highScore[i];
+				if(data.highScore[i] > highScore[i])
+				{
+					highScore[i] = data.highScore[i];
+				}
+				completed[i] = data.completed[i];
+				timeLeft[i] = data.timeLeft[i];
 			}
-			completed[i] = data.completed[i];
-			timeLeft[i] = data.timeLeft[i];
 		}
 	}
 }

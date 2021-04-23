@@ -32,6 +32,9 @@ public class Health : MonoBehaviour
 	[Tooltip("The text that displays the remaining time on the fail menu.")]
 	public ValueDisplay TIME_DISPLAY;
 
+	[Tooltip("The player's emergency shield")]
+	public EmergencyShield EMERGENCY_SHIELD;
+
 	[HideInInspector]
 	public int currentHealth;
 
@@ -74,6 +77,10 @@ public class Health : MonoBehaviour
 		if (this.IsDead)
 		{
 			PlayerDead();
+		}
+		else
+		{
+			EMERGENCY_SHIELD.ActivateInvincibility();
 		}
 	}
 	
