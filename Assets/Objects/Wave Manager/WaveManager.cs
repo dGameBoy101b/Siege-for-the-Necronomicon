@@ -188,7 +188,7 @@ public sealed class WaveManager : MonoBehaviour
 		{
 			foreach (ProjectileBase proj in attack)
 			{
-				if (proj.gameObject != null)
+				if (proj != null)
 				{
 					UnityEngine.Object.Destroy(proj.gameObject);
 				}

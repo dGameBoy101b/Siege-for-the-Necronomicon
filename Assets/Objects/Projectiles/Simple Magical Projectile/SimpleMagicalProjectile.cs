@@ -5,10 +5,12 @@ using UnityEngine;
 /**
  * @author Rhys Mader 33705134
  * @date 27/03/2021
- * A simple magical projectile that moves in a straight line towards a target position at a constant velocity.
+ * A simple projectile that moves in a straight line towards a target position at a constant velocity.
  */
 public sealed class SimpleMagicalProjectile : MagicalProjectileBase
 {
+	[Header("Projectile Attributes")]
+	
 	[SerializeField()]
 	[Tooltip("The amount of damage to do to the player when hit.")]
 	[Min(0)]
@@ -29,7 +31,7 @@ public sealed class SimpleMagicalProjectile : MagicalProjectileBase
 	public float SPEED;
 	
 	/**
-	 * Rotate this simple magical projectile to face the target.
+	 * Rotate this simple projectile to face the target.
 	 */
 	private void faceTarget()
 	{
@@ -37,7 +39,7 @@ public sealed class SimpleMagicalProjectile : MagicalProjectileBase
 	}
 	
 	/**
-	 * Move this simple magical projectile forwards.
+	 * Move this simple projectile forwards.
 	 * @param t The float number of seconds since this function was called.
 	 */
 	private void moveForward(float t)
@@ -46,21 +48,21 @@ public sealed class SimpleMagicalProjectile : MagicalProjectileBase
 	}
 	
 	/**
-	 * Destroy this projectile when it hits the gauntlet.
+	 * Attack the player when hit.
 	 */
-	public override void hit()
-	{
-		this.PLAYER_SCORE?.AddScore(this.POINTS);
-		Object.Destroy(this.gameObject);
-	}
-	
 	public override void attack()
 	{
-		//Added by Allan for Audio reasons
-		FindObjectOfType<AudioManager>().Play("Hurt");
-
-		this.PLAYER_HEALTH?.TakeDamage(DAMAGE);
-		Object.Destroy(this.gameObject);
+		this.PLAYER_HEALTH.TakeDamage(DAMAGE);
+		base.attack();
+	}
+	
+	/**
+	 * Destroy this projectile when it hits the gauntlet.
+	 */
+	public override void defeat()
+	{
+		this.PLAYER_SCORE.AddScore(this.POINTS);
+		base.defeat();
 	}
 	
 	private void Start()

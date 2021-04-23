@@ -165,6 +165,7 @@ public sealed class SingleSimpleAttack : AttackBase
 		proj.TARGET = player_pos;
 		proj.PLAYER_HEALTH = player_health;
 		proj.PLAYER_SCORE = player_score;
+		proj.spawn();
 		return proj;
 	}
 	
@@ -183,6 +184,7 @@ public sealed class SingleSimpleAttack : AttackBase
 		proj.TARGET = player_pos;
 		proj.PLAYER_HEALTH = player_health;
 		proj.PLAYER_SCORE = player_score;
+		proj.spawn();
 		return proj;
 	}
 	

@@ -1,21 +1,18 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/**
- * @author Rhys Mader 33705134
- * @date 27/03/2021
- * A simple physical projectile that moves in a straight line towards a target position at a constant velocity.
- */
-public sealed class SimplePhysicalProjectile : PhysicalProjectileBase
+public class SimplePhysicalProjectile : PhysicalProjectileBase
 {
+	[Header("Projectile Attributes")]
+	
 	[SerializeField()]
 	[Tooltip("The amount of damage to do to the player when hit.")]
 	[Min(0)]
 	public int DAMAGE;
 	
 	[SerializeField()]
-	[Tooltip("The number of points to add to the player's score when this projectile is defeated.")]
+	[Tooltip("The number of point to add to the score when this simple physical projectile is slashed.")]
 	[Min(0)]
 	public int POINTS;
 	
@@ -46,23 +43,21 @@ public sealed class SimplePhysicalProjectile : PhysicalProjectileBase
 	}
 	
 	/**
-	 * Destroy this projectile when it is hit by a sword slash.
-	 */
-	public override void hit()
-	{
-		this.PLAYER_SCORE.AddScore(this.POINTS);
-		Object.Destroy(this.gameObject);
-	}
-	
-	/**
-	 * The damage the player and destroy itself when this projectile hits the player.
+	 * Attack the player when hit.
 	 */
 	public override void attack()
 	{
-		//Added by Allan for Audio Reasons
-		FindObjectOfType<AudioManager>().Play("Hurt");
-		this.PLAYER_HEALTH.TakeDamage(this.DAMAGE);
-		Object.Destroy(this.gameObject);
+		this.PLAYER_HEALTH.TakeDamage(DAMAGE);
+		base.attack();
+	}
+	
+	/**
+	 * Destroy this simple physical projectile when it hits a sword slash.
+	 */
+	public override void defeat()
+	{
+		this.PLAYER_SCORE.AddScore(this.POINTS);
+		base.defeat();
 	}
 	
 	private void Start()

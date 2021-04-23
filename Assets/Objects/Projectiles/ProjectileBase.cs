@@ -10,36 +10,21 @@ using UnityEngine;
 public abstract class ProjectileBase : MonoBehaviour
 {
 	/**
-	 * The names of the collision layers that should destroy projectiles when they collide.
+	 * The names of the collision layers that this projectile should attack.
 	 */
-	public static string[] DESTROY_LAYERS {get;} = {"Default"};
+	public string[] ATTACK_LAYERS {get;} = {"Player"};
 	
 	/**
-	 * The name of the collision layers that projectiles should attack.
+	 * The names of the collision layers that this projectile should be destroyed by.
 	 */
-	public static string[] ATTACK_LAYERS {get;} = {"Player"};
+	public string[] DESTROY_LAYERS {get;} = {"Default"};
 	
 	/**
-	 * Test if the given collider is part of a collision layer projectiles should destroy themselves against.
-	 * @param col The collider to test.
-	 * @return True if the given collider should destroy projectiles, false otherwise.
+	 * The names of the collision layers that this projectile should be defeated by.
 	 */
-	public static bool shouldBeDestroyed(Collider col)
-	{
-		return (LayerMask.GetMask(ProjectileBase.DESTROY_LAYERS) 
-		        & LayerMask.GetMask(LayerMask.LayerToName(col.gameObject.layer))) != 0;
-	}
+	public abstract string[] DEFEAT_LAYERS {get;}
 	
-	/**
-	 * Test if the given collider is part of a collision layer projectiles should attack.
-	 * @param col The collider to test.
-	 * @return True if the given collider should destroy projectiles, false otherwise.
-	 */
-	public static bool shouldAttack(Collider col)
-	{
-		return (LayerMask.GetMask(ProjectileBase.ATTACK_LAYERS) 
-		        & LayerMask.GetMask(LayerMask.LayerToName(col.gameObject.layer))) != 0;
-	}
+	[Header("Player Information")]
 	
 	[SerializeField()]
 	[Tooltip("The player's health.")]
@@ -49,42 +34,150 @@ public abstract class ProjectileBase : MonoBehaviour
 	[Tooltip("The player's score.")]
 	public ScoreSystem PLAYER_SCORE;
 	
+	[Header("Sound Effects")]
+	
+	[SerializeField()]
+	[Tooltip("The sounds played when this projectile is spawned.")]
+	public AudioSource[] SPAWN_SOUNDS;
+	
+	[SerializeField()]
+	[Tooltip("The sounds played when this projectile attacks.")]
+	public AudioSource[] ATTACK_SOUNDS;
+	
+	[SerializeField()]
+	[Tooltip("The sounds played when this projectile is defeated.")]
+	public AudioSource[] DEFEAT_SOUNDS;
+	
+	[SerializeField()]
+	[Tooltip("The sounds played when this projectile is destroyed.")]
+	public AudioSource[] DESTROY_SOUNDS;
+	
 	/**
-	 * Ensure all colliders of this projectile are triggers.
+	 * Test if the given collider is part of a collision layer this projectile should be destroyed by.
+	 * @param col The collider to test.
+	 * @return True if the given collider should destroy this projectile, false otherwise.
 	 */
-	private void setTriggers()
+	public bool shouldBeDestroyed(Collider col)
 	{
-		foreach (Collider col in this.gameObject.GetComponents<Collider>())
+		return (LayerMask.GetMask(this.DESTROY_LAYERS) 
+		        & LayerMask.GetMask(LayerMask.LayerToName(col.gameObject.layer))) != 0;
+	}
+	
+	/**
+	 * Test if the given collider is part of a collision layer projectiles should attack.
+	 * @param col The collider to test.
+	 * @return True if the given collider should destroy projectiles, false otherwise.
+	 */
+	public bool shouldAttack(Collider col)
+	{
+		return (LayerMask.GetMask(this.ATTACK_LAYERS) 
+		        & LayerMask.GetMask(LayerMask.LayerToName(col.gameObject.layer))) != 0;
+	}
+	
+	/**
+	 * Test if the given collider is part of a collision layer this projectile should be defeated by.
+	 * @param col The collider to test.
+	 * @return True if the given collider should defeat this projectile, false otherwise.
+	 */
+	public bool shouldBeDefeated(Collider col)
+	{
+		return (LayerMask.GetMask(this.DEFEAT_LAYERS) 
+		        & LayerMask.GetMask(LayerMask.LayerToName(col.gameObject.layer))) != 0;
+	}
+	
+	/**
+	 * Play all the sounds associated with spawning this projectile.
+	 */
+	protected void playSpawnSounds()
+	{
+		foreach (AudioSource aud in this.SPAWN_SOUNDS)
 		{
-			col.isTrigger = true;
+			aud.Play();
 		}
 	}
 	
 	/**
-	 * Set the collision layer of this projectile.
+	 * Play all the sounds associated with this projectile attacking.
 	 */
-	protected abstract void setCollisionLayer();
+	protected void playAttackSounds()
+	{
+		foreach (AudioSource aud in this.ATTACK_SOUNDS)
+		{
+			aud.Play();
+		}
+	}
+	
+	/**
+	 * Play all the sounds associated with defeating this projectile.
+	 */
+	protected void playDefeatSounds()
+	{
+		foreach (AudioSource aud in this.DEFEAT_SOUNDS)
+		{
+			aud.Play();
+		}
+	}
+	
+	/**
+	 * Play all the sounds associated with destroying this projectile.
+	 */
+	protected void playDestorySounds()
+	{
+		foreach (AudioSource aud in this.DESTROY_SOUNDS)
+		{
+			aud.Play();
+		}
+	}
+	
+	/**
+	 * The function that should be executed when this projectile is spawned.
+	 */
+	public virtual void spawn()
+	{
+		this.gameObject.SetActive(true);
+		this.playSpawnSounds();
+	}
 	
 	/**
 	 * The function executed when this projectile hits the player.
 	 */
-	public abstract void attack();
+	public virtual void attack()
+	{
+		this.playAttackSounds();
+		Object.Destroy(this.gameObject);
+	}
+	
+	/**
+	 * The function executed when this projectile is successfully defeated by the player.
+	 */
+	public virtual void defeat()
+	{
+		this.playDefeatSounds();
+		Object.Destroy(this.gameObject);
+	}
+	
+	/**
+	 * The function executed when this projectile is destroyed by the terrain or the emergency shield.
+	 */
+	public virtual void destroy()
+	{
+		this.playDestorySounds();
+		Object.Destroy(this.gameObject);
+	}
 	
 	protected virtual void OnTriggerEnter(Collider col)
 	{
-		if (ProjectileBase.shouldAttack(col))
+		if (this.shouldAttack(col))
 		{
 			this.attack();
 		}
-		if (ProjectileBase.shouldBeDestroyed(col))
+		if (this.shouldBeDefeated(col))
 		{
-			Object.Destroy(this.gameObject);
+			this.defeat();
 		}
-	}
-	
-	protected virtual void Awake()
-	{
-		this.setCollisionLayer();
-		this.setTriggers();
+		if (this.shouldBeDestroyed(col))
+		{
+			this.destroy();
+		}
 	}
 }

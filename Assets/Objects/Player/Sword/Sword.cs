@@ -56,7 +56,6 @@ public sealed class Sword : EquipmentBase
 	
 	private void Update()
 	{
-		Debug.Log("hi");
 		if ((OVRInput.GetDominantHand() == OVRInput.Handedness.LeftHanded && OVRInput.GetDown(this.SLASH_BUTTON, OVRInput.Controller.LHand))
 			|| (OVRInput.GetDominantHand() == OVRInput.Handedness.RightHanded && OVRInput.GetDown(this.SLASH_BUTTON, OVRInput.Controller.RHand))
 			|| (OVRInput.GetDominantHand() == OVRInput.Handedness.Unsupported && OVRInput.GetDown(this.SLASH_BUTTON, OVRInput.Controller.Active)))
