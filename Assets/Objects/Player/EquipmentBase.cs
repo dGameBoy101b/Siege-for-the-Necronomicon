@@ -43,7 +43,7 @@ public abstract class EquipmentBase : MonoBehaviour
 		this.transform.SetParent(hand, false);
 	}
 	
-	protected void Start()
+	protected virtual void Start()
 	{
 		this.updateHandedness();
 	}

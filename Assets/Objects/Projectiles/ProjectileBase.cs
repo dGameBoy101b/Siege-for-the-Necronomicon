@@ -72,10 +72,8 @@ public abstract class ProjectileBase : MonoBehaviour
 	
 	protected virtual void OnTriggerEnter(Collider col)
 	{
-		Debug.Log("trigger enter: " + col.gameObject.layer.ToString());
 		if (ProjectileBase.shouldAttack(col))
 		{
-			Debug.Log("attack!");
 			this.attack();
 		}
 		if (ProjectileBase.shouldBeDestroyed(col))

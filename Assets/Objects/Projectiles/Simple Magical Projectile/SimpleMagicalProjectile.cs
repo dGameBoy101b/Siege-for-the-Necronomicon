@@ -51,7 +51,6 @@ public sealed class SimpleMagicalProjectile : MagicalProjectileBase
 	public override void hit()
 	{
 		this.PLAYER_SCORE?.AddScore(this.POINTS);
-		Debug.Log(this.PLAYER_SCORE);
 		Object.Destroy(this.gameObject);
 	}
 	
