@@ -197,6 +197,36 @@ public sealed class WaveManager : MonoBehaviour
 		this.active_attacks.Clear();
 	}
 	
+	/**
+	 * Pause all currently active attacks and projectiles.
+	 */
+	public void pauseAttacks()
+	{
+		Time.timeScale = 0;
+		foreach (List<ProjectileBase> attack in this.active_attacks)
+		{
+			foreach (ProjectileBase proj in attack)
+			{
+				proj.pause();
+			}
+		}
+	}
+	
+	/**
+	 * Unpause all currently active attacks and projectiles.
+	 */
+	public void unpauseAttacks()
+	{
+		Time.timeScale = 1;
+		foreach (List<ProjectileBase> attack in this.active_attacks)
+		{
+			foreach (ProjectileBase proj in attack)
+			{
+				proj.unpause();
+			}
+		}
+	}
+	
 	private void Awake()
 	{
 		this.checkAttacks();

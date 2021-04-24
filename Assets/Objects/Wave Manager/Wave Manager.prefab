@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PLAYER: {fileID: 0}
+  PLAYER_HEALTH: {fileID: 0}
+  PLAYER_SCORE: {fileID: 0}
   MIN_DELAY: 0.1
   MAX_DELAY: 0.5
   MAX_ACTIVE: 1

@@ -165,6 +165,44 @@ public abstract class ProjectileBase : MonoBehaviour
 		Object.Destroy(this.gameObject);
 	}
 	
+	/**
+	 * Return all the audio sources associated with this projectile.
+	 */
+	private AudioSource[] allSounds()
+	{
+		List<AudioSource> auds = new List<AudioSource>();
+		auds.AddRange(this.SPAWN_SOUNDS);
+		auds.AddRange(this.ATTACK_SOUNDS);
+		auds.AddRange(this.DESTROY_SOUNDS);
+		auds.AddRange(this.DEFEAT_SOUNDS);
+		return auds.ToArray();
+	}
+	
+	/**
+	 * Pause this projectile.
+	 */
+	public virtual void pause()
+	{
+		foreach (AudioSource aud in this.allSounds())
+		{
+			if (aud.isPlaying)
+			{
+				aud.Pause();
+			}
+		}
+	}
+	
+	/**
+	 * Unpause this projectile.
+	 */
+	public virtual void unpause()
+	{
+		foreach (AudioSource aud in this.allSounds())
+		{
+			aud.UnPause();
+		}
+	}
+	
 	protected virtual void OnTriggerEnter(Collider col)
 	{
 		if (this.shouldAttack(col))

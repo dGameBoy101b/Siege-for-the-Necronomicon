@@ -11,47 +11,54 @@ using UnityEngine;
 
 public static class SaveLoad
 {
-    //save path, persistentDataPath gives a path on any computer to a data file
-    private static string path = Application.persistentDataPath + "/player.u";
-    
-    /**
-    *@param player this is the class that is going to be saved
-    * this fucntion saves the playerdata to a consistent filepath
-    */
-    //change param to class that has the players data to save
-    public static void SaveData(Player player)
-    {
-        //pass the player into the playerdata constructor
-        PlayerData data = new PlayerData(player);
-        
-        BinaryFormatter formatter = new BinaryFormatter();
-    
-        FileStream stream = new FileStream(path, FileMode.Create);
-    
-        formatter.Serialize(stream, data);
-        stream.Close();
+	/**
+	 * Save the given data to the given file
+	 * @param rel_path The string path to the file to save to.
+	 * @param data The level data to save.
+	 */
+	public static void saveData(string rel_path, LevelData data)
+	{
+		LevelData old_data = SaveLoad.loadData(rel_path);
+		if (old_data == null)
+		{
+			old_data = data;
+		}
+		if (old_data.isComplete() && old_data.HighScore < data.HighScore)
+		{
+			old_data.HighScore = data.HighScore;
+		}
+		if (!old_data.isComplete() && old_data.TimeLeft > data.TimeLeft)
+		{
+			old_data.TimeLeft = data.TimeLeft;
+		}
+		FileStream stream = new FileStream(SaveLoad.absPath(rel_path), FileMode.Create);
+		new BinaryFormatter().Serialize(stream, data);
+		stream.Close();
+	}
 
-        Debug.Log("file saved");
-    }
-
-    /**
-    *@return PlayerData the data that has been loaded
-    * this function loads the saved data from the consistent filepath
-    */
-    public static PlayerData LoadData()
-    {
-        if(File.Exists(path))
-        {
-            FileStream stream = new FileStream(path, FileMode.Open);
-            BinaryFormatter formatter = new BinaryFormatter();
-            PlayerData data = formatter.Deserialize(stream) as PlayerData;
-            stream.Close();
-            return(data);
-        }else
-        {
-            Debug.LogWarning("Save file not found in " + path);
-            //PlayerData data = new PlayerData();
-            return(null);
-        }
-    }
+	/**
+	* Loads the saved data from the given path.
+	* @param rel_path The string path to the file to load.
+	* @return LevelData The data that has been loaded, null if file not found.
+	*/
+	public static LevelData loadData(string rel_path)
+	{
+		string abs_path = SaveLoad.absPath(rel_path);
+		if (File.Exists(abs_path))
+		{
+			return null;
+		}
+		FileStream stream = new FileStream(abs_path, FileMode.Open);
+		LevelData data = new BinaryFormatter().Deserialize(stream) as LevelData;
+		stream.Close();
+		return data;
+	}
+	
+	/**
+	 * Convert the given relative path into an absolute path.
+	 */
+	private static string absPath(string rel_path)
+	{
+		return Application.persistentDataPath + rel_path;
+	}
 }
