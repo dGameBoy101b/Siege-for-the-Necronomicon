@@ -76,47 +76,49 @@ public sealed class SingleSimpleAttack : AttackBase
 	 * @param player_score The score of the player.
 	 * @return The list of spawned projectiles.
 	 */
-	public override List<ProjectileBase> spawn(Vector3 player_pos, Quaternion player_rot, Health player_health, ScoreSystem player_score)
+	public override List<ProjectileBase> spawn(System.Random rng, Vector3 player_pos, Quaternion player_rot, Health player_health, ScoreSystem player_score)
 	{
 		List<ProjectileBase> projectiles = new List<ProjectileBase>(1);
-		System.Random rand = new System.Random();
-		if (rand.Next(2) == 0)
+		if (rng.Next(2) == 0)
 		{
-			projectiles.Add(this.spawnMagical(player_pos, player_rot, player_health, player_score));
+			projectiles.Add(this.spawnMagical(rng, player_pos, player_rot, player_health, player_score));
 		}
 		else
 		{
-			projectiles.Add(this.spawnPhysical(player_pos, player_rot, player_health, player_score));
+			projectiles.Add(this.spawnPhysical(rng, player_pos, player_rot, player_health, player_score));
 		}
 		return projectiles;
 	}
 	
 	/**
 	 * Randomly generate a speed for a new projectile.
+	 * @param rng The random number generator used for all randomisation.
 	 * @return The float random speed of a projectile in units per second.
 	 */
-	private float randSpeed()
+	private float randSpeed(System.Random rng)
 	{
-		return (float)(new System.Random().NextDouble()) * (this.MAX_SPEED - this.MIN_SPEED) + this.MIN_SPEED;
+		return (float)(rng.NextDouble()) * (this.MAX_SPEED - this.MIN_SPEED) + this.MIN_SPEED;
 	}
 	
 	/**
 	 * Randomly generate a distance from the player for a new projectile.
+	 * @param rng The random number generator used for all randomisation.
 	 * @return The float random distance from the player of a projectile in units.
 	 */
-	private float randDist()
+	private float randDist(System.Random rng)
 	{
-		return (float)(new System.Random().NextDouble()) * (this.MAX_DIST - this.MIN_DIST) + this.MIN_DIST;
+		return (float)(rng.NextDouble()) * (this.MAX_DIST - this.MIN_DIST) + this.MIN_DIST;
 	}
 	
 	/**
 	 * Randomly ganerate a horzintal angle from the player for a new projectile.
+	 * @param rng The random number generator used for all randomisation.
 	 * @return The float random horizontal angle from the player in degrees.
 	 */
-	private float randLon()
+	private float randLon(System.Random rng)
 	{
-		float lon = (float)(new System.Random().NextDouble()) * (this.MAX_LON - this.MIN_LON) + this.MIN_LON;
-		if (new System.Random().Next(1) == 0)
+		float lon = (float)(rng.NextDouble()) * (this.MAX_LON - this.MIN_LON) + this.MIN_LON;
+		if (rng.Next(1) == 0)
 		{
 			lon *= -1;
 		}
@@ -125,12 +127,13 @@ public sealed class SingleSimpleAttack : AttackBase
 	
 	/**
 	 * Randomly ganerate a vertical angle from the player for a new projectile.
+	 * @param rng The random njumber generator used for alll randomisation.
 	 * @return The float random vertical angle from the player in degrees.
 	 */
-	private float randLat()
+	private float randLat(System.Random rng)
 	{
-		float lat = (float)(new System.Random().NextDouble()) * (this.MAX_LAT - this.MIN_LAT) + this.MIN_LAT;
-		if (new System.Random().Next(1) == 0)
+		float lat = (float)(rng.NextDouble()) * (this.MAX_LAT - this.MIN_LAT) + this.MIN_LAT;
+		if (rng.Next(1) == 0)
 		{
 			lat *= -1;
 		}
@@ -139,29 +142,31 @@ public sealed class SingleSimpleAttack : AttackBase
 	
 	/**
 	 * Randomly ganerate a start world position for a new projectile.
+	 * @param rng The random number generator used for all randomisation.
 	 * @param player_pos The current world position of the player.
 	 * @param player_rot The current world rotation of the player.
 	 * @return The random start world position of a projectile.
 	 */
-	private Vector3 randStartPos(Vector3 player_pos, Quaternion player_rot)
+	private Vector3 randStartPos(System.Random rng, Vector3 player_pos, Quaternion player_rot)
 	{
-		Quaternion lon = Quaternion.AngleAxis(this.randLon(), Vector3.up);
-		Quaternion lat = Quaternion.AngleAxis(this.randLat(), Vector3.right);
-		return lon * lat * player_rot * Vector3.forward * this.randDist() + player_pos;
+		Quaternion lon = Quaternion.AngleAxis(this.randLon(rng), Vector3.up);
+		Quaternion lat = Quaternion.AngleAxis(this.randLat(rng), Vector3.right);
+		return lon * lat * player_rot * Vector3.forward * this.randDist(rng) + player_pos;
 	}
 	
 	/**
 	 * Spawn a simple magical projectile.
+	 * @param rng The random number generator used for all randomisation.
 	 * @param player_pos The current world position of the player.
 	 * @param player_rot The current world rotation of the player.
 	 * @param player_health The health of the player.
 	 * @param player_score The score of the player.
 	 * @return The script attached to the simple magical projectile.
 	 */
-	private SimpleMagicalProjectile spawnMagical(Vector3 player_pos, Quaternion player_rot, Health player_health, ScoreSystem player_score)
+	private SimpleMagicalProjectile spawnMagical(System.Random rng, Vector3 player_pos, Quaternion player_rot, Health player_health, ScoreSystem player_score)
 	{
-		SimpleMagicalProjectile proj = GameObject.Instantiate(this.MAGIC_PROJ, this.randStartPos(player_pos, player_rot), Quaternion.identity).GetComponent<SimpleMagicalProjectile>();
-		proj.SPEED = this.randSpeed();
+		SimpleMagicalProjectile proj = GameObject.Instantiate(this.MAGIC_PROJ, this.randStartPos(rng, player_pos, player_rot), Quaternion.identity).GetComponent<SimpleMagicalProjectile>();
+		proj.SPEED = this.randSpeed(rng);
 		proj.TARGET = player_pos;
 		proj.PLAYER_HEALTH = player_health;
 		proj.PLAYER_SCORE = player_score;
@@ -171,16 +176,17 @@ public sealed class SingleSimpleAttack : AttackBase
 	
 	/**
 	 * Spawn a simple physical projectile.
+	 * @param The random number generator used for all randomisation.
 	 * @param player_pos The current world position of the player.
 	 * @param player_rot The current world rotation of the player.
 	 * @param player_health The health of the player.
 	 * @param player_score The score of the player.
 	 * @return The script attached to the simple physcial projectile.
 	 */
-	private SimplePhysicalProjectile spawnPhysical(Vector3 player_pos, Quaternion player_rot, Health player_health, ScoreSystem player_score)
+	private SimplePhysicalProjectile spawnPhysical(System.Random rng, Vector3 player_pos, Quaternion player_rot, Health player_health, ScoreSystem player_score)
 	{
-		SimplePhysicalProjectile proj = GameObject.Instantiate(this.PHYSICS_PROJ, this.randStartPos(player_pos, player_rot), Quaternion.identity).GetComponent<SimplePhysicalProjectile>();
-		proj.SPEED = this.randSpeed();
+		SimplePhysicalProjectile proj = GameObject.Instantiate(this.PHYSICS_PROJ, this.randStartPos(rng, player_pos, player_rot), Quaternion.identity).GetComponent<SimplePhysicalProjectile>();
+		proj.SPEED = this.randSpeed(rng);
 		proj.TARGET = player_pos;
 		proj.PLAYER_HEALTH = player_health;
 		proj.PLAYER_SCORE = player_score;

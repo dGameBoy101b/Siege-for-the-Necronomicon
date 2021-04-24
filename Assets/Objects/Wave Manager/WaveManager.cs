@@ -67,6 +67,11 @@ public sealed class WaveManager : MonoBehaviour
 	private List<List<ProjectileBase>> active_attacks;
 	
 	/**
+	 * The random number generator used for all randomisation.
+	 */
+	private System.Random rng = new System.Random();
+	
+	/**
 	 * Test if another wave can currently be spawned.
 	 */
 	public bool canSpawnWave()
@@ -81,7 +86,7 @@ public sealed class WaveManager : MonoBehaviour
 	 */
 	private void resetTimer()
 	{
-		this.next_spawn = Time.time + (float)new System.Random().NextDouble() * (this.MAX_DELAY - this.MIN_DELAY) + this.MIN_DELAY;
+		this.next_spawn = Time.time + (float)this.rng.NextDouble() * (this.MAX_DELAY - this.MIN_DELAY) + this.MIN_DELAY;
 	}
 	
 	/**
@@ -89,7 +94,6 @@ public sealed class WaveManager : MonoBehaviour
 	 */
 	private void spawnWave()
 	{
-		System.Random rand = new System.Random();
 		this.resetTimer();
 		this.active_attacks.Add(this.randomAttack());
 	}
@@ -100,14 +104,14 @@ public sealed class WaveManager : MonoBehaviour
 	 */
 	private List<ProjectileBase> randomAttack()
 	{
-		int r = new System.Random().Next(this.total_weight);
+		int r = rng.Next(this.total_weight);
 		int weight = 0;
 		for (int i = 0; i < this.ATTACK_WEIGHTS.Count; i++)
 		{
 			weight += this.ATTACK_WEIGHTS[i];
 			if (r < weight)
 			{
-				return this.ATTACK_POOL[i].spawn(this.PLAYER.transform.position, this.PLAYER.transform.rotation, this.PLAYER_HEALTH, this.PLAYER_SCORE);
+				return this.ATTACK_POOL[i].spawn(this.rng, this.PLAYER.transform.position, this.PLAYER.transform.rotation, this.PLAYER_HEALTH, this.PLAYER_SCORE);
 			}
 		}
 		throw new Exception("No attack spawned.");
