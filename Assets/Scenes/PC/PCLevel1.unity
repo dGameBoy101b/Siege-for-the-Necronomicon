@@ -3898,6 +3898,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 84135248873209737, guid: 9ab7941042e233041b24e74aa51dd304,
+        type: 3}
+      propertyPath: SCORE
+      value: 
+      objectReference: {fileID: 1987292710}
+    - target: {fileID: 84135248873209737, guid: 9ab7941042e233041b24e74aa51dd304,
+        type: 3}
+      propertyPath: TIMER
+      value: 
+      objectReference: {fileID: 7186072483577067584}
+    - target: {fileID: 84135248873209737, guid: 9ab7941042e233041b24e74aa51dd304,
+        type: 3}
+      propertyPath: DATA_PATH
+      value: PClevel1.dat
+      objectReference: {fileID: 0}
     - target: {fileID: 1959802944232716118, guid: 9ab7941042e233041b24e74aa51dd304,
         type: 3}
       propertyPath: WAVE_MANAGER
@@ -3908,6 +3923,21 @@ PrefabInstance:
       propertyPath: WAVE_MANAGER
       value: 
       objectReference: {fileID: 1245157552}
+    - target: {fileID: 2366219733634320576, guid: 9ab7941042e233041b24e74aa51dd304,
+        type: 3}
+      propertyPath: SCORE
+      value: 
+      objectReference: {fileID: 1987292710}
+    - target: {fileID: 2366219733634320576, guid: 9ab7941042e233041b24e74aa51dd304,
+        type: 3}
+      propertyPath: TIMER
+      value: 
+      objectReference: {fileID: 7186072483577067584}
+    - target: {fileID: 2366219733634320576, guid: 9ab7941042e233041b24e74aa51dd304,
+        type: 3}
+      propertyPath: DATA_PATH
+      value: PClevel1.dat
+      objectReference: {fileID: 0}
     - target: {fileID: 3559848240473544221, guid: 9ab7941042e233041b24e74aa51dd304,
         type: 3}
       propertyPath: WAVE_MANAGER
@@ -4035,3 +4065,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ab7941042e233041b24e74aa51dd304, type: 3}
+--- !u!114 &7186072483577067584 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2116636517939464312, guid: 9ab7941042e233041b24e74aa51dd304,
+    type: 3}
+  m_PrefabInstance: {fileID: 7186072483577067583}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cc9288c40187804a9afcf0839a190be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
