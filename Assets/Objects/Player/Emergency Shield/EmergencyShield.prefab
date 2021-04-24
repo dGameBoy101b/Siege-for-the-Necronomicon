@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4063308220891733164}
   - component: {fileID: 2816285460860563258}
   - component: {fileID: 4153052981914445164}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: EmergencyShield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,6 +162,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: inverted sphere
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d792dc3dd778029478407e3f2fb01ae5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: d792dc3dd778029478407e3f2fb01ae5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d792dc3dd778029478407e3f2fb01ae5, type: 3}

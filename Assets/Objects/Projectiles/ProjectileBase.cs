@@ -17,7 +17,7 @@ public abstract class ProjectileBase : MonoBehaviour
 	/**
 	 * The names of the collision layers that this projectile should be destroyed by.
 	 */
-	public string[] DESTROY_LAYERS {get;} = {"Default"};
+	public string[] DESTROY_LAYERS {get;} = {"Level Bounds", "Emergency Shield"};
 	
 	/**
 	 * The names of the collision layers that this projectile should be defeated by.
