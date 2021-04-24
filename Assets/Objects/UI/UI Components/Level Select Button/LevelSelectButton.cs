@@ -6,41 +6,40 @@ using UnityEngine.SceneManagement;
 
 public sealed class LevelSelectButton : MonoBehaviour
 {
+	[Header("Linked Files")]
+	
+	[SerializeField()]
 	[Tooltip("The path of the scene this button loads when clicked.")]
-	public string LOAD_PATH;
+	public string SCENE_PATH;
+	
+	[SerializeField()]
+	[Tooltip("The path to the saved data about the level this button is linked to.")]
+	public string DATA_PATH;
 	
 	[Header("Text Displays")]
 	
+	[SerializeField()]
 	[Tooltip("The text element to display the level name.")]
 	public ValueDisplay LEVEL_DISPLAY;
 	
+	[SerializeField()]
 	[Tooltip("The element to enable to show the highscore.")]
 	public ValueDisplay SCORE_DISPLAY;
 	
+	[SerializeField()]
 	[Tooltip("The element to enable to show the time remaining.")]
 	public ValueDisplay TIME_DISPLAY;
 	
 	[Header("Level Statistics")]
 	
+	[SerializeField()]
 	[Tooltip("The displayed name of the level.")]
 	public string LEVEL_NAME;
 	
-	[Tooltip("The displayed highscore of the level.")]
-	public int HIGH_SCORE;
-	
-	[Tooltip("The displayed time in seconds until the level was completed.")]
-	public float TIME_LEFT;
-	
 	/**
-	 * Whether the linked level is complete.
+	 * The data about the linked level.
 	 */
-	public bool IsComplete
-	{
-		get
-		{
-			return this.TIME_LEFT <= 0f;
-		}
-	}
+	public LevelData Data {get; private set;}
 	
 	/**
 	 * Whether the linked level has been found.
@@ -64,19 +63,23 @@ public sealed class LevelSelectButton : MonoBehaviour
 	private Button button;
 	
 	/**
-	 * Update all the linked text to display the set attributes.
+	 * Update all the linked text to display the fetched data.
 	 */
 	public void updateText()
 	{
 		this.fetchScene();
+		this.fetchData();
 		this.LEVEL_DISPLAY.Value = this.LEVEL_NAME;
 		this.LEVEL_DISPLAY.updateText();
-		this.SCORE_DISPLAY.Value = this.HIGH_SCORE;
-		this.SCORE_DISPLAY.updateText();
-		this.TIME_DISPLAY.Value = this.TIME_LEFT;
-		this.TIME_DISPLAY.updateText();
-		this.TIME_DISPLAY.gameObject.SetActive(!this.IsComplete);
-		this.SCORE_DISPLAY.gameObject.SetActive(this.IsComplete);
+		if (this.Data != null)
+		{
+			this.SCORE_DISPLAY.Value = this.Data.HighScore;
+			this.SCORE_DISPLAY.updateText();
+			this.TIME_DISPLAY.Value = this.Data.TimeLeft;
+			this.TIME_DISPLAY.updateText();
+		}
+		this.TIME_DISPLAY.gameObject.SetActive(this.Data != null && !this.Data.isComplete());
+		this.SCORE_DISPLAY.gameObject.SetActive(this.Data != null && this.Data.isComplete());
 		this.button.interactable = this.ValidScene;
 	}
 	
@@ -99,7 +102,19 @@ public sealed class LevelSelectButton : MonoBehaviour
 	 */
 	private void fetchScene()
 	{
-		this.BuildIndex = SceneUtility.GetBuildIndexByScenePath(this.LOAD_PATH);
+		this.BuildIndex = SceneUtility.GetBuildIndexByScenePath(this.SCENE_PATH);
+	}
+	
+	/**
+	 * Fetch the level data this button is linked to.
+	 */
+	private void fetchData()
+	{
+		this.Data = SaveLoad.loadData(this.DATA_PATH);
+		if (this.Data != null && this.Data.Path != this.SCENE_PATH)
+		{
+			throw new System.Exception("Mismatched level path in level data and linked scene.");
+		}
 	}
 	
 	private void OnEnable()
@@ -111,5 +126,6 @@ public sealed class LevelSelectButton : MonoBehaviour
 	{
 		this.button = this.GetComponent<Button>();
 		this.fetchScene();
+		this.fetchData();
 	}
 }

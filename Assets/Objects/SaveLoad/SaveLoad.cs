@@ -31,7 +31,7 @@ public static class SaveLoad
 		{
 			old_data.TimeLeft = data.TimeLeft;
 		}
-		FileStream stream = new FileStream(SaveLoad.absPath(rel_path), FileMode.Create);
+		FileStream stream = new FileStream(SaveLoad.absPath(rel_path), FileMode.Create, FileAccess.Write, FileShare.None);
 		new BinaryFormatter().Serialize(stream, data);
 		stream.Close();
 	}
@@ -44,11 +44,11 @@ public static class SaveLoad
 	public static LevelData loadData(string rel_path)
 	{
 		string abs_path = SaveLoad.absPath(rel_path);
-		if (File.Exists(abs_path))
+		if (!File.Exists(abs_path))
 		{
 			return null;
 		}
-		FileStream stream = new FileStream(abs_path, FileMode.Open);
+		FileStream stream = new FileStream(abs_path, FileMode.Open, FileAccess.Read, FileShare.Read);
 		LevelData data = new BinaryFormatter().Deserialize(stream) as LevelData;
 		stream.Close();
 		return data;
@@ -59,6 +59,6 @@ public static class SaveLoad
 	 */
 	private static string absPath(string rel_path)
 	{
-		return Application.persistentDataPath + rel_path;
+		return Path.Combine(Application.persistentDataPath, rel_path);
 	}
 }
