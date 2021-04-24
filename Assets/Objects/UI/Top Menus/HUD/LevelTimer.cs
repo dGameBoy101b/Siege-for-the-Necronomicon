@@ -82,6 +82,7 @@ public class LevelTimer : MonoBehaviour
 		this.timerIsRunning = false;
 		this.WAVE_MANAGER.gameObject.SetActive(false);
 		this.LEVEL_COMPLETE.gameObject.SetActive(true);
+		this.HUD.gameObject.SetActive(false);
 		Cursor.lockState = CursorLockMode.Confined;
 	}
 }

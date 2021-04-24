@@ -494,18 +494,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 69653809}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &124776621 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1959802944232716118, guid: 9ab7941042e233041b24e74aa51dd304,
-    type: 3}
-  m_PrefabInstance: {fileID: 7186072483577067583}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ac747ee1cd0cec4cba013d638224c48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &154632271
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,6 +775,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219913546}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &251211461 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5640099022376924734, guid: 9ab7941042e233041b24e74aa51dd304,
+    type: 3}
+  m_PrefabInstance: {fileID: 7186072483577067583}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac747ee1cd0cec4cba013d638224c48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &384559970
 GameObject:
   m_ObjectHideFlags: 0
@@ -1644,6 +1644,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ec06e95eb5720458449c3381888320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!223 &870513424 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 9016738656334518510, guid: 9ab7941042e233041b24e74aa51dd304,
+    type: 3}
+  m_PrefabInstance: {fileID: 7186072483577067583}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &872059875
 GameObject:
   m_ObjectHideFlags: 0
@@ -3913,11 +3919,11 @@ PrefabInstance:
       propertyPath: DATA_PATH
       value: PClevel1.dat
       objectReference: {fileID: 0}
-    - target: {fileID: 1959802944232716118, guid: 9ab7941042e233041b24e74aa51dd304,
+    - target: {fileID: 2116636517939464312, guid: 9ab7941042e233041b24e74aa51dd304,
         type: 3}
-      propertyPath: WAVE_MANAGER
-      value: 
-      objectReference: {fileID: 1245157552}
+      propertyPath: TIME
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 2116636517939464312, guid: 9ab7941042e233041b24e74aa51dd304,
         type: 3}
       propertyPath: WAVE_MANAGER
@@ -3948,11 +3954,21 @@ PrefabInstance:
       propertyPath: EMERGENCY_SHIELD
       value: 
       objectReference: {fileID: 771717347}
+    - target: {fileID: 5640099022376924734, guid: 9ab7941042e233041b24e74aa51dd304,
+        type: 3}
+      propertyPath: PAUSE_MENU
+      value: 
+      objectReference: {fileID: 870513424}
+    - target: {fileID: 5640099022376924734, guid: 9ab7941042e233041b24e74aa51dd304,
+        type: 3}
+      propertyPath: WAVE_MANAGER
+      value: 
+      objectReference: {fileID: 1245157552}
     - target: {fileID: 7133634923631011182, guid: 9ab7941042e233041b24e74aa51dd304,
         type: 3}
       propertyPath: PAUSE
       value: 
-      objectReference: {fileID: 124776621}
+      objectReference: {fileID: 251211461}
     - target: {fileID: 7186072483659647123, guid: 9ab7941042e233041b24e74aa51dd304,
         type: 3}
       propertyPath: m_Pivot.x

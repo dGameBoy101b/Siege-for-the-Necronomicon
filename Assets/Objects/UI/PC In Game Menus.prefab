@@ -78,7 +78,6 @@ GameObject:
   - component: {fileID: 7186072483659647124}
   - component: {fileID: 7186072483659647125}
   - component: {fileID: 7186072483659647126}
-  - component: {fileID: 1959802944232716118}
   m_Layer: 5
   m_Name: PC In Game Menus
   m_TagString: Untagged
@@ -170,22 +169,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1959802944232716118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7186072483659647127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ac747ee1cd0cec4cba013d638224c48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PAUSE_BUTTON: Cancel
-  PAUSE_MENU: {fileID: 9016738656334518510}
-  WAVE_MANAGER: {fileID: 0}
-  HUD: {fileID: 1597417112740544073}
 --- !u!1001 &7186072483319979280
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -489,12 +472,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 7186072483456190140}
   m_PrefabAsset: {fileID: 0}
---- !u!223 &1597417112740544073 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 8471592777381722357, guid: f09dc8137811a6a45ac308d4dc23f815,
-    type: 3}
-  m_PrefabInstance: {fileID: 7186072483456190140}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7186072483842225389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -627,12 +604,6 @@ PrefabInstance:
 --- !u!224 &8656274207770711026 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1989268729507309343, guid: da1aa3e815d8cba4a8c6e5b3cdc5da6a,
-    type: 3}
-  m_PrefabInstance: {fileID: 7186072483842225389}
-  m_PrefabAsset: {fileID: 0}
---- !u!223 &9016738656334518510 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 2205614624869837827, guid: da1aa3e815d8cba4a8c6e5b3cdc5da6a,
     type: 3}
   m_PrefabInstance: {fileID: 7186072483842225389}
   m_PrefabAsset: {fileID: 0}
