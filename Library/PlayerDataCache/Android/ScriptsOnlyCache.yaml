@@ -3,13 +3,18 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - BackButton
     - ContinueButton
+    - DataSaver
     - Gauntlet
+    - HandedInputSelector
     - Health
+    - LaserPointer
     - LevelSelectButton
     - LevelTimer
     - ONSPSettings
     - OvrAvatarSettings
+    - Pause
     - QuitButton
+    - ResumeButton
     - ScoreSystem
     - SimpleMagicalProjectile
     - SimplePhysicalProjectile
@@ -25,6 +30,8 @@ ScriptsOnlyBuild:
     - OVRCameraRig
     - OVRHeadsetEmulator
     - OVRManager
+    - OVRRaycaster
+    - UnityEngine.EventSystems.OVRInputModule
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.XR.Management.Editor.dll:
@@ -41,7 +48,6 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
-    - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
@@ -75,6 +81,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -84,29 +94,37 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11450}
     - Class: 114
-      Script: {instanceID: 11454}
+      Script: {instanceID: 11452}
     - Class: 114
-      Script: {instanceID: 11458}
+      Script: {instanceID: 11456}
     - Class: 114
-      Script: {instanceID: 11496}
+      Script: {instanceID: 11494}
     - Class: 114
-      Script: {instanceID: 11582}
+      Script: {instanceID: 11580}
     - Class: 114
-      Script: {instanceID: 11682}
+      Script: {instanceID: 11642}
     - Class: 114
-      Script: {instanceID: 11750}
+      Script: {instanceID: 11654}
+    - Class: 114
+      Script: {instanceID: 11684}
+    - Class: 114
+      Script: {instanceID: 11754}
     - Class: 114
       Script: {instanceID: 11868}
     - Class: 114
-      Script: {instanceID: 11944}
+      Script: {instanceID: 11870}
     - Class: 114
-      Script: {instanceID: 12068}
+      Script: {instanceID: 11946}
     - Class: 114
-      Script: {instanceID: 12384}
+      Script: {instanceID: 12066}
     - Class: 114
-      Script: {instanceID: 12434}
+      Script: {instanceID: 12382}
     - Class: 114
-      Script: {instanceID: 12498}
+      Script: {instanceID: 12432}
+    - Class: 114
+      Script: {instanceID: 12496}
+    - Class: 114
+      Script: {instanceID: 12566}
     - Class: 114
       Script: {instanceID: 12662}
     - Class: 114
@@ -116,28 +134,34 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13254}
     - Class: 114
+      Script: {instanceID: 13410}
+    - Class: 114
       Script: {instanceID: 13550}
     - Class: 114
-      Script: {instanceID: 13706}
+      Script: {instanceID: 13564}
     - Class: 114
-      Script: {instanceID: 13954}
+      Script: {instanceID: 13708}
     - Class: 114
-      Script: {instanceID: 14090}
+      Script: {instanceID: 13952}
     - Class: 114
-      Script: {instanceID: 14104}
+      Script: {instanceID: 14088}
+    - Class: 114
+      Script: {instanceID: 14102}
+    - Class: 114
+      Script: {instanceID: 14182}
     - Class: 114
       Script: {instanceID: 14184}
     - Class: 114
-      Script: {instanceID: 14650}
+      Script: {instanceID: 14186}
     - Class: 114
-      Script: {instanceID: 29288}
+      Script: {instanceID: 14492}
     - Class: 114
-      Script: {instanceID: 53460}
+      Script: {instanceID: 14552}
     - Class: 114
-      Script: {instanceID: 55360}
-    - Class: 114
-      Script: {instanceID: 61094}
+      Script: {instanceID: 14756}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 120
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
@@ -160,22 +184,16 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: 89f9a1b4c64db9559e39f4a2e3bfaadd
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Image
-  - hash:
-      serializedVersion: 2
       Hash: 5f1752ed2092162f016c19510c28a8b9
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Button
   - hash:
       serializedVersion: 2
-      Hash: 7072231382eb3c4871b3dd75ad0227e1
+      Hash: 89f9a1b4c64db9559e39f4a2e3bfaadd
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
-    className: Slider
+    className: Image
   - hash:
       serializedVersion: 2
       Hash: aeb62f729c52c814dec86c47dcac1471
@@ -194,6 +212,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GraphicRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 7072231382eb3c4871b3dd75ad0227e1
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Slider
   - hash:
       serializedVersion: 2
       Hash: a1f19ad47d3094e235f21b74dfc423a8
@@ -298,6 +322,18 @@ ScriptsOnlyBuild:
     className: PlayerController
   - hash:
       serializedVersion: 2
+      Hash: 06e3cb82be0705fd1a436543afe9f1ec
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ContinueButton
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: QuitButton
+  - hash:
+      serializedVersion: 2
       Hash: 71f7f12b8d0f4fd73590db8bcb6d453c
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
@@ -362,6 +398,12 @@ ScriptsOnlyBuild:
     assemblyName: Oculus.VR.dll
     namespaceName: 
     className: OVRDebugHeadController
+  - hash:
+      serializedVersion: 2
+      Hash: 4658c8cd51586e9c4061adff8419d521
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EmergencyShield
   - hash:
       serializedVersion: 2
       Hash: a5781dc71a671b1ad2b38de19f24b71f
@@ -568,13 +610,7 @@ ScriptsOnlyBuild:
     className: OvrAvatarSDKManager
   - hash:
       serializedVersion: 2
-      Hash: 4a6bac76f378310e6afe6e34e6ce652e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Player
-  - hash:
-      serializedVersion: 2
-      Hash: b8b67aeafe7548ecf56dc9138f49978c
+      Hash: 8f67288d24b1cb602bad325c1fc3190f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LevelSelectButton
@@ -832,6 +868,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
+      Hash: 1cab79e271af95697ec89682adcdb635
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ResumeButton
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Oculus.Platform.dll
     namespaceName: Oculus.Platform.Samples.VrHoops
@@ -1000,6 +1042,12 @@ ScriptsOnlyBuild:
     className: OVROverlayCanvas
   - hash:
       serializedVersion: 2
+      Hash: b6071e54dd2ee7046546cc77892c5036
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PhysicalProjectileBase
+  - hash:
+      serializedVersion: 2
       Hash: 7136ccb8970d7b5b2feefcae2f0d201d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1078,7 +1126,7 @@ ScriptsOnlyBuild:
     className: BallEjector
   - hash:
       serializedVersion: 2
-      Hash: 79f1402f01809bd533cf7da0201f4caa
+      Hash: 086d89ab1cb1e0dbbf8f329b917ef472
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Health
@@ -1318,7 +1366,7 @@ ScriptsOnlyBuild:
     className: TouchController
   - hash:
       serializedVersion: 2
-      Hash: d4a12e9536d1e5b14199fe5c39a2f391
+      Hash: 6103ccf21d4a4a073adf0e7900158102
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AudioManager
@@ -1412,6 +1460,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MouseLook
+  - hash:
+      serializedVersion: 2
+      Hash: b72f855b4e64124402f6e02ad87b690b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ValueDisplay
   - hash:
       serializedVersion: 2
       Hash: 4c063458ca029e84d4f59c22fc3c5fca
@@ -1516,7 +1570,7 @@ ScriptsOnlyBuild:
     className: PlatformManager
   - hash:
       serializedVersion: 2
-      Hash: b3c3857ed07eab081f9886512b100e79
+      Hash: 079186cb08e5f6f2a12d1a772b7909ea
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SimplePhysicalProjectile
@@ -1594,7 +1648,7 @@ ScriptsOnlyBuild:
     className: ONSPPropagationMaterial
   - hash:
       serializedVersion: 2
-      Hash: b3c3857ed07eab081f9886512b100e79
+      Hash: 079186cb08e5f6f2a12d1a772b7909ea
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SimpleMagicalProjectile
@@ -1694,6 +1748,12 @@ ScriptsOnlyBuild:
     assemblyName: Oculus.Platform.dll
     namespaceName: Oculus.Platform.Samples.VrBoardGame
     className: MatchmakingManager
+  - hash:
+      serializedVersion: 2
+      Hash: b19935599d769bd8511ec5ed62ab261c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DataSaver
   - hash:
       serializedVersion: 2
       Hash: 0cc2f729ed4885ca9c95ead34ce0e907
@@ -1864,6 +1924,12 @@ ScriptsOnlyBuild:
     className: TeleportTransitionBlink
   - hash:
       serializedVersion: 2
+      Hash: c8b47de6c731e267e38a7b39b2d1baec
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Pause
+  - hash:
+      serializedVersion: 2
       Hash: a63fc1a3b035e5a0b5839cd7f7b3086e
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -1988,26 +2054,7 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BackButton
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: QuitButton
-  - hash:
-      serializedVersion: 2
-      Hash: b72f855b4e64124402f6e02ad87b690b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ValueDisplay
-  - hash:
-      serializedVersion: 2
-      Hash: 06e3cb82be0705fd1a436543afe9f1ec
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ContinueButton
   platform: 13
   scenePathNames:
   - Assets/Scenes/VR/VRLevel01.unity
-  playerPath: C:/Users/rhysm/OneDrive/Documents/Education/2021 S1/ICT288/assignments/Siege-for-the-Necronomicon/Builds/VR
-    Demo/VR Demo.apk
+  playerPath: C:/Users/Connor/Desktop/UNI/ICT288 2021/Builds/Build1.apk

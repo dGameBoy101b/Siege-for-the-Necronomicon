@@ -24,6 +24,8 @@ public class Pause : MonoBehaviour
 	[SerializeField()]
 	[Tooltip("The canvas to hide when the pause button is pressed.")]
 	public Canvas HUD;
+
+	public bool isPaused = false;
 	
 	/**
 	 * Pause the game.
@@ -34,6 +36,7 @@ public class Pause : MonoBehaviour
 		this.HUD.gameObject.SetActive(false);
 		this.PAUSE_MENU.gameObject.SetActive(true);
 		this.WAVE_MANAGER.pauseAttacks();
+		isPaused = true;
 	}
 	
 	/**
@@ -45,13 +48,21 @@ public class Pause : MonoBehaviour
 		this.PAUSE_MENU.gameObject.SetActive(false);
 		this.HUD.gameObject.SetActive(true);
 		this.WAVE_MANAGER.unpauseAttacks();
+		isPaused = false;
 	}
 	
 	private void Update()
 	{
-		if (Input.GetButtonDown(this.PAUSE_BUTTON))
+		if (Input.GetButtonDown(this.PAUSE_BUTTON) || OVRInput.GetDown(OVRInput.Button.Start))
 		{
-			this.pause();
+			if(isPaused == false)
+			{
+				this.pause();
+			}else
+			{
+				this.unpause();
+			}
+			
 		}
 	}
 	
