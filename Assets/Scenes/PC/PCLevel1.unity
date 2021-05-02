@@ -3924,6 +3924,11 @@ PrefabInstance:
       propertyPath: DATA_PATH
       value: PClevel1.dat
       objectReference: {fileID: 0}
+    - target: {fileID: 1681138847177652194, guid: 9ab7941042e233041b24e74aa51dd304,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2116636517939464312, guid: 9ab7941042e233041b24e74aa51dd304,
         type: 3}
       propertyPath: TIME

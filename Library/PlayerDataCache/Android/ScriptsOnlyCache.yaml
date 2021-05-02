@@ -1924,7 +1924,7 @@ ScriptsOnlyBuild:
     className: TeleportTransitionBlink
   - hash:
       serializedVersion: 2
-      Hash: c8b47de6c731e267e38a7b39b2d1baec
+      Hash: 62893f05207c401cb7f0171c6358ce0c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Pause

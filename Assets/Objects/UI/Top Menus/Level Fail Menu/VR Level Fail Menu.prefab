@@ -1,24 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &7914345227359525097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8313697045985171155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7aaf960227867044282d921171d2d7ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  pointer: {fileID: 0}
-  sortOrder: 0
 --- !u!114 &48057377708197796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,12 +168,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 7680420405649997183, guid: 94a44219c7e103d47bd493da5626826a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 94a44219c7e103d47bd493da5626826a, type: 3}
---- !u!1 &8313697045985171155 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9214129254077996647, guid: 94a44219c7e103d47bd493da5626826a,
-    type: 3}
-  m_PrefabInstance: {fileID: 918460368218720436}
-  m_PrefabAsset: {fileID: 0}
 --- !u!223 &8313697045985171159 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 9214129254077996643, guid: 94a44219c7e103d47bd493da5626826a,
@@ -210,6 +185,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VR Level Fail Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834700555456439668, guid: a0b24f4edc3fd1a44a6291892d69568d,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5051043186568064616, guid: a0b24f4edc3fd1a44a6291892d69568d,
         type: 3}
@@ -229,22 +209,22 @@ PrefabInstance:
     - target: {fileID: 5051043186568064616, guid: a0b24f4edc3fd1a44a6291892d69568d,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5051043186568064616, guid: a0b24f4edc3fd1a44a6291892d69568d,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5051043186568064616, guid: a0b24f4edc3fd1a44a6291892d69568d,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5051043186568064616, guid: a0b24f4edc3fd1a44a6291892d69568d,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5051043186568064616, guid: a0b24f4edc3fd1a44a6291892d69568d,
         type: 3}
@@ -259,17 +239,17 @@ PrefabInstance:
     - target: {fileID: 5051043186568064616, guid: a0b24f4edc3fd1a44a6291892d69568d,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5051043186568064616, guid: a0b24f4edc3fd1a44a6291892d69568d,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5051043186568064616, guid: a0b24f4edc3fd1a44a6291892d69568d,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5051043186568064616, guid: a0b24f4edc3fd1a44a6291892d69568d,
         type: 3}
