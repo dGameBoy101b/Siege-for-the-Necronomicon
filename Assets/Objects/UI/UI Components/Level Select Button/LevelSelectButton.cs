@@ -90,6 +90,7 @@ public sealed class LevelSelectButton : MonoBehaviour
 	public void loadLevel()
 	{
 		this.fetchScene();
+		Debug.Log(BuildIndex);
 		if (!this.ValidScene)
 		{
 			throw new System.Exception("No valid scene found.");

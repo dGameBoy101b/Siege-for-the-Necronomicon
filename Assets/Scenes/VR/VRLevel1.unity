@@ -2815,6 +2815,18 @@ Camera:
     type: 3}
   m_PrefabInstance: {fileID: 1675392259}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1675392262 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4599246309123845336, guid: a69fa0598830aab43a3e850315a5b29c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1675392259}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8772861dfd5ed34f85cf73f1a4db422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1714345912
 GameObject:
   m_ObjectHideFlags: 0
@@ -3225,6 +3237,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff6cbe50cc733314093a41a5e2d690f0, type: 3}
+--- !u!114 &1923247600 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8087311091999208895, guid: ff6cbe50cc733314093a41a5e2d690f0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1923247599}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17dbaa98c2ae03748bc197cbe77a9eaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1923247601 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 385196578480376498, guid: ff6cbe50cc733314093a41a5e2d690f0,
@@ -3751,8 +3775,40 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1675392261}
+    - target: {fileID: 6809335527761405481, guid: 255361c677412894ea3e0cfc88d9a4b9,
+        type: 3}
+      propertyPath: TIME_DISPLAY
+      value: 
+      objectReference: {fileID: 2142955868}
+    - target: {fileID: 6809335527761405481, guid: 255361c677412894ea3e0cfc88d9a4b9,
+        type: 3}
+      propertyPath: WAVE_MANAGER
+      value: 
+      objectReference: {fileID: 1923247600}
+    - target: {fileID: 6809335527761405481, guid: 255361c677412894ea3e0cfc88d9a4b9,
+        type: 3}
+      propertyPath: EMERGENCY_SHIELD
+      value: 
+      objectReference: {fileID: 1675392262}
+    - target: {fileID: 8234634256491821132, guid: 255361c677412894ea3e0cfc88d9a4b9,
+        type: 3}
+      propertyPath: WAVE_MANAGER
+      value: 
+      objectReference: {fileID: 1923247600}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 255361c677412894ea3e0cfc88d9a4b9, type: 3}
+--- !u!114 &2142955868 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8657735934068790667, guid: 255361c677412894ea3e0cfc88d9a4b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2142955867}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11d19f94f3603149bcf026f0dcc416d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2145239521
 GameObject:
   m_ObjectHideFlags: 0
