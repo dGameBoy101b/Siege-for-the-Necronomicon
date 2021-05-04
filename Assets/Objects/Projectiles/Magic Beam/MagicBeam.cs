@@ -122,11 +122,6 @@ public sealed class MagicBeam : MagicalProjectileBase
 			out hit, Mathf.Infinity, this.hit_mask,
 			QueryTriggerInteraction.Collide))
 		{
-			if (this.shouldAttack(hit.collider))
-			{
-				Debug.Log("hit player");
-				return hit.transform.position;
-			}
 			return hit.point + hit.normal * (this.col.radius - this.col.contactOffset - hit.collider.contactOffset);
 		}
 		return this.transform.position;
@@ -211,7 +206,6 @@ public sealed class MagicBeam : MagicalProjectileBase
 	
 	public override void attack()
 	{
-		Debug.Log("attack");
 		this.PLAYER_HEALTH.TakeDamage(this.DAMAGE);
 		base.attack();
 	}
