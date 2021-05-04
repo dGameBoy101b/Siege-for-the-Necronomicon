@@ -12,51 +12,49 @@ using UnityEngine.UI;
 public class ScoreSystem : MonoBehaviour
 {
 
-    [Tooltip("The text object that stores the player's current score.")]
-    public Text currentScoreLabel;
+	[Tooltip("The text object that stores the player's current score.")]
+	public Text currentScoreLabel;
 
-    [Tooltip("The text object that stores the player's final score to display on game over.")]
-    public ValueDisplay endScoreLabel;
+	[Tooltip("The text object that stores the player's final score to display on game over.")]
+	public ValueDisplay endScoreLabel;
 
-    [HideInInspector]
-    public int currentScore;
-    
-    [HideInInspector]
-    public int endScore;
-    
+	[HideInInspector]
+	public int currentScore;
+	
+	[HideInInspector]
+	public int endScore;
+	
+	void Start()
+	{
 
+		currentScore = 0;
+		endScore = currentScore;
+		ScoreUpdate();
+		
+	}
 
-    void Start()
-    {
+	/**
+	 * set the public text variables to store the current player score in a string
+	 * this is so it can be displayed on game over or during gameplay
+	 */
 
-        currentScore = 0;
-        endScore = currentScore;
-        ScoreUpdate();
-        
-    }
+	void ScoreUpdate()
+	{
+		currentScoreLabel.text = currentScore.ToString();
+		endScoreLabel.Value = currentScore;
+		this.endScoreLabel.updateText();
+	}
 
-    /**
-     * set the public text variables to store the current player score in a string
-     * this is so it can be displayed on game over or during gameplay
-     */
+	/**
+	 * @param col The collider projectile that is hitting the player sword and adding score points
+	 * score increases by 10 on every successful hit of projectile
+	 * destroys the projectile on hit
+	 */
 
-    void ScoreUpdate()
-    {
-        currentScoreLabel.text = currentScore.ToString();
-        endScoreLabel.Value = currentScore;
-        this.endScoreLabel.updateText();
-    }
-
-    /**
-     * @param col The collider projectile that is hitting the player sword and adding score points
-     * score increases by 10 on every successful hit of projectile
-     * destroys the projectile on hit
-     */
-
-    public void AddScore(int points)
-    {
-        currentScore += points;
-        ScoreUpdate();
-    }
+	public void AddScore(int points)
+	{
+		currentScore += points;
+		ScoreUpdate();
+	}
 
 }

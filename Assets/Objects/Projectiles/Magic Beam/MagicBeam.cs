@@ -13,6 +13,8 @@ public sealed class MagicBeam : MagicalProjectileBase
 	[Tooltip("The transform to manipulate for displaying the beam.")]
 	public Transform MODEL;
 	
+	[Header("Projectile Attributes")]
+	
 	[SerializeField()]
 	[Tooltip("The global position to aim at.")]
 	public Vector3 TARGET;
@@ -55,7 +57,7 @@ public sealed class MagicBeam : MagicalProjectileBase
 	/**
 	 * The global point at which this magic beam starts.
 	 */
-	private Vector3 start_point;
+	private Vector3 start_pos;
 	
 	/**
 	 * An enumeration used to denote the state of magic beams.
@@ -90,7 +92,11 @@ public sealed class MagicBeam : MagicalProjectileBase
 	 */
 	private void faceTarget()
 	{
-		this.transform.rotation = Quaternion.LookRotation(this.TARGET - this.transform.position);
+		Vector3 diff = this.TARGET - this.transform.position;
+		if (diff.magnitude > 0f)
+		{
+			this.transform.rotation = Quaternion.LookRotation(diff);
+		}
 	}
 	
 	/**
@@ -111,12 +117,17 @@ public sealed class MagicBeam : MagicalProjectileBase
 	private Vector3 calcNextHit()
 	{
 		RaycastHit hit;
-		if (Physics.SphereCast(this.transform.position + this.col.center,
-		                   this.col.radius, this.transform.forward,
-		                   out hit, Mathf.Infinity, this.hit_mask,
-		                   QueryTriggerInteraction.Collide))
+		if (Physics.SphereCast(this.start_pos + this.col.center,
+			this.col.radius, this.transform.forward,
+			out hit, Mathf.Infinity, this.hit_mask,
+			QueryTriggerInteraction.Collide))
 		{
-			return hit.point + (hit.normal * this.col.radius);
+			if (this.shouldAttack(hit.collider))
+			{
+				Debug.Log("hit player");
+				return hit.transform.position;
+			}
+			return hit.point + hit.normal * (this.col.radius - this.col.contactOffset - hit.collider.contactOffset);
 		}
 		return this.transform.position;
 	}
@@ -135,8 +146,9 @@ public sealed class MagicBeam : MagicalProjectileBase
 	 */
 	private void stretchModel()
 	{
-		this.MODEL.position = (this.transform.position + this.start_point) / 2f;
-		this.MODEL.localScale = Vector3.forward * Vector3.Distance(this.transform.position, this.start_point);
+		this.MODEL.position = (this.transform.position + this.start_pos) / 2f;
+		this.MODEL.localScale = new Vector3(1f, 1f, Vector3.Distance(this.transform.position, this.start_pos) + 1f);
+		this.MODEL.rotation = Quaternion.LookRotation(this.transform.position - this.start_pos);
 	}
 	
 	/**
@@ -164,10 +176,8 @@ public sealed class MagicBeam : MagicalProjectileBase
 	 */
 	public void startAttack()
 	{
-		Debug.Log("start attack");
 		this.CurrentState = State.Attacking;
 		this.timer = this.STAY_TIME;
-		this.moveToNextHit();
 	}
 	
 	/**
@@ -175,7 +185,6 @@ public sealed class MagicBeam : MagicalProjectileBase
 	 */
 	public void stopAttack()
 	{
-		Debug.Log("end attack");
 		this.CurrentState = State.None;
 		this.defeat();
 	}
@@ -187,15 +196,8 @@ public sealed class MagicBeam : MagicalProjectileBase
 	{
 		this.col = this.GetComponent<SphereCollider>();
 		this.hit_mask = this.calcHitMask();
-		this.start_point = this.transform.position;
+		this.start_pos = this.transform.position;
 		this.faceTarget();
-	}
-	
-	public override void spawn()
-	{
-		base.spawn();
-		this.timer = this.CHARGE_TIME;
-		this.CurrentState = State.Charging;
 	}
 	
 	public override void defeat()
@@ -209,6 +211,7 @@ public sealed class MagicBeam : MagicalProjectileBase
 	
 	public override void attack()
 	{
+		Debug.Log("attack");
 		this.PLAYER_HEALTH.TakeDamage(this.DAMAGE);
 		base.attack();
 	}
@@ -224,16 +227,25 @@ public sealed class MagicBeam : MagicalProjectileBase
 		{
 			this.stopAttack();
 		}
+		if (this.CurrentState == State.Attacking)
+		{
+			this.moveToNextHit();
+		}
 	}
 	
 	private void Start()
 	{
 		this.setup();
+		this.timer = this.CHARGE_TIME;
+		this.CurrentState = State.Charging;
 	}
 	
 	private void OnDrawGizmosSelected()
 	{
-		this.setup();
+		if (!UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode)
+		{
+			this.setup();
+		}
 		Gizmos.color = Color.white;
 		Gizmos.DrawLine(this.transform.position, this.TARGET);
 		Gizmos.color = Color.blue;
