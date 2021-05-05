@@ -21,8 +21,13 @@ public sealed class MultiHitProjectile : PhysicalProjectileBase
 	public float SPEED;
 	
 	[SerializeField()]
-	[Tooltip("The progressive list of models to render each time this projectile is hit.\n(The size is the number of hits it takes to defeat this projectile.)")]
-	public List<GameObject> HIT_MODELS;
+	[Tooltip("The reverse list of models to render each time this projectile is hit.")]
+	public List<MeshRenderer> HIT_MODELS;
+	
+	[SerializeField()]
+	[Tooltip("The number of hits this projectile can take before being defeated.")]
+	[Min(1)]
+	public int HIT_CAPACITY;
 	
 	[SerializeField()]
 	[Tooltip("The amount of damage this projectile does to the player.")]
@@ -53,7 +58,7 @@ public sealed class MultiHitProjectile : PhysicalProjectileBase
 	 */
 	private void moveForward(float t)
 	{
-		this.transform.position += this.transform.forward * this.SPEED;
+		this.transform.position += this.transform.forward * this.SPEED * t;
 	}
 	
 	/**
@@ -64,22 +69,35 @@ public sealed class MultiHitProjectile : PhysicalProjectileBase
 	{
 		for (int i = 0; i < this.HIT_MODELS.Count; i++)
 		{
-			this.HIT_MODELS[i].SetActive(i == index);
+			this.HIT_MODELS[i].enabled = i == index;
+		}
+	}
+	
+	/**
+	 * Check that the hit capacity is lesser than or equal to the length of the hit model list.
+	 * @throws Exception The hit capacity of this projectile is greater than the length od the hit model list.
+	 */
+	private void checkHitModels()
+	{
+		if (this.HIT_CAPACITY > this.HIT_MODELS.Count)
+		{
+			throw new System.Exception("The hit capacity must be lesser than or equal to the length of the model list.");
 		}
 	}
 	
 	public override void defeat()
 	{
 		this.CurrentHits += 1;
-		if (this.CurrentHits >= this.HIT_MODELS.Count)
+		if (this.CurrentHits >= this.HIT_CAPACITY)
 		{
 			this.PLAYER_SCORE.AddScore(this.POINTS);
 			base.defeat();
 		}
 		else
 		{
-			this.switchModel(this.CurrentHits);
+			this.switchModel(this.HIT_CAPACITY - this.CurrentHits - 1);
 		}
+		Debug.Break();
 	}
 	
 	public override void attack()
@@ -90,9 +108,10 @@ public sealed class MultiHitProjectile : PhysicalProjectileBase
 	
 	private void Start()
 	{
+		this.checkHitModels();
 		this.faceTarget();
 		this.CurrentHits = 0;
-		this.switchModel(0);
+		this.switchModel(this.HIT_CAPACITY - 1);
 	}
 	
 	private void Update()

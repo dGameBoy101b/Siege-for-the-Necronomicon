@@ -319,6 +319,11 @@ PrefabInstance:
       propertyPath: endScoreLabel
       value: 
       objectReference: {fileID: 1380221642275528586}
+    - target: {fileID: 3314551417876803714, guid: f09dc8137811a6a45ac308d4dc23f815,
+        type: 3}
+      propertyPath: PAUSE_MENU
+      value: 
+      objectReference: {fileID: 9016738656334518510}
     - target: {fileID: 3349187148187507691, guid: f09dc8137811a6a45ac308d4dc23f815,
         type: 3}
       propertyPath: m_Pivot.x
@@ -604,6 +609,12 @@ PrefabInstance:
 --- !u!224 &8656274207770711026 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1989268729507309343, guid: da1aa3e815d8cba4a8c6e5b3cdc5da6a,
+    type: 3}
+  m_PrefabInstance: {fileID: 7186072483842225389}
+  m_PrefabAsset: {fileID: 0}
+--- !u!223 &9016738656334518510 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 2205614624869837827, guid: da1aa3e815d8cba4a8c6e5b3cdc5da6a,
     type: 3}
   m_PrefabInstance: {fileID: 7186072483842225389}
   m_PrefabAsset: {fileID: 0}
