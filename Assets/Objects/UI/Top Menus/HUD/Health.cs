@@ -35,6 +35,8 @@ public class Health : MonoBehaviour
 	[Tooltip("The player's emergency shield")]
 	public EmergencyShield EMERGENCY_SHIELD;
 
+	public Slider slider;
+
 	[HideInInspector]
 	public int currentHealth;
 
@@ -65,6 +67,7 @@ public class Health : MonoBehaviour
 	{
 		currentHealthLabel.text = currentHealth.ToString();
 		LEVEL_FAIL.gameObject.SetActive(IsDead);
+		slider.value = currentHealth;
 	}
 
 	/** 
