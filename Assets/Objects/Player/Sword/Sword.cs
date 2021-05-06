@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -32,8 +32,8 @@ public sealed class Sword : EquipmentBase
 	public GameObject createSlash(Vector3 start, Vector3 end, float speed_scale = 1f)
 	{
 		Vector3 midpoint = Vector3.Lerp(start, end, 0.5f);
-		GameObject slash = GameObject.Instantiate(this.SLASH_PREFAB, midpoint, Quaternion.LookRotation(this.PLAYER.position - midpoint, end - start));
-		slash.transform.localScale = Vector3.Scale(new Vector3(1f, Vector3.Distance(start, end) / slash.GetComponent<Collider>().bounds.size.y, 1f), slash.transform.localScale);
+		GameObject slash = GameObject.Instantiate(this.SLASH_PREFAB, midpoint, Quaternion.LookRotation(midpoint - this.PLAYER.position, end - start));
+		slash.transform.localScale = Vector3.Scale(new Vector3(Vector3.Distance(start, end) / slash.GetComponent<Collider>().bounds.size.x, Vector3.Distance(start, end) / slash.GetComponent<Collider>().bounds.size.y, 1f), slash.transform.localScale);
 		slash.GetComponent<SwordSlash>().SPEED *= speed_scale;
 		return slash;
 	}

@@ -2848,6 +2848,11 @@ PrefabInstance:
       propertyPath: SLASH_OFFSET.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 930511794260572885, guid: a69fa0598830aab43a3e850315a5b29c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1241229424735196484, guid: a69fa0598830aab43a3e850315a5b29c,
         type: 3}
       propertyPath: m_RootOrder
@@ -2973,6 +2978,11 @@ PrefabInstance:
       propertyPath: m_CullingMask.m_Bits
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 5868576190276395951, guid: a69fa0598830aab43a3e850315a5b29c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6332321623517091381, guid: a69fa0598830aab43a3e850315a5b29c,
         type: 3}
       propertyPath: m_IsActive
@@ -2998,7 +3008,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!20 &1675392261 stripped
 Camera:
-  m_CorrespondingSourceObject: {fileID: 5597739531459628283, guid: a69fa0598830aab43a3e850315a5b29c,
+  m_CorrespondingSourceObject: {fileID: 1554967641291617234, guid: a69fa0598830aab43a3e850315a5b29c,
     type: 3}
   m_PrefabInstance: {fileID: 1675392259}
   m_PrefabAsset: {fileID: 0}
@@ -3847,6 +3857,11 @@ PrefabInstance:
       propertyPath: DATA_PATH
       value: VRlevel1.dat
       objectReference: {fileID: 0}
+    - target: {fileID: 1726331262907147723, guid: 255361c677412894ea3e0cfc88d9a4b9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2404123566038451722, guid: 255361c677412894ea3e0cfc88d9a4b9,
         type: 3}
       propertyPath: WAVE_MANAGER
@@ -3870,7 +3885,7 @@ PrefabInstance:
     - target: {fileID: 2899029387094298669, guid: 255361c677412894ea3e0cfc88d9a4b9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2899029387094298669, guid: 255361c677412894ea3e0cfc88d9a4b9,
         type: 3}
@@ -3977,6 +3992,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3088830811824788514, guid: 255361c677412894ea3e0cfc88d9a4b9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3166705648265991396, guid: 255361c677412894ea3e0cfc88d9a4b9,
         type: 3}
       propertyPath: SCORE
@@ -3997,6 +4017,21 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1675392261}
+    - target: {fileID: 5135312157649631364, guid: 255361c677412894ea3e0cfc88d9a4b9,
+        type: 3}
+      propertyPath: DATA_PATH
+      value: VRlevel1.dat
+      objectReference: {fileID: 0}
+    - target: {fileID: 5135312157649631364, guid: 255361c677412894ea3e0cfc88d9a4b9,
+        type: 3}
+      propertyPath: SCENE_PATH
+      value: Assets/Scenes/VR/VRLevel1.unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168822545944144611, guid: 255361c677412894ea3e0cfc88d9a4b9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6809335527761405481, guid: 255361c677412894ea3e0cfc88d9a4b9,
         type: 3}
       propertyPath: TIME_DISPLAY

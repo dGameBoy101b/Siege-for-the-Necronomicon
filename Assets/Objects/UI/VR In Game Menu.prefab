@@ -120,6 +120,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4899444888770938731, guid: f074124b23dc3b142b375ea686852d7a,
+        type: 3}
+      propertyPath: SCORE
+      value: 
+      objectReference: {fileID: 1156037216623410880}
+    - target: {fileID: 4899444888770938731, guid: f074124b23dc3b142b375ea686852d7a,
+        type: 3}
+      propertyPath: TIMER
+      value: 
+      objectReference: {fileID: 8234634256491821132}
+    - target: {fileID: 4899444888770938731, guid: f074124b23dc3b142b375ea686852d7a,
+        type: 3}
+      propertyPath: DATA_PATH
+      value: VRlevel1.dat
+      objectReference: {fileID: 0}
     - target: {fileID: 7763992497619038211, guid: f074124b23dc3b142b375ea686852d7a,
         type: 3}
       propertyPath: m_Pivot.x
@@ -403,6 +418,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8621722090896337855, guid: 12bbe8d0edf038c4c97317b345a83777,
+        type: 3}
+      propertyPath: SCORE
+      value: 
+      objectReference: {fileID: 1156037216623410880}
+    - target: {fileID: 8621722090896337855, guid: 12bbe8d0edf038c4c97317b345a83777,
+        type: 3}
+      propertyPath: TIMER
+      value: 
+      objectReference: {fileID: 8234634256491821132}
+    - target: {fileID: 8621722090896337855, guid: 12bbe8d0edf038c4c97317b345a83777,
+        type: 3}
+      propertyPath: DATA_PATH
+      value: VRlevel1.dat
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12bbe8d0edf038c4c97317b345a83777, type: 3}
 --- !u!224 &7175942695688107433 stripped
@@ -433,6 +463,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1835045835790331817, guid: 454aed307567b0e459c372e5118db0bf,
+        type: 3}
+      propertyPath: DATA_PATH
+      value: VRlevel1.dat
+      objectReference: {fileID: 0}
+    - target: {fileID: 1835045835790331817, guid: 454aed307567b0e459c372e5118db0bf,
+        type: 3}
+      propertyPath: SCENE_PATH
+      value: Assets/Scenes/VR/VRLevel1.unity
       objectReference: {fileID: 0}
     - target: {fileID: 1989268729507309343, guid: 454aed307567b0e459c372e5118db0bf,
         type: 3}
@@ -914,5 +954,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ac747ee1cd0cec4cba013d638224c48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8234634256491821132 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 622657221285296340, guid: 7f82ad5eeaa412247a93bcbbdd830a1a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8855012876797051032}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cc9288c40187804a9afcf0839a190be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1156037216623410880 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7703480772199956056, guid: 7f82ad5eeaa412247a93bcbbdd830a1a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8855012876797051032}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42f7683171068a644bfdc1848b5929ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
