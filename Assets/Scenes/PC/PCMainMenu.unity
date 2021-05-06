@@ -382,6 +382,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 372108389}
     m_Modifications:
+    - target: {fileID: 653921411137192182, guid: 3a4a627116e386b4da9b0097fd902c36,
+        type: 3}
+      propertyPath: SCENE_PATH
+      value: Assets/Scenes/PC/PCLevel2.unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620746848329846425, guid: 3a4a627116e386b4da9b0097fd902c36,
+        type: 3}
+      propertyPath: DATA_PATH
+      value: PClevel1.unity.meta
+      objectReference: {fileID: 0}
     - target: {fileID: 4839483287361171330, guid: 3a4a627116e386b4da9b0097fd902c36,
         type: 3}
       propertyPath: m_Name
@@ -506,6 +516,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7371150504008858878, guid: 3a4a627116e386b4da9b0097fd902c36,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: loadLevel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a4a627116e386b4da9b0097fd902c36, type: 3}
