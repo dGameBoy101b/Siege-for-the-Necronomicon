@@ -1,0 +1,25 @@
+ManifestFileVersion: 0
+CRC: 277282650
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3996ba0683004ab0ea9fd5310c7bd276
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 10a6a558690295dadb3dd990eda0821a
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/plane.mat
+- Assets/Objects/Player/Gauntlet/Gauntlet.mat
+- Assets/road.mat
+- Assets/Objects/Player/Sword Slash/Sword Slash.mat
+- Assets/Objects/Projectiles/Simple Magical Projectile/Simple Magical Projectile.mat
+- Assets/Objects/Projectiles/Simple Physical Projectile/Simple Physical Projectile.mat
+- Assets/Objects/Player/Sword/Sword.mat
+- Assets/box.mat
+Dependencies: []

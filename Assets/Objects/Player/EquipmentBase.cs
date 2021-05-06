@@ -47,4 +47,9 @@ public abstract class EquipmentBase : MonoBehaviour
 	{
 		this.updateHandedness();
 	}
+
+	protected virtual void Update() 
+	{
+		
+	}
 }
