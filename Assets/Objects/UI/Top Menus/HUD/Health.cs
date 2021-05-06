@@ -35,6 +35,9 @@ public class Health : MonoBehaviour
 	[Tooltip("The player's emergency shield")]
 	public EmergencyShield EMERGENCY_SHIELD;
 
+	[Tooltip("GUI component for player's health")]
+	public Slider slider;
+
 	[HideInInspector]
 	public int currentHealth;
 
@@ -60,11 +63,13 @@ public class Health : MonoBehaviour
 	/** 
 	 * set the amount of current HP into text on the UI
 	 * check if isDead is true yet for enabling game over screen
+	 * update GUI slider to reflect players current health
 	*/
 	public void UpdateGUI()
 	{
 		currentHealthLabel.text = currentHealth.ToString();
 		LEVEL_FAIL.gameObject.SetActive(IsDead);
+		slider.value = currentHealth;
 	}
 
 	/** 
