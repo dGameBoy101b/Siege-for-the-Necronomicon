@@ -115,9 +115,9 @@ public class CurvedMagicalProjectile : MagicalProjectileBase
 	private Quaternion calcRot(float t)
 	{
 		Vector3 d = this.TARGET - this.start_pos;
-		float angle = 180f * (float)System.Math.Atan(this.calcGradient(t)) / (float)System.Math.PI;
+		float angle = (float)System.Math.Atan(this.calcGradient(t)) / (float)System.Math.PI * -180f;
 		Debug.Log("angle = " + angle.ToString());
-		Quaternion r = Quaternion.AngleAxis(angle, Vector3.Cross(d, this.start_up).normalized) * Quaternion.LookRotation(d, this.start_up);
+		Quaternion r = Quaternion.AngleAxis(angle, Vector3.Cross(this.start_up, d).normalized) * Quaternion.LookRotation(d, this.start_up);
 		return r;
 	}
 	
@@ -128,7 +128,7 @@ public class CurvedMagicalProjectile : MagicalProjectileBase
 	 */
 	private float calcGradient(float t)
 	{
-		float g = (float)System.Math.PI * this.HEIGHT * (float)System.Math.Cos(System.Math.PI * t);
+		float g = (float)System.Math.PI * this.HEIGHT * (float)System.Math.Cos(System.Math.PI * t) / Vector3.Distance(this.start_pos, this.TARGET);
 		return g;
 	}
 	
@@ -168,7 +168,7 @@ public class CurvedMagicalProjectile : MagicalProjectileBase
 	private void setup()
 	{
 		this.start_pos = this.transform.position;
-		this.start_up = Vector3.Cross(this.TARGET - this.start_pos, this.transform.right).normalized;
+		this.start_up = this.transform.up;//Vector3.Cross(this.TARGET - this.start_pos, this.transform.right).normalized;
 		this.timer = 0f;
 	}
 	
