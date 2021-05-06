@@ -56,7 +56,7 @@ public sealed class SimpleMagicalProjectile : MagicalProjectileBase
 	{
 		this.transform.position += this.transform.forward * this.SPEED * t;
 	}
-	
+
 	/**
 	 * Attack the player when hit.
 	 */
