@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 1980061722
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: de435f0742150b07fc9ccfefd718b1f5
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 3f7d0c5e0986ec71841622bcb2f9be1c
+HashAppended: 0
+ClassTypes:
+- Class: 83
+  Script: {instanceID: 0}
+Assets:
+- Assets/Objects/Audio/Soundtrack/Danger LOOP NO INTRO.wav
+- Assets/Objects/Audio/Sound FX/THRUSTER_Afterburner_Power_Distorted_loop_mono.wav
+- Assets/Objects/Audio/Sound FX/ROCKET_Launch_Deep_Slow_mono.wav
+- Assets/Objects/Audio/Sound FX/CHARGE_Sci-Fi_High_Pass_Sweep_12_Semi_High_Loop_loop_stereo.wav
+- Assets/Objects/Audio/Sound FX/MAGIC_SPELL_Quick_Whoosh_Echo_Out_stereo_V2.wav
+Dependencies: []

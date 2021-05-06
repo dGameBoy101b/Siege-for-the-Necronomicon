@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -31,9 +31,9 @@ public sealed class Sword : EquipmentBase
 	 */
 	public GameObject createSlash(Vector3 start, Vector3 end, float speed_scale = 1f)
 	{
-		Vector3 midpoint = (start + end) * .5f;
+		Vector3 midpoint = Vector3.Lerp(start, end, 0.5f);
 		GameObject slash = GameObject.Instantiate(this.SLASH_PREFAB, midpoint, Quaternion.LookRotation(midpoint - this.PLAYER.position, end - start));
-		slash.transform.localScale = Vector3.Scale(new Vector3(1f, Vector3.Distance(start, end) / slash.GetComponent<Collider>().bounds.size.y, 1f), slash.transform.localScale);
+		slash.transform.localScale = Vector3.Scale(new Vector3(Vector3.Distance(start, end) / slash.GetComponent<Collider>().bounds.size.x, Vector3.Distance(start, end) / slash.GetComponent<Collider>().bounds.size.y, 1f), slash.transform.localScale);
 		slash.GetComponent<SwordSlash>().SPEED *= speed_scale;
 		return slash;
 	}
@@ -52,22 +52,24 @@ public sealed class Sword : EquipmentBase
 	private void endSlash()
 	{
 		this.createSlash(this.slash_start, this.transform.position + this.SLASH_OFFSET);
+		Debug.Log("End slash " + this.transform.position);
 	}
 	
-	private void Update()
+	protected override void Update()
 	{
-		if ((OVRInput.GetDominantHand() == OVRInput.Handedness.LeftHanded && OVRInput.GetDown(this.SLASH_BUTTON, OVRInput.Controller.LHand))
+		if (/*(OVRInput.GetDominantHand() == OVRInput.Handedness.LeftHanded && OVRInput.GetDown(this.SLASH_BUTTON, OVRInput.Controller.LHand))
 			|| (OVRInput.GetDominantHand() == OVRInput.Handedness.RightHanded && OVRInput.GetDown(this.SLASH_BUTTON, OVRInput.Controller.RHand))
-			|| (OVRInput.GetDominantHand() == OVRInput.Handedness.Unsupported && OVRInput.GetDown(this.SLASH_BUTTON, OVRInput.Controller.Active)))
+			|| (OVRInput.GetDominantHand() == OVRInput.Handedness.Unsupported && OVRInput.GetDown(this.SLASH_BUTTON, OVRInput.Controller.Active))*/
+			OVRInput.GetDown(this.SLASH_BUTTON))
 		{
-			Debug.Log("start slash");
 			this.startSlash();
+			Debug.Log("start slash position " + slash_start);
 		}
-		else if ((OVRInput.GetDominantHand() == OVRInput.Handedness.LeftHanded && OVRInput.GetUp(this.SLASH_BUTTON, OVRInput.Controller.LHand))
+		if (/*(OVRInput.GetDominantHand() == OVRInput.Handedness.LeftHanded && OVRInput.GetUp(this.SLASH_BUTTON, OVRInput.Controller.LHand))
 			|| (OVRInput.GetDominantHand() == OVRInput.Handedness.RightHanded && OVRInput.GetUp(this.SLASH_BUTTON, OVRInput.Controller.RHand))
-			|| (OVRInput.GetDominantHand() == OVRInput.Handedness.Unsupported && OVRInput.GetUp(this.SLASH_BUTTON, OVRInput.Controller.Active)))
+			|| (OVRInput.GetDominantHand() == OVRInput.Handedness.Unsupported && OVRInput.GetUp(this.SLASH_BUTTON, OVRInput.Controller.Active))*/
+			OVRInput.GetUp(this.SLASH_BUTTON))
 		{
-			Debug.Log("end slash");
 			this.endSlash();
 		}
 	}

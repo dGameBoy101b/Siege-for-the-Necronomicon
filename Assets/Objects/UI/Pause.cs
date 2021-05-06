@@ -49,7 +49,7 @@ public class Pause : MonoBehaviour
 	
 	private void Update()
 	{
-		if (Input.GetButtonDown(this.PAUSE_BUTTON))
+		if (Input.GetButtonDown(this.PAUSE_BUTTON) || OVRInput.GetDown(OVRInput.Button.Start))
 		{
 			this.pause();
 		}

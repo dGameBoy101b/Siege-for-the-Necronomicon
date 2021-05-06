@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &4377574258533156560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5722511296665798293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aaf960227867044282d921171d2d7ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  pointer: {fileID: 0}
+  sortOrder: 0
 --- !u!1001 &7195021089650210165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -117,5 +136,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: VR Credits Pane
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7705766715829375221, guid: 9380a94e030e604408e6857b6419730c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9380a94e030e604408e6857b6419730c, type: 3}
+--- !u!1 &5722511296665798293 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3221103133831181280, guid: 9380a94e030e604408e6857b6419730c,
+    type: 3}
+  m_PrefabInstance: {fileID: 7195021089650210165}
+  m_PrefabAsset: {fileID: 0}

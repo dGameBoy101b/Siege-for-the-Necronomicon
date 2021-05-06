@@ -43,6 +43,7 @@ public sealed class SwordSlash : MonoBehaviour
 		if (SwordSlash.shouldDestroy(col))
 		{
 			Object.Destroy(this.gameObject);
+			Debug.Log("destroyed by " + col.gameObject.name);
 		}
 	}
 }

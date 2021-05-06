@@ -1504,6 +1504,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7517340084495778270, guid: 472cf811904814547928b41e570ca35c,
+        type: 3}
+      propertyPath: SLASH_BUTTON
+      value: 2097152
+      objectReference: {fileID: 0}
     - target: {fileID: 7925709358855656402, guid: 472cf811904814547928b41e570ca35c,
         type: 3}
       propertyPath: m_Name
@@ -3918,6 +3923,11 @@ PrefabInstance:
         type: 3}
       propertyPath: DATA_PATH
       value: PClevel1.dat
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681138847177652194, guid: 9ab7941042e233041b24e74aa51dd304,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2116636517939464312, guid: 9ab7941042e233041b24e74aa51dd304,
         type: 3}
