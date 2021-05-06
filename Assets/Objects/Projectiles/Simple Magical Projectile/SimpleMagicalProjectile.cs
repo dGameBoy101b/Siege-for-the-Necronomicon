@@ -29,7 +29,17 @@ public sealed class SimpleMagicalProjectile : MagicalProjectileBase
 	[Tooltip("The speed in units per second at which this simple magical projectile moves forward.")]
 	[Min(float.Epsilon)]
 	public float SPEED;
-	
+
+	[Header("Physical Projectile Animation")]
+
+	[SerializeField()]
+	[Tooltip("Is the effects that plays when the projectile is defeated.")]
+	public GameObject defeatAnimation;
+
+	[SerializeField()]
+	[Tooltip("Is the effects that plays when the projectile is hits the player.")]
+	public GameObject attackAnimation;
+
 	/**
 	 * Rotate this simple projectile to face the target.
 	 */
@@ -53,6 +63,7 @@ public sealed class SimpleMagicalProjectile : MagicalProjectileBase
 	public override void attack()
 	{
 		this.PLAYER_HEALTH.TakeDamage(DAMAGE);
+		this.playAttackAnimation();
 		base.attack();
 	}
 	
@@ -62,6 +73,7 @@ public sealed class SimpleMagicalProjectile : MagicalProjectileBase
 	public override void defeat()
 	{
 		this.PLAYER_SCORE.AddScore(this.POINTS);
+		this.playDefeatAnimation();
 		base.defeat();
 	}
 	
@@ -73,5 +85,23 @@ public sealed class SimpleMagicalProjectile : MagicalProjectileBase
 	private void Update()
 	{
 		this.moveForward(Time.deltaTime);
+	}
+
+	/**
+	 * @author Allan Zheng 33690777
+	 * Plays the animation for when the player defeats a projectile.
+	 */
+	private void playDefeatAnimation()
+	{
+		Instantiate(defeatAnimation, transform.position, transform.rotation);
+	}
+
+	/**
+	 * @author Allan Zheng 33690777
+	 * Plays the animation for when the player is hit by a projectile.
+	 */
+	private void playAttackAnimation()
+	{
+		Instantiate(attackAnimation, transform.position, transform.rotation);
 	}
 }
