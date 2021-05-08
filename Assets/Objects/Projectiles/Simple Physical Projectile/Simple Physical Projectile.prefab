@@ -165,6 +165,9 @@ MonoBehaviour:
   POINTS: 10
   TARGET: {x: 0, y: 0, z: 0}
   SPEED: 0
+  defeatedPhysicalProjectile: {fileID: 858096020925572054, guid: 183488b399c7fd448b6574bca16964a5,
+    type: 3}
+  breakForce: 2
 --- !u!1 &1469780314223391564
 GameObject:
   m_ObjectHideFlags: 0

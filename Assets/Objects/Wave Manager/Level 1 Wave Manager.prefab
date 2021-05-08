@@ -23,17 +23,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6937707871423498234}
     m_Modifications:
-    - target: {fileID: 1686839534504528535, guid: 39d76bf6d434c954ba8f5a2e870f7e90,
-        type: 3}
-      propertyPath: breakForce
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1686839534504528535, guid: 39d76bf6d434c954ba8f5a2e870f7e90,
-        type: 3}
-      propertyPath: defeatedPhysicalProjectile
-      value: 
-      objectReference: {fileID: 858096020925572054, guid: 183488b399c7fd448b6574bca16964a5,
-        type: 3}
     - target: {fileID: 1839181747315851439, guid: 39d76bf6d434c954ba8f5a2e870f7e90,
         type: 3}
       propertyPath: m_Name
@@ -119,18 +108,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7440087140923013420, guid: 39d76bf6d434c954ba8f5a2e870f7e90,
-        type: 3}
-      propertyPath: attackAnimation
-      value: 
-      objectReference: {fileID: 1714524745656972, guid: 2e33bbd89680b744a8f2b0727a31b0ca,
-        type: 3}
-    - target: {fileID: 7440087140923013420, guid: 39d76bf6d434c954ba8f5a2e870f7e90,
-        type: 3}
-      propertyPath: defeatAnimation
-      value: 
-      objectReference: {fileID: 1320316104850776, guid: 1977fc844cb969a44866c4dcd32996d1,
-        type: 3}
     - target: {fileID: 7440087140923013420, guid: 39d76bf6d434c954ba8f5a2e870f7e90,
         type: 3}
       propertyPath: defeatedMagicalProjectile
@@ -488,7 +465,7 @@ PrefabInstance:
     - target: {fileID: 8248358620339226293, guid: ff6cbe50cc733314093a41a5e2d690f0,
         type: 3}
       propertyPath: m_Name
-      value: Wave Manager Variant - Level 1
+      value: Level 1 Wave Manager
       objectReference: {fileID: 0}
     - target: {fileID: 8827056051176475156, guid: ff6cbe50cc733314093a41a5e2d690f0,
         type: 3}
@@ -515,17 +492,6 @@ PrefabInstance:
       propertyPath: POINTS
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 1686839534504528535, guid: 39d76bf6d434c954ba8f5a2e870f7e90,
-        type: 3}
-      propertyPath: breakForce
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1686839534504528535, guid: 39d76bf6d434c954ba8f5a2e870f7e90,
-        type: 3}
-      propertyPath: defeatedPhysicalProjectile
-      value: 
-      objectReference: {fileID: 858096020925572054, guid: 183488b399c7fd448b6574bca16964a5,
-        type: 3}
     - target: {fileID: 1839181747315851439, guid: 39d76bf6d434c954ba8f5a2e870f7e90,
         type: 3}
       propertyPath: m_Name
@@ -601,18 +567,6 @@ PrefabInstance:
       propertyPath: POINTS
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 7440087140923013420, guid: 39d76bf6d434c954ba8f5a2e870f7e90,
-        type: 3}
-      propertyPath: attackAnimation
-      value: 
-      objectReference: {fileID: 1231636063597364, guid: 3aa0fab185f378240b831342bde74b26,
-        type: 3}
-    - target: {fileID: 7440087140923013420, guid: 39d76bf6d434c954ba8f5a2e870f7e90,
-        type: 3}
-      propertyPath: defeatAnimation
-      value: 
-      objectReference: {fileID: 1746675453279186, guid: 01638115f50284b4fb616d584a6fabff,
-        type: 3}
     - target: {fileID: 7440087140923013420, guid: 39d76bf6d434c954ba8f5a2e870f7e90,
         type: 3}
       propertyPath: defeatedMagicalProjectile

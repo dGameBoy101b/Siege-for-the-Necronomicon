@@ -30,7 +30,7 @@ public sealed class SimpleMagicalProjectile : MagicalProjectileBase
 	[Min(float.Epsilon)]
 	public float SPEED;
 
-	[Header("Physical Projectile Animation")]
+	[Header("Projectile Animation")]
 
 	[SerializeField()]
 	[Tooltip("Is the effects that plays when the projectile is defeated.")]
