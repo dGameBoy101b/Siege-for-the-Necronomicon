@@ -72,10 +72,6 @@ MonoBehaviour:
   POINTS: 10
   TARGET: {x: 0, y: 0, z: 0}
   SPEED: 0
-  defeatAnimation: {fileID: 1320316104850776, guid: 1977fc844cb969a44866c4dcd32996d1,
-    type: 3}
-  attackAnimation: {fileID: 1714524745656972, guid: 2e33bbd89680b744a8f2b0727a31b0ca,
-    type: 3}
 --- !u!1 &2470734567014000991
 GameObject:
   m_ObjectHideFlags: 0

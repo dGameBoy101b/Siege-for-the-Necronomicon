@@ -25,7 +25,7 @@ public class SimplePhysicalProjectile : PhysicalProjectileBase
 	[Min(float.Epsilon)]
 	public float SPEED;
 
-	[Header("Projectile Animation")]
+	[Header("Physical Projectile Animation")]
 
 	[SerializeField()]
 	[Tooltip("Is the fractured version of the projectile game object.")]
