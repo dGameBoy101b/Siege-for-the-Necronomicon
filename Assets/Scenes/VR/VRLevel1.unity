@@ -2749,7 +2749,7 @@ PrefabInstance:
     - target: {fileID: 3784572114630202001, guid: 3cac2a68744637b4880486cb51deb074,
         type: 3}
       propertyPath: MIN_DIST
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3784572114630202001, guid: 3cac2a68744637b4880486cb51deb074,
         type: 3}

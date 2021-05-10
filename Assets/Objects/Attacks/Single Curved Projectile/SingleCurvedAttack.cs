@@ -6,7 +6,7 @@ using System;
 /**
  * @author Rhys Mader 33705134
  * @date 13/04/2021
- * An attack that spawns a single simple projectile.
+ * An attack that spawns a single curved projectile.
  */
 public sealed class SingleCurvedAttack : AttackBase
 {

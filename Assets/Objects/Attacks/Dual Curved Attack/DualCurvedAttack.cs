@@ -4,20 +4,20 @@ using UnityEngine;
 using System;
 
 /**
- * @author Rhys Mader 33705134
- * @date 13/04/2021
- * An attack that spawns a single simple projectile.
+ * @author Connor Burnside 33394927	
+ * @date 10/05/2021
+ * An attack that spawns two curved projectiles at the same time. Based on the single simple attack script
  */
 public sealed class DualCurvedAttack : AttackBase
 {
 	[Header("Projectile Prefabs")]
 	
 	[SerializeField()]
-	[Tooltip("The simple magical projectile prefab.")]
+	[Tooltip("The curved magical projectile prefab.")]
 	public GameObject MAGIC_PROJ;
 	
 	[SerializeField()]
-	[Tooltip("The simple physical projectile prefab.")]
+	[Tooltip("The curved physical projectile prefab.")]
 	public GameObject PHYSICS_PROJ;
 	
 	[Header("Speed")]
@@ -67,9 +67,12 @@ public sealed class DualCurvedAttack : AttackBase
 	[Tooltip("The maximum angle the player should turn vertically to face the spawned projectile in degrees.")]
 	[Range(0f, 90f)]
 	public float MAX_LAT;
+
+	//this stores the spawn position of the first projectile so that the second can be spawned with the opposite lat
+	private Vector3 projpos;
 	
 	/**
-	 * Spawn either a simple magical prjectile or a simple physical projectile.
+	 * Spawn a curved magical projectile and a curved physical projectile.
 	 * @param player_pos The current world position of the player.
 	 * @param player_rot The current world rotation of the player.
 	 * @param player_health The health of the player.
@@ -79,10 +82,10 @@ public sealed class DualCurvedAttack : AttackBase
 	public override List<ProjectileBase> spawn(System.Random rng, Vector3 player_pos, Quaternion player_rot, Health player_health, ScoreSystem player_score)
 	{
 		List<ProjectileBase> projectiles = new List<ProjectileBase>(2);
-		//spawn one of eachat an equal distance apart
+		//spawn one of each at an equal distance apart
 		projectiles.Add(this.spawnMagical(rng, player_pos, player_rot, player_health, player_score));
 		projectiles.Add(this.spawnPhysical(rng , player_pos, player_rot, player_health, player_score));
-	
+
 		return projectiles;
 	}
 	
@@ -151,17 +154,18 @@ public sealed class DualCurvedAttack : AttackBase
 	}
 	
 	/**
-	 * Spawn a simple magical projectile.
+	 * Spawn a curved magical projectile.
 	 * @param rng The random number generator used for all randomisation.
 	 * @param player_pos The current world position of the player.
 	 * @param player_rot The current world rotation of the player.
 	 * @param player_health The health of the player.
 	 * @param player_score The score of the player.
-	 * @return The script attached to the simple magical projectile.
+	 * @return The script attached to the curved magical projectile.
 	 */
 	private CurvedMagicalProjectile spawnMagical(System.Random rng, Vector3 player_pos, Quaternion player_rot, Health player_health, ScoreSystem player_score)
 	{
-		CurvedMagicalProjectile proj = GameObject.Instantiate(this.MAGIC_PROJ, this.randStartPos(rng, player_pos, player_rot), Quaternion.identity).GetComponent<CurvedMagicalProjectile>();
+		projpos = this.randStartPos(rng, player_pos, player_rot);
+		CurvedMagicalProjectile proj = GameObject.Instantiate(this.MAGIC_PROJ, projpos, Quaternion.identity).GetComponent<CurvedMagicalProjectile>();
 		proj.SPEED = this.randSpeed(rng);
 		proj.TARGET = player_pos;
 		proj.PLAYER_HEALTH = player_health;
@@ -171,17 +175,18 @@ public sealed class DualCurvedAttack : AttackBase
 	}
 	
 	/**
-	 * Spawn a simple physical projectile.
+	 * Spawn a curved physical projectile.
 	 * @param The random number generator used for all randomisation.
 	 * @param player_pos The current world position of the player.
 	 * @param player_rot The current world rotation of the player.
 	 * @param player_health The health of the player.
 	 * @param player_score The score of the player.
-	 * @return The script attached to the simple physcial projectile.
+	 * @return The script attached to the curved physcial projectile.
 	 */
 	private CurvedPhysicalProjectile spawnPhysical(System.Random rng, Vector3 player_pos, Quaternion player_rot, Health player_health, ScoreSystem player_score)
 	{
-		CurvedPhysicalProjectile proj = GameObject.Instantiate(this.PHYSICS_PROJ, this.randStartPos(rng, player_pos, player_rot), Quaternion.identity).GetComponent<CurvedPhysicalProjectile>();
+		projpos.x *= -1;
+		CurvedPhysicalProjectile proj = GameObject.Instantiate(this.PHYSICS_PROJ, projpos, Quaternion.identity).GetComponent<CurvedPhysicalProjectile>();
 		proj.SPEED = this.randSpeed(rng);
 		proj.TARGET = player_pos;
 		proj.PLAYER_HEALTH = player_health;
