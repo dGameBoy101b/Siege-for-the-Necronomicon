@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/PC/PCLevel1.unity
-  isLoaded: 1
-  isActive: 1
+- path: Assets/Objects/UI/UI Components/Option Slider/New Scene.unity
+  isLoaded: 0
+  isActive: 0
   isSubScene: 0
