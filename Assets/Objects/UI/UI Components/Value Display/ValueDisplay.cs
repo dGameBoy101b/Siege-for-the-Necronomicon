@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ValueDisplay : MonoBehaviour
 {
 	[Tooltip("The text element ot display the value.")]
-	public Text VALUE_TEXT;
+	public TMPro.TMP_Text VALUE_TEXT;
 	
 	/**
 	 * The value to display.

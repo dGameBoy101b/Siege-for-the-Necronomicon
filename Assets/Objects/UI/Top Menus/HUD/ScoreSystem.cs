@@ -13,7 +13,7 @@ public class ScoreSystem : MonoBehaviour
 {
 
 	[Tooltip("The text object that stores the player's current score.")]
-	public Text currentScoreLabel;
+	public TMPro.TMP_Text currentScoreLabel;
 
 	[Tooltip("The text object that stores the player's final score to display on game over.")]
 	public ValueDisplay endScoreLabel;

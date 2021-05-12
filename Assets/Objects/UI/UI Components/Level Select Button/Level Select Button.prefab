@@ -144,13 +144,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3661e2488077749806e32da2bf809b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LOAD_SCENE: 0
+  SCENE_PATH: 
+  DATA_PATH: 
   LEVEL_DISPLAY: {fileID: 3757501218131049890}
   SCORE_DISPLAY: {fileID: 1776897673824340917}
   TIME_DISPLAY: {fileID: 790384480632809746}
   LEVEL_NAME: 
-  HIGH_SCORE: 0
-  TIME_LEFT: 0
 --- !u!1 &6580161769499777138
 GameObject:
   m_ObjectHideFlags: 0
