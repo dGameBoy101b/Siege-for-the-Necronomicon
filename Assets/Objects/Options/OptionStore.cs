@@ -146,7 +146,7 @@ public sealed class OptionStore : MonoBehaviour
 		}
 		catch (Exception e)
 		{
-			Debug.LogException(e);
+			Debug.LogWarning(e);
 			return;
 		}
 		this.options = new BinaryFormatter().Deserialize(file) as Dictionary<string, object>;

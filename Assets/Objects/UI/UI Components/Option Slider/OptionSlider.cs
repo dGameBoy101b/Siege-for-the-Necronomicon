@@ -41,6 +41,11 @@ public class OptionSlider : MonoBehaviour
 	[Tooltip("The default value.")]
 	public float DEFAULT;
 	
+	[SerializeField()]
+	[Tooltip("The number of decimal places that should be displayed.")]
+	[Range(0,5)]
+	public int PRECISION;
+	
 	/**
 	 * Check to ensure the minimum is lesser than the maximum.
 	 * @throws Exception The minimum is greater than or equal to the maximum.
@@ -74,7 +79,7 @@ public class OptionSlider : MonoBehaviour
 			OptionStore.Instance.addOption(this.NAME, this.DEFAULT);
 		}
 		this.SLIDER.value = (float)OptionStore.Instance.getOption(this.NAME);
-		this.VAL_TEXT.text = this.SLIDER.value.ToString();
+		this.VAL_TEXT.text = this.ensurePrecision(this.SLIDER.value.ToString());
 	}
 	
 	/**
@@ -82,8 +87,40 @@ public class OptionSlider : MonoBehaviour
 	 */
 	public void updateValue()
 	{
+		if (!OptionStore.Instance.hasOption(this.NAME))
+		{
+			OptionStore.Instance.addOption(this.NAME, this.DEFAULT);
+		}
 		OptionStore.Instance.setOption(this.NAME, this.SLIDER.value);
-		this.VAL_TEXT.text = this.SLIDER.value.ToString();
+		this.VAL_TEXT.text = this.ensurePrecision(this.SLIDER.value.ToString());
+	}
+	
+	/**
+	 * Trim or pad the given number string to comply with the precision setting of this option slider.
+	 * @param str The number string to process.
+	 * @return The given string trimmed and padded to the specified precision.
+	 */
+	private string ensurePrecision(string str)
+	{
+		int dec_i = str.Length;
+		if (str.Contains("."))
+		{
+			dec_i = str.IndexOf('.');
+		}
+		else
+		{
+			str += '.';
+		}
+		if (this.PRECISION == 0)
+		{
+			return str.Substring(0, dec_i);
+		}
+		dec_i += 1;
+		while (str.Length - dec_i < this.PRECISION)
+		{
+			str += '0';
+		}
+		return str.Substring(0, dec_i + this.PRECISION);
 	}
 	
 	private void Awake()
