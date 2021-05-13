@@ -41,10 +41,16 @@ public class OptionSlider : MonoBehaviour
 	[Tooltip("The default value.")]
 	public float DEFAULT;
 	
+	[Header("Display Settings")]
+	
 	[SerializeField()]
 	[Tooltip("The number of decimal places that should be displayed.")]
 	[Range(0,5)]
 	public int PRECISION;
+	
+	[SerializeField()]
+	[Tooltip("Should text displays always have a plus sign if the value is psoitive?")]
+	public bool FORCE_PLUS;
 	
 	/**
 	 * Check to ensure the minimum is lesser than the maximum.
@@ -63,8 +69,8 @@ public class OptionSlider : MonoBehaviour
 	 */
 	private void updateRange()
 	{
-		this.MIN_TEXT.text = this.MIN.ToString();
-		this.MAX_TEXT.text = this.MAX.ToString();
+		this.MIN_TEXT.text = this.ensurePlus(this.ensurePrecision(this.MIN.ToString()));
+		this.MAX_TEXT.text = this.ensurePlus(this.ensurePrecision(this.MAX.ToString()));
 		this.SLIDER.minValue = this.MIN;
 		this.SLIDER.maxValue = this.MAX;
 	}
@@ -79,7 +85,7 @@ public class OptionSlider : MonoBehaviour
 			OptionStore.Instance.addOption(this.NAME, this.DEFAULT);
 		}
 		this.SLIDER.value = (float)OptionStore.Instance.getOption(this.NAME);
-		this.VAL_TEXT.text = this.ensurePrecision(this.SLIDER.value.ToString());
+		this.VAL_TEXT.text = this.ensurePlus(this.ensurePrecision(this.SLIDER.value.ToString()));
 	}
 	
 	/**
@@ -92,7 +98,7 @@ public class OptionSlider : MonoBehaviour
 			OptionStore.Instance.addOption(this.NAME, this.DEFAULT);
 		}
 		OptionStore.Instance.setOption(this.NAME, this.SLIDER.value);
-		this.VAL_TEXT.text = this.ensurePrecision(this.SLIDER.value.ToString());
+		this.VAL_TEXT.text = this.ensurePlus(this.ensurePrecision(this.SLIDER.value.ToString()));
 	}
 	
 	/**
@@ -102,6 +108,7 @@ public class OptionSlider : MonoBehaviour
 	 */
 	private string ensurePrecision(string str)
 	{
+		Debug.Log("ensure precision: \"" + str + "\"");
 		int dec_i = str.Length;
 		if (str.Contains("."))
 		{
@@ -121,6 +128,20 @@ public class OptionSlider : MonoBehaviour
 			str += '0';
 		}
 		return str.Substring(0, dec_i + this.PRECISION);
+	}
+	
+	/**
+	 * Ensure the given number string has a plus sign if it doesn't have a negative sign.
+	 * @param str The number string to midify.
+	 * @return The given number string with a plus sign prepended if applicable.
+	 */
+	private string ensurePlus(string str)
+	{
+		if (this.FORCE_PLUS && !str.Contains("-"))
+		{
+			str = '+' + str;
+		}
+		return str;
 	}
 	
 	private void Awake()
