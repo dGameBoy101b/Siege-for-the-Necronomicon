@@ -17,7 +17,7 @@ public class LevelTimer : MonoBehaviour
 	public float TIME;
 
 	[Tooltip("The text object the timer is displayed on.")]
-	public Text TIME_TEXT;
+	public TMPro.TMP_Text TIME_TEXT;
 	
 	[Tooltip("The canvas to show when the level is completed.")]
 	public Canvas LEVEL_COMPLETE;

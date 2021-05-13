@@ -18,7 +18,7 @@ public class Health : MonoBehaviour
 	public int maxHealth;
 
 	[Tooltip("The text object that stores the health of the player.")]
-	public Text currentHealthLabel;
+	public TMPro.TMP_Text currentHealthLabel;
 
 	[Tooltip("The canvas that displays at the game over screen.")]
 	public Canvas LEVEL_FAIL;
