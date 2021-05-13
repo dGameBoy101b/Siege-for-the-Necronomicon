@@ -79,6 +79,7 @@ MonoBehaviour:
   LEFT_HAND: {fileID: 0}
   RIGHT_HAND: {fileID: 0}
   DEFAULT_HAND: {fileID: 0}
+  HANDEDNESS: Left Handed
 --- !u!1 &6312718579520031763
 GameObject:
   m_ObjectHideFlags: 0

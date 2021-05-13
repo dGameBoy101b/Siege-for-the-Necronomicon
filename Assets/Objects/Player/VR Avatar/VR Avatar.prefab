@@ -187,6 +187,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1241229424735196484}
   - component: {fileID: 7470270998925207035}
+  - component: {fileID: 2681115784762672202}
   m_Layer: 10
   m_Name: VR Avatar
   m_TagString: Untagged
@@ -227,6 +228,21 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2681115784762672202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9105077945127954468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ada9b0e38b0aa1c47a5d9029678b3901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TRACKING_SPACE: {fileID: 5597739531459458629}
+  REACH: Reach Adjustment
+  HEIGHT: Height Adjustment
 --- !u!1001 &464246281644624308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -516,6 +532,12 @@ PrefabInstance:
 --- !u!4 &5597739531459167015 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 5597739531459565987}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5597739531459458629 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 159718, guid: 126d619cf4daa52469682f85c1378b4a,
     type: 3}
   m_PrefabInstance: {fileID: 5597739531459565987}
   m_PrefabAsset: {fileID: 0}
