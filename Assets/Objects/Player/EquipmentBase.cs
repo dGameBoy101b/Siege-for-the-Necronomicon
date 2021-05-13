@@ -22,23 +22,45 @@ public abstract class EquipmentBase : MonoBehaviour
 	[Tooltip("The object to attach this object to when there is no dominant hand.")]
 	public Transform DEFAULT_HAND;
 	
+	[Header("Options")]
+	
+	[SerializeField()]
+	[Tooltip("The name of the option which indicate if the player is left handed.")]
+	public string HANDEDNESS;
+	
 	/**
 	 * Update the hand this object is attached to.
 	 */
 	public void updateHandedness()
 	{
 		Transform hand;
-		switch (OVRInput.GetDominantHand())
+		try
 		{
-			case OVRInput.Handedness.LeftHanded:
+			if((bool)OptionStore.Instance.getOption(this.HANDEDNESS))
+			{
 				hand = this.LEFT_HAND;
-				break;
-			case OVRInput.Handedness.RightHanded:
+			}
+			else
+			{
 				hand = this.RIGHT_HAND;
-				break;
-			default:
-				hand = this.DEFAULT_HAND;
-				break;
+			}
+		}
+		catch (OptionStore.OptionDoesNotExistException e)
+		{
+			Debug.LogWarning("Could not find handedness option. Falling back on OVRInput.");
+			switch (OVRInput.GetDominantHand())
+			{
+				case OVRInput.Handedness.LeftHanded:
+					hand = this.LEFT_HAND;
+					break;
+				case OVRInput.Handedness.RightHanded:
+					hand = this.RIGHT_HAND;
+					break;
+				default:
+					Debug.LogWarning("No OVRInput handedness found.");
+					hand = this.DEFAULT_HAND;
+					break;
+			}
 		}
 		this.transform.SetParent(hand, false);
 	}
