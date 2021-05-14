@@ -414,6 +414,11 @@ PrefabInstance:
       propertyPath: CUR_MENU
       value: 
       objectReference: {fileID: 4057001551653474578}
+    - target: {fileID: 7530884553764828042, guid: 0650eb22c95115e4e9b75a49789d703f,
+        type: 3}
+      propertyPath: m_text
+      value: How To Play
+      objectReference: {fileID: 0}
     - target: {fileID: 7701824064509390153, guid: 0650eb22c95115e4e9b75a49789d703f,
         type: 3}
       propertyPath: m_Text
@@ -549,6 +554,11 @@ PrefabInstance:
       propertyPath: CUR_MENU
       value: 
       objectReference: {fileID: 4057001551653474578}
+    - target: {fileID: 7530884553764828042, guid: 0650eb22c95115e4e9b75a49789d703f,
+        type: 3}
+      propertyPath: m_text
+      value: Credits
+      objectReference: {fileID: 0}
     - target: {fileID: 7701824064509390153, guid: 0650eb22c95115e4e9b75a49789d703f,
         type: 3}
       propertyPath: m_Text
@@ -684,6 +694,11 @@ PrefabInstance:
       propertyPath: CUR_MENU
       value: 
       objectReference: {fileID: 4057001551653474578}
+    - target: {fileID: 7530884553764828042, guid: 0650eb22c95115e4e9b75a49789d703f,
+        type: 3}
+      propertyPath: m_text
+      value: Level Select
+      objectReference: {fileID: 0}
     - target: {fileID: 7701824064509390153, guid: 0650eb22c95115e4e9b75a49789d703f,
         type: 3}
       propertyPath: m_Text
@@ -819,6 +834,11 @@ PrefabInstance:
       propertyPath: CUR_MENU
       value: 
       objectReference: {fileID: 4057001551653474578}
+    - target: {fileID: 7530884553764828042, guid: 0650eb22c95115e4e9b75a49789d703f,
+        type: 3}
+      propertyPath: m_text
+      value: Options
+      objectReference: {fileID: 0}
     - target: {fileID: 7701824064509390153, guid: 0650eb22c95115e4e9b75a49789d703f,
         type: 3}
       propertyPath: m_Text
