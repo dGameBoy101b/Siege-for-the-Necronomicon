@@ -13,15 +13,15 @@ public class OptionSlider : MonoBehaviour
 	
 	[SerializeField()]
 	[Tooltip("The text element that displays the minimum value.")]
-	public Text MIN_TEXT;
+	public TMPro.TMP_Text MIN_TEXT;
 	
 	[SerializeField()]
 	[Tooltip("The text element that displays the maximum value.")]
-	public Text MAX_TEXT;
+	public TMPro.TMP_Text MAX_TEXT;
 	
 	[SerializeField()]
 	[Tooltip("The text element that displays the current value.")]
-	public Text VAL_TEXT;
+	public TMPro.TMP_Text VAL_TEXT;
 	
 	[Header("Option Settings")]
 	
