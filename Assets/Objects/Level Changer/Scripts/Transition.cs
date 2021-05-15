@@ -29,6 +29,10 @@ public class Transition : MonoBehaviour
     public float START_TIME;
 
     [SerializeField()]
+    [Tooltip("The Starting Orb that the player interacts with to begin in VR")]
+    public GameObject STARTING_ORB;
+
+    [SerializeField()]
     [Tooltip("The level timer")]
     public LevelTimer LEVEL_TIMER;
 
@@ -112,6 +116,7 @@ public class Transition : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.G))
         {
+            Destroy(STARTING_ORB);
             begin();
         }
     }
