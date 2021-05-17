@@ -9,11 +9,11 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Mesh_MeshEffect
   m_Shader: {fileID: 4800000, guid: 972a05a1fafc1c54d8287892f2a939b6, type: 3}
-  m_ShaderKeywords: USE_CUTOUT USE_FRESNEL USE_HEIGHT USE_MAINTEX
+  m_ShaderKeywords: USE_ALPHA_CLIPING USE_CUTOUT USE_FRESNEL USE_HEIGHT USE_MAINTEX
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3001
+  m_CustomRenderQueue: 2999
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -94,7 +94,7 @@ Material:
     - _Shininess: 1
     - _Tess: 4
     - _TexDist: 10
-    - _UseAlphaCliping: 0
+    - _UseAlphaCliping: 1
     - _UseBlending: 0
     - _UseCutout: 1
     - _UseFresnel: 1

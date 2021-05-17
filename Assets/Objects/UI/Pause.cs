@@ -34,6 +34,9 @@ public class Pause : MonoBehaviour
 		this.HUD.gameObject.SetActive(false);
 		this.PAUSE_MENU.gameObject.SetActive(true);
 		this.WAVE_MANAGER.pauseAttacks();
+
+		FindObjectOfType<LaserPointer>().GetComponent<LineRenderer>().enabled = true;
+	
 	}
 	
 	/**
@@ -45,6 +48,8 @@ public class Pause : MonoBehaviour
 		this.PAUSE_MENU.gameObject.SetActive(false);
 		this.HUD.gameObject.SetActive(true);
 		this.WAVE_MANAGER.unpauseAttacks();
+		
+		FindObjectOfType<LaserPointer>().GetComponent<LineRenderer>().enabled = false;
 	}
 	
 	private void Update()

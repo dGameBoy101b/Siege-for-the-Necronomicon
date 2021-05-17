@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5868576190276395951}
-  - component: {fileID: 7793294460007813944}
   - component: {fileID: 1554967641291617234}
   m_Layer: 10
   m_Name: UI Camera
@@ -32,14 +31,6 @@ Transform:
   m_Father: {fileID: 5597739531459167009}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &7793294460007813944
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2101189882538693171}
-  m_Enabled: 1
 --- !u!20 &1554967641291617234
 Camera:
   m_ObjectHideFlags: 0
