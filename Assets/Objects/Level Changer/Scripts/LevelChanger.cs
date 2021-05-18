@@ -74,7 +74,7 @@ public class LevelChanger : MonoBehaviour
                 BARRIER.shatterBarrier();
                 Debug.Log("Loading level " + LevelToLoad);
                 FadeToLevel(LevelToLoad);
-             }
+            }
     }
     /*
      * Is the trigger for the end barrier.
@@ -124,7 +124,7 @@ public class LevelChanger : MonoBehaviour
     /*
      * After the outro life span, the level to load index will load the corresponding scene.
      */
-    private void loadAfterOutro()
+    public void loadAfterOutro()
     {
         FadeToLevel(LevelToLoad);
     }

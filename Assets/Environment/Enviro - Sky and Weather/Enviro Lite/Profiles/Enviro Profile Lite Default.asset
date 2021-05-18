@@ -1845,6 +1845,6 @@ MonoBehaviour:
   showComponentsSetup: 0
   showTimeUI: 0
   showWeatherUI: 1
-  showAudioUI: 0
+  showAudioUI: 1
   showEffectsUI: 0
-  modified: 1
+  modified: 0
