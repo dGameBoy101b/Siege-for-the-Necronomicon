@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 1241229424735196484}
   - component: {fileID: 7470270998925207035}
   - component: {fileID: 2681115784762672202}
+  - component: {fileID: 4644801710593748499}
   m_Layer: 10
   m_Name: VR Avatar
   m_TagString: Untagged
@@ -234,6 +235,22 @@ MonoBehaviour:
   TRACKING_SPACE: {fileID: 5597739531459458629}
   REACH: Reach Adjustment
   HEIGHT: Height Adjustment
+--- !u!54 &4644801710593748499
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9105077945127954468}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &464246281644624308
 PrefabInstance:
   m_ObjectHideFlags: 0

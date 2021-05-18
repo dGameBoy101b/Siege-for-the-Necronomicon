@@ -59,8 +59,15 @@ public abstract class ProjectileBase : MonoBehaviour
 	 */
 	public bool shouldBeDestroyed(Collider col)
 	{
-		return (LayerMask.GetMask(this.DESTROY_LAYERS) 
-		        & LayerMask.GetMask(LayerMask.LayerToName(col.gameObject.layer))) != 0;
+		foreach(string l in DESTROY_LAYERS)
+		{
+			if(LayerMask.GetMask(LayerMask.LayerToName(col.gameObject.layer)) == LayerMask.GetMask(l))
+			{
+				return(true);
+			}
+		}
+		
+		return(false);
 	}
 	
 	/**
@@ -205,6 +212,7 @@ public abstract class ProjectileBase : MonoBehaviour
 	
 	protected virtual void OnTriggerEnter(Collider col)
 	{
+		Debug.Log("collided with " + col.gameObject.layer.ToString());
 		if (this.shouldAttack(col))
 		{
 			this.attack();

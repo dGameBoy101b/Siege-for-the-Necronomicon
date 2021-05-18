@@ -6,19 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Objects/UI/Top Menus/HUD/Scenes/VR/VRMainMenu.unity
+    path: Assets/Scenes/VR/VRMainMenu.unity
     guid: 8ac13a512a7b6634fb136da46ed6334f
   - enabled: 1
-    path: Assets/Objects/UI/Top Menus/HUD/Scenes/VR/VRLevel1.unity
+    path: Assets/Scenes/VR/VRLevel1.unity
     guid: 281d783131a06894eb1e6c3ef44f5646
   - enabled: 0
-    path: Assets/Objects/UI/Top Menus/HUD/Scenes/PC/PCMainMenu.unity
+    path: Assets/Scenes/PC/PCMainMenu.unity
     guid: fa449470100c49e4aab1ab4a2bd475f8
   - enabled: 0
-    path: Assets/Objects/UI/Top Menus/HUD/Scenes/PC/PCLevel1.unity
+    path: Assets/Scenes/PC/PCLevel1.unity
     guid: 245bf8fcd2c5c674895e926e153a5618
   - enabled: 0
-    path: Assets/Objects/UI/Top Menus/HUD/Scenes/PC/PCLevel2.unity
+    path: Assets/Scenes/PC/PCLevel2.unity
     guid: bbff233faf205c643adca302efcdd31c
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: f29d39f739e04aa49b3c913a177f8ed0,
