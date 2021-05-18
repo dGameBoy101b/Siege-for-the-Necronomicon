@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * @author Allan Zheng 33690777
+ * @date 18/05/2021
+ * Handles the transition upon defeating the Necronomicon
+ */
 public class Defeated : MonoBehaviour
 {
     [SerializeField()]
@@ -49,6 +54,9 @@ public class Defeated : MonoBehaviour
         }
     }
 
+    /*
+    * Will trigger the various steps to complete the transition of defeating the Necronomicon
+    */
     public void defeatNeronomicon()
     {
         Destroy(BOOK);
@@ -59,24 +67,28 @@ public class Defeated : MonoBehaviour
         Invoke("levelCompleted", DELAY_BEFORE_SCENE_CHANGE);
     }
 
-    public void deleteBook()
-    {
-        Destroy(BOOK);
-    }
-
+    /*
+    * Will remove the broken world and replace with the Fixed world.
+    */
     public void changeWorld()
     {
         EnviroSkyMgr.instance.SetTimeOfDay(TOD);
         EnviroSkyMgr.instance.ChangeWeatherInstant(ENVIRO_PRESET_INDEX);
-        BROKEN_WORLD.SetActive(false);
+        Destroy(BROKEN_WORLD);
         FIXED_WORLD.SetActive(true);
     }
 
+    /*
+    * Will use LevelChanger.cs to fade out to the next level.
+    */
     public void levelCompleted()
     {
         LEVEL_CHANGER.nextLevel();
     }
 
+    /*
+    * Will play all the audio for defeating the Necronomicon
+    */
     protected void playDefeatedSounds()
     {
         foreach (AudioSource aud in this.DEFEATED_SOUNDS)
