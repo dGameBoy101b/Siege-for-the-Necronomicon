@@ -27,15 +27,15 @@ RectTransform:
   m_GameObject: {fileID: 2190742900035647460}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2577460791566810837}
   - {fileID: 3260095807299491142}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
@@ -251,7 +251,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 191.63037, y: 250.87122}
+  m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &3828365769764161372
 Canvas:
@@ -779,6 +779,11 @@ PrefabInstance:
       propertyPath: CUR_MENU
       value: 
       objectReference: {fileID: 3828365769764161372}
+    - target: {fileID: 7530884553764828042, guid: 0650eb22c95115e4e9b75a49789d703f,
+        type: 3}
+      propertyPath: m_text
+      value: Level Select
+      objectReference: {fileID: 0}
     - target: {fileID: 7701824064509390153, guid: 0650eb22c95115e4e9b75a49789d703f,
         type: 3}
       propertyPath: m_Text
