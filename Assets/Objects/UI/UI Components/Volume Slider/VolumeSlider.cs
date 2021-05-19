@@ -26,6 +26,6 @@ public sealed class VolumeSlider : MonoBehaviour
 	 */
 	public void updateMixer()
 	{
-		this.MIXER.SetFloat(this.MIXER_NAME, this.SLIDER.value - 80);
+		this.MIXER.SetFloat(this.MIXER_NAME, this.SLIDER.value - 100);
 	}
 }

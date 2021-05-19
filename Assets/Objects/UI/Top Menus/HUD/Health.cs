@@ -99,9 +99,12 @@ public class Health : MonoBehaviour
 	void PlayerDead()
 	{
 		this.TIMER.timerIsRunning = false;
-		this.TIME_DISPLAY.Value = this.TIMER.TIME;
+		if (this.TIME_DISPLAY != null)
+		{
+			this.TIME_DISPLAY.Value = this.TIMER.TIME;
+			this.TIME_DISPLAY.updateText();
+		}
 		Cursor.lockState = CursorLockMode.Confined;
-		this.TIME_DISPLAY.updateText();
 		this.WAVE_MANAGER.gameObject.SetActive(false);
 		this.LEVEL_FAIL.gameObject.SetActive(true);
 		this.HUD.gameObject.SetActive(false);

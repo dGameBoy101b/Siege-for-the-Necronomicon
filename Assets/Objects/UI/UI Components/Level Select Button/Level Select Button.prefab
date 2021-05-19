@@ -818,6 +818,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level Display
       objectReference: {fileID: 0}
+    - target: {fileID: 4804922246952235107, guid: 5d6b0c619fd0a1040b75230b1467adbf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6866201454287311180, guid: 5d6b0c619fd0a1040b75230b1467adbf,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6866201454287311180, guid: 5d6b0c619fd0a1040b75230b1467adbf,
         type: 3}
       propertyPath: m_fontColor.b

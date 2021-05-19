@@ -476,26 +476,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3981011328109762238, guid: 472cf811904814547928b41e570ca35c,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.40696648
-      objectReference: {fileID: 0}
-    - target: {fileID: 3981011328109762238, guid: 472cf811904814547928b41e570ca35c,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.649755
-      objectReference: {fileID: 0}
-    - target: {fileID: 3981011328109762238, guid: 472cf811904814547928b41e570ca35c,
-        type: 3}
-      propertyPath: m_Center.x
-      value: 0.006020367
-      objectReference: {fileID: 0}
-    - target: {fileID: 3981011328109762238, guid: 472cf811904814547928b41e570ca35c,
-        type: 3}
-      propertyPath: m_Center.y
-      value: 0.114081934
-      objectReference: {fileID: 0}
     - target: {fileID: 4175899187277678013, guid: 472cf811904814547928b41e570ca35c,
         type: 3}
       propertyPath: m_IsActive
@@ -524,7 +504,7 @@ PrefabInstance:
     - target: {fileID: 7925709358855656402, guid: 472cf811904814547928b41e570ca35c,
         type: 3}
       propertyPath: m_Name
-      value: PC Avatar
+      value: PC Avatar Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8323649531218275806, guid: 472cf811904814547928b41e570ca35c,
         type: 3}

@@ -9,8 +9,9 @@ using UnityEngine;
 */
 public class Credits : MonoBehaviour
 {   
-    //the animation component so we can start and reset animation
-    private Animator anim;
+	[SerializeField()]
+	[Tooltip("the animation component so we can start and reset animation")]
+    public Animator anim;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,6 @@ public class Credits : MonoBehaviour
 
     private void OnEnable() 
     {
-        anim.Play("Credits Animation", 0, 0f);    
+        anim.Play("Credit Animation", 0, 0f);    
     }
 }

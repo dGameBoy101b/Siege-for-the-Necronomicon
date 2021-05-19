@@ -494,6 +494,7 @@ MonoBehaviour:
   PAUSE_MENU: {fileID: 0}
   WAVE_MANAGER: {fileID: 0}
   HUD: {fileID: 3101303567896912569}
+  POINTER: {fileID: 0}
 --- !u!1 &1492343897773999019
 GameObject:
   m_ObjectHideFlags: 0
@@ -1100,7 +1101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WAVE_MANAGER: {fileID: 0}
-  TIME: 0
+  TIME: 200
   TIME_TEXT: {fileID: 0}
   LEVEL_COMPLETE: {fileID: 0}
   HUD: {fileID: 3101303567896912569}

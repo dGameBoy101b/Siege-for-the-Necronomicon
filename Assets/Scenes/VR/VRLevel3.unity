@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 205405559}
+  m_SkyboxMaterial: {fileID: 1777921402}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -464,55 +464,20 @@ MonoBehaviour:
     customCloudsQuality: {fileID: 0}
   currentFogType: 2
   currentReprojectionPixelSize: 2
-  fogMat: {fileID: 1986575758}
+  fogMat: {fileID: 1455036836}
   _ditheringTexture: {fileID: 1508746126}
   DefaultSpotCookie: {fileID: 2800000, guid: d569327f9e6a94841835e2f701795322, type: 3}
-  volumeLightMat: {fileID: 0}
---- !u!84 &90659646
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 2048
-  m_Height: 2048
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 8
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_Dimension: 2
-  m_VolumeDepth: 1
---- !u!21 &205405559
+  volumeLightMat: {fileID: 284145288}
+--- !u!21 &284145288
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Enviro/Standard/SkyboxSimple
-  m_Shader: {fileID: 4800000, guid: 8e6e0603052e7ce47b1d8c48aa9ee67e, type: 3}
-  m_ShaderKeywords: 
+  m_Name: Enviro/Standard/VolumeLight
+  m_Shader: {fileID: 4800000, guid: d9f3d22da4b08c84eb26827873f2a233, type: 3}
+  m_ShaderKeywords: DIRECTIONAL SHADOWS_DEPTH
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -522,44 +487,14 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _Aurora_Colorshift:
-        m_Texture: {fileID: 2800000, guid: c745f38dc285f034d87b346a6f3a9519, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Aurora_Layer_1:
-        m_Texture: {fileID: 2800000, guid: 0f3aa374cdd1a5247b48a8c48016eca2, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Aurora_Layer_2:
-        m_Texture: {fileID: 2800000, guid: 9fbd49bae2bd427429d0e8c25e36e9e5, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Galaxy:
-        m_Texture: {fileID: 8900000, guid: d0bf06d76ab6e1d459d72757fa79192d, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _GlowTex:
+    - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _MoonTex:
-        m_Texture: {fileID: 2800000, guid: 66ad4c55c5a3a7045a25295e064fc7d2, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Stars:
-        m_Texture: {fileID: 8900000, guid: 214e1a8de772f334886a8d3bee074dc9, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _StarsTwinklingNoise:
-        m_Texture: {fileID: 8900000, guid: cd6e898ed9788da48ac517f37841cea8, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
+    m_Floats:
+    - _ZTest: 0
     m_Colors:
-    - _HorizonBackColor: {r: 1, g: 1, b: 1, a: 1}
-    - _HorizonColor: {r: 0.9511452, g: 0.9511452, b: 0.9511452, a: 1}
-    - _SkyColor: {r: 0.38252658, g: 0.55919576, b: 0.72395134, a: 0.87389904}
-    - _SunColor: {r: 0.9666419, g: 0.8672625, b: 0.7670391, a: 1}
+    - _LightColor: {r: 1.3786334, g: 1.260354, b: 1.1384952, a: 1.5023569}
 --- !u!1001 &341327165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -740,68 +675,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ec06e95eb5720458449c3381888320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!21 &406231833
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Enviro/Standard/VolumeLight
-  m_Shader: {fileID: 4800000, guid: d9f3d22da4b08c84eb26827873f2a233, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _ZTest: 8
-    m_Colors:
-    - _LightColor: {r: 1, g: 1, b: 1, a: 1}
---- !u!84 &507539580
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Enviro Reflection Final Cubemap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 256
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 1
-  m_ColorFormat: 48
-  m_MipMap: 1
-  m_GenerateMips: 0
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 4
-  m_VolumeDepth: 1
 --- !u!114 &520278710 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5858647566886495912, guid: 255361c677412894ea3e0cfc88d9a4b9,
@@ -982,6 +855,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 552037d6cb9d765408755d8cd368d638, type: 3}
+--- !u!84 &836875580
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Enviro Reflection Final Cubemap
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 256
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 1
+  m_ColorFormat: 48
+  m_MipMap: 1
+  m_GenerateMips: 0
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 4
+  m_VolumeDepth: 1
 --- !u!1001 &975912916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1056,7 +964,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59727070d30dc7d45a01beaa6cff0f44, type: 3}
---- !u!84 &1012292345
+--- !u!1 &1195522727 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8823374332962872318, guid: 59727070d30dc7d45a01beaa6cff0f44,
+    type: 3}
+  m_PrefabInstance: {fileID: 975912916}
+  m_PrefabAsset: {fileID: 0}
+--- !u!84 &1259891571
 RenderTexture:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1091,12 +1005,35 @@ RenderTexture:
     m_WrapW: 0
   m_Dimension: 2
   m_VolumeDepth: 1
---- !u!1 &1195522727 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8823374332962872318, guid: 59727070d30dc7d45a01beaa6cff0f44,
-    type: 3}
-  m_PrefabInstance: {fileID: 975912916}
+--- !u!21 &1455036836
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_Name: Enviro/Standard/EnviroFogRendering
+  m_Shader: {fileID: 4800000, guid: 78aa7501e8e951446b1be533c73e8de6, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _EnviroVolumeLightingTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
 --- !u!28 &1508746126
 Texture2D:
   m_ObjectHideFlags: 0
@@ -1151,6 +1088,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f455ed1aa85642949b5fe0bdc57e7be8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!84 &1699150140
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 2048
+  m_Height: 2048
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 8
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1001 &1714765544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1305,6 +1277,63 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1714765544}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &1777921402
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Enviro/Standard/SkyboxSimple
+  m_Shader: {fileID: 4800000, guid: 8e6e0603052e7ce47b1d8c48aa9ee67e, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Aurora_Colorshift:
+        m_Texture: {fileID: 2800000, guid: c745f38dc285f034d87b346a6f3a9519, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Aurora_Layer_1:
+        m_Texture: {fileID: 2800000, guid: 0f3aa374cdd1a5247b48a8c48016eca2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Aurora_Layer_2:
+        m_Texture: {fileID: 2800000, guid: 9fbd49bae2bd427429d0e8c25e36e9e5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Galaxy:
+        m_Texture: {fileID: 8900000, guid: d0bf06d76ab6e1d459d72757fa79192d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GlowTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MoonTex:
+        m_Texture: {fileID: 2800000, guid: 66ad4c55c5a3a7045a25295e064fc7d2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Stars:
+        m_Texture: {fileID: 8900000, guid: 214e1a8de772f334886a8d3bee074dc9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _StarsTwinklingNoise:
+        m_Texture: {fileID: 8900000, guid: cd6e898ed9788da48ac517f37841cea8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _HorizonBackColor: {r: 1, g: 1, b: 1, a: 1}
+    - _HorizonColor: {r: 0.9511452, g: 0.9511452, b: 0.9511452, a: 1}
+    - _SkyColor: {r: 0.38252658, g: 0.55919576, b: 0.72395134, a: 0.87389904}
+    - _SunColor: {r: 0.9666419, g: 0.8672625, b: 0.7670391, a: 1}
 --- !u!114 &1795147996 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5808221384459790576, guid: 255361c677412894ea3e0cfc88d9a4b9,
@@ -1624,15 +1653,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f11d19f94f3603149bcf026f0dcc416d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!21 &1986575758
+--- !u!21 &1912250333
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Enviro/Standard/EnviroFogRendering
-  m_Shader: {fileID: 4800000, guid: 78aa7501e8e951446b1be533c73e8de6, type: 3}
+  m_Name: Enviro/Standard/VolumeLight
+  m_Shader: {fileID: 4800000, guid: d9f3d22da4b08c84eb26827873f2a233, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -1643,13 +1672,11 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _EnviroVolumeLightingTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors: []
+    m_Floats:
+    - _ZTest: 8
+    m_Colors:
+    - _LightColor: {r: 1, g: 1, b: 1, a: 1}

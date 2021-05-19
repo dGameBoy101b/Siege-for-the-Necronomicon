@@ -1,152 +1,251 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &976756691466720436
+--- !u!1001 &2819009691656393677
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3632124348125721151}
+    m_Modifications:
+    - target: {fileID: 3661005000010826745, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: m_Name
+      value: EnviroSky
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000010826746, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000010826746, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -50.04719
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000010826746, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -117.51009
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000010826746, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 188.00311
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000010826746, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000010826746, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000010826746, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000010826746, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000010826746, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000010826746, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000010826746, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000218340630, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: m_CustomBakedTexture
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000218340631, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: renderCam
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000406937448, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000406937448, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: skyMat
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000406937448, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: weatherMap
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000406937448, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: cloudAnim.y
+      value: 0.40973508
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000406937448, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: cloudAnim.z
+      value: 0.25617236
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000406937448, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: PlayerCamera
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000406937448, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: cirrusAnim.y
+      value: -0.116740294
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000406937448, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: cloudShadowMap
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000406937448, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: cloudFlatBaseAnim.y
+      value: -0.16917254
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000406937448, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: cloudAnimNonScaled.y
+      value: -2.16899
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000406937448, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: Audio.AudioSourceZone
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000406937448, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: cloudFlatDetailAnim.y
+      value: 0.25267562
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000406937448, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: Audio.AudioSourceAmbient
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000406937448, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: Audio.AudioSourceThunder
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000406937448, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: Audio.AudioSourceWeather
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000406937448, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: Audio.AudioSourceAmbient2
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000406937448, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: Audio.AudioSourceWeather2
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000406937448, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: Audio.currentAmbientSource
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661005000406937448, guid: f68b937f4fd18c047b742171e86360c1,
+        type: 3}
+      propertyPath: Weather.currentAudioSource
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f68b937f4fd18c047b742171e86360c1, type: 3}
+--- !u!1001 &4413316423929720470
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 415212961620074964, guid: 98394590a3ad36f4baaa54f86ff66e28,
-        type: 3}
-      propertyPath: cloudAnim.y
-      value: 0.38675088
-      objectReference: {fileID: 0}
-    - target: {fileID: 415212961620074964, guid: 98394590a3ad36f4baaa54f86ff66e28,
-        type: 3}
-      propertyPath: cloudAnim.z
-      value: 0.2504261
-      objectReference: {fileID: 0}
-    - target: {fileID: 415212961620074964, guid: 98394590a3ad36f4baaa54f86ff66e28,
-        type: 3}
-      propertyPath: cirrusAnim.y
-      value: -0.11685525
-      objectReference: {fileID: 0}
-    - target: {fileID: 415212961620074964, guid: 98394590a3ad36f4baaa54f86ff66e28,
-        type: 3}
-      propertyPath: cloudFlatBaseAnim.y
-      value: -0.171471
-      objectReference: {fileID: 0}
-    - target: {fileID: 415212961620074964, guid: 98394590a3ad36f4baaa54f86ff66e28,
-        type: 3}
-      propertyPath: cloudAnimNonScaled.y
-      value: -2.171288
-      objectReference: {fileID: 0}
-    - target: {fileID: 415212961620074964, guid: 98394590a3ad36f4baaa54f86ff66e28,
-        type: 3}
-      propertyPath: cloudFlatDetailAnim.y
-      value: 0.19521478
-      objectReference: {fileID: 0}
-    - target: {fileID: 3967004261639164031, guid: 98394590a3ad36f4baaa54f86ff66e28,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: cbee163c71981af4ba1cb61562bd5df1, type: 3}
-    - target: {fileID: 3967004261720488551, guid: 98394590a3ad36f4baaa54f86ff66e28,
+    - target: {fileID: 1105873670216015014, guid: f39d06f3f270cbb448ab97ccf6d24983,
         type: 3}
       propertyPath: m_Name
       value: Transition Manager Level 2
       objectReference: {fileID: 0}
-    - target: {fileID: 3967004261720488552, guid: 98394590a3ad36f4baaa54f86ff66e28,
+    - target: {fileID: 1105873670216015017, guid: f39d06f3f270cbb448ab97ccf6d24983,
         type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3967004261720488552, guid: 98394590a3ad36f4baaa54f86ff66e28,
+    - target: {fileID: 1105873670216015017, guid: f39d06f3f270cbb448ab97ccf6d24983,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3967004261720488552, guid: 98394590a3ad36f4baaa54f86ff66e28,
+    - target: {fileID: 1105873670216015017, guid: f39d06f3f270cbb448ab97ccf6d24983,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.9
       objectReference: {fileID: 0}
-    - target: {fileID: 3967004261720488552, guid: 98394590a3ad36f4baaa54f86ff66e28,
+    - target: {fileID: 1105873670216015017, guid: f39d06f3f270cbb448ab97ccf6d24983,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3967004261720488552, guid: 98394590a3ad36f4baaa54f86ff66e28,
+    - target: {fileID: 1105873670216015017, guid: f39d06f3f270cbb448ab97ccf6d24983,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3967004261720488552, guid: 98394590a3ad36f4baaa54f86ff66e28,
+    - target: {fileID: 1105873670216015017, guid: f39d06f3f270cbb448ab97ccf6d24983,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3967004261720488552, guid: 98394590a3ad36f4baaa54f86ff66e28,
+    - target: {fileID: 1105873670216015017, guid: f39d06f3f270cbb448ab97ccf6d24983,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3967004261720488552, guid: 98394590a3ad36f4baaa54f86ff66e28,
+    - target: {fileID: 1105873670216015017, guid: f39d06f3f270cbb448ab97ccf6d24983,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3967004261720488552, guid: 98394590a3ad36f4baaa54f86ff66e28,
+    - target: {fileID: 1105873670216015017, guid: f39d06f3f270cbb448ab97ccf6d24983,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3967004261720488552, guid: 98394590a3ad36f4baaa54f86ff66e28,
+    - target: {fileID: 1105873670216015017, guid: f39d06f3f270cbb448ab97ccf6d24983,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3967004261720488552, guid: 98394590a3ad36f4baaa54f86ff66e28,
+    - target: {fileID: 1105873670216015017, guid: f39d06f3f270cbb448ab97ccf6d24983,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3967004261720488553, guid: 98394590a3ad36f4baaa54f86ff66e28,
-        type: 3}
-      propertyPath: PLAYER
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3967004261720488553, guid: 98394590a3ad36f4baaa54f86ff66e28,
-        type: 3}
-      propertyPath: LEVEL_TIMER
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3967004261720488553, guid: 98394590a3ad36f4baaa54f86ff66e28,
-        type: 3}
-      propertyPath: STARTING_ORB
-      value: 
-      objectReference: {fileID: 3880792728489092291}
-    - target: {fileID: 3967004261720488553, guid: 98394590a3ad36f4baaa54f86ff66e28,
-        type: 3}
-      propertyPath: WAVE_MANAGER
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3967004261720488553, guid: 98394590a3ad36f4baaa54f86ff66e28,
-        type: 3}
-      propertyPath: ENVIRO_PRESET_INDEX
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3967004263137826205, guid: 98394590a3ad36f4baaa54f86ff66e28,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: e77f069ec2cb3dc4a9dfe79c512dce30, type: 3}
-    - target: {fileID: 4059286315162549147, guid: 98394590a3ad36f4baaa54f86ff66e28,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.6301975
-      objectReference: {fileID: 0}
-    - target: {fileID: 4059286315162571015, guid: 98394590a3ad36f4baaa54f86ff66e28,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 20d10ae12cf9b9d429dd4aeb1f22035d, type: 3}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 98394590a3ad36f4baaa54f86ff66e28, type: 3}
---- !u!1 &3880792728489092291 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4059286316999700599, guid: 98394590a3ad36f4baaa54f86ff66e28,
+  m_SourcePrefab: {fileID: 100100000, guid: f39d06f3f270cbb448ab97ccf6d24983, type: 3}
+--- !u!4 &3632124348125721151 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1105873670216015017, guid: f39d06f3f270cbb448ab97ccf6d24983,
     type: 3}
-  m_PrefabInstance: {fileID: 976756691466720436}
+  m_PrefabInstance: {fileID: 4413316423929720470}
   m_PrefabAsset: {fileID: 0}

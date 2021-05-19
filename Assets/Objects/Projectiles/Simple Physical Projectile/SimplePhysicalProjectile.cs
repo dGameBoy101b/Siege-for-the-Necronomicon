@@ -88,14 +88,16 @@ public class SimplePhysicalProjectile : PhysicalProjectileBase
 	 */
 	private void hitAnimation()
 	{
-		GameObject defeatedAnimaton = Instantiate(defeatedPhysicalProjectile, transform.position, transform.rotation);
-
+		if (this.defeatedPhysicalProjectile == null)
+		{
+			return;
+		}
+		GameObject defeatedAnimaton = Instantiate(this.defeatedPhysicalProjectile, this.transform.position, this.transform.rotation);
 		foreach (Rigidbody rb in defeatedAnimaton.GetComponentsInChildren<Rigidbody>())
 		{
-			Vector3 force = (rb.transform.position - transform.position).normalized * breakForce;
+			Vector3 force = (rb.transform.position - this.transform.position).normalized * this.breakForce;
 			rb.AddForce(force);
 		}
-
 		Destroy(defeatedAnimaton, 10);
 	}
 }

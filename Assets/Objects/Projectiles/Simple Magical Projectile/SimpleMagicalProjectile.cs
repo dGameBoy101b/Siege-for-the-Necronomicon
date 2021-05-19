@@ -93,7 +93,10 @@ public sealed class SimpleMagicalProjectile : MagicalProjectileBase
 	 */
 	private void playDefeatAnimation()
 	{
-		Instantiate(defeatAnimation, transform.position, transform.rotation);
+		if (this.defeatAnimation != null)
+		{
+			Instantiate(this.defeatAnimation, this.transform.position, this.transform.rotation);
+		}
 	}
 
 	/**
@@ -102,6 +105,9 @@ public sealed class SimpleMagicalProjectile : MagicalProjectileBase
 	 */
 	private void playAttackAnimation()
 	{
-		Instantiate(attackAnimation, transform.position, transform.rotation);
+		if (this.attackAnimation)
+		{
+			Instantiate(this.attackAnimation, this.transform.position, this.transform.rotation);
+		}
 	}
 }

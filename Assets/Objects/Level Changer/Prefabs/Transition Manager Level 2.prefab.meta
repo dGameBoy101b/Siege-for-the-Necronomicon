@@ -1,12 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Objects/UI/UI Components/Retry Button.meta
-guid: 3e9eb00d27d9c064f91a1ce1ffde6cbb
-folderAsset: yes
-DefaultImporter:
-=======
-guid: b9b016ccfcf402f4e80fdd0db44a905b
+guid: dc7a0340632deda4ea38e6d24ce7cec1
 PrefabImporter:
->>>>>>> Level-1:Assets/Objects/Level Changer/Prefabs/Transition Manager Variant Level 2.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

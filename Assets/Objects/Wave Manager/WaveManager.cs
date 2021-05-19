@@ -64,7 +64,7 @@ public sealed class WaveManager : MonoBehaviour
 	/**
 	 * The list of currently active attacks.
 	 */
-	private List<List<ProjectileBase>> active_attacks;
+	private List<List<ProjectileBase>> active_attacks = new List<List<ProjectileBase>>();
 	
 	/**
 	 * The random number generator used for all randomisation.

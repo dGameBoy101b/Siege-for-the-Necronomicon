@@ -25,6 +25,10 @@ public class Pause : MonoBehaviour
 	[Tooltip("The canvas to hide when the pause button is pressed.")]
 	public Canvas HUD;
 	
+	[SerializeField()]
+	[Tooltip("The pointer used in VR menus.")]
+	public LaserPointer POINTER;
+	
 	/**
 	 * Pause the game.
 	 */
@@ -34,9 +38,7 @@ public class Pause : MonoBehaviour
 		this.HUD.gameObject.SetActive(false);
 		this.PAUSE_MENU.gameObject.SetActive(true);
 		this.WAVE_MANAGER.pauseAttacks();
-
-		FindObjectOfType<LaserPointer>().GetComponent<LineRenderer>().enabled = true;
-	
+		this.POINTER?.gameObject.SetActive(true);
 	}
 	
 	/**
@@ -48,8 +50,7 @@ public class Pause : MonoBehaviour
 		this.PAUSE_MENU.gameObject.SetActive(false);
 		this.HUD.gameObject.SetActive(true);
 		this.WAVE_MANAGER.unpauseAttacks();
-		
-		FindObjectOfType<LaserPointer>().GetComponent<LineRenderer>().enabled = false;
+		this.POINTER?.gameObject.SetActive(false);
 	}
 	
 	private void Update()

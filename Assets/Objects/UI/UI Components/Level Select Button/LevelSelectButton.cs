@@ -114,7 +114,7 @@ public sealed class LevelSelectButton : MonoBehaviour
 		this.Data = SaveLoad.loadData(this.DATA_PATH);
 		if (this.Data != null && this.Data.Path != this.SCENE_PATH)
 		{
-			throw new System.Exception("Mismatched level path in level data and linked scene.");
+			Debug.LogWarning("Mismatched level path in level data (\"" + this.Data.Path + "\") and linked scene (\"" + this.SCENE_PATH + "\").");
 		}
 	}
 	

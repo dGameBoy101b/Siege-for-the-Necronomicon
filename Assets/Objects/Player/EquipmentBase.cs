@@ -45,7 +45,7 @@ public abstract class EquipmentBase : MonoBehaviour
 				hand = this.RIGHT_HAND;
 			}
 		}
-		catch (OptionStore.OptionDoesNotExistException e)
+		catch (OptionStore.OptionDoesNotExistException)
 		{
 			Debug.LogWarning("Could not find handedness option. Falling back on OVRInput.");
 			switch (OVRInput.GetDominantHand())

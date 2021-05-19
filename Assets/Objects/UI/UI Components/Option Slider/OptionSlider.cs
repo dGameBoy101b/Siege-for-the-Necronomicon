@@ -73,6 +73,7 @@ public class OptionSlider : MonoBehaviour
 		this.MAX_TEXT.text = this.ensurePlus(this.ensurePrecision(this.MAX.ToString()));
 		this.SLIDER.minValue = this.MIN;
 		this.SLIDER.maxValue = this.MAX;
+		Debug.Log(this.gameObject.name + ": range update");
 	}
 	
 	/**
@@ -108,7 +109,6 @@ public class OptionSlider : MonoBehaviour
 	 */
 	private string ensurePrecision(string str)
 	{
-		Debug.Log("ensure precision: \"" + str + "\"");
 		int dec_i = str.Length;
 		if (str.Contains("."))
 		{
