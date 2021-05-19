@@ -833,6 +833,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: loadLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 7912029262305249823, guid: 3a4a627116e386b4da9b0097fd902c36,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -385
+      objectReference: {fileID: 0}
     - target: {fileID: 8671383687967252810, guid: 3a4a627116e386b4da9b0097fd902c36,
         type: 3}
       propertyPath: m_AnchorMax.y
