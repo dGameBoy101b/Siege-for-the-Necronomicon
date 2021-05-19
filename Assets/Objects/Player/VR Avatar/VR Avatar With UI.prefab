@@ -532,6 +532,11 @@ PrefabInstance:
       propertyPath: DATA_PATH
       value: VRlevel1.dat
       objectReference: {fileID: 0}
+    - target: {fileID: 4356956449282547078, guid: 255361c677412894ea3e0cfc88d9a4b9,
+        type: 3}
+      propertyPath: EMERGENCY_SHIELD
+      value: 
+      objectReference: {fileID: 1450669756072767706}
     - target: {fileID: 5109656855960911737, guid: 255361c677412894ea3e0cfc88d9a4b9,
         type: 3}
       propertyPath: m_Camera
@@ -567,11 +572,6 @@ PrefabInstance:
       propertyPath: EMERGENCY_SHIELD
       value: 
       objectReference: {fileID: 1450669756072767706}
-    - target: {fileID: 8234634256491821132, guid: 255361c677412894ea3e0cfc88d9a4b9,
-        type: 3}
-      propertyPath: TIME
-      value: 120
-      objectReference: {fileID: 0}
     - target: {fileID: 8234634256491821132, guid: 255361c677412894ea3e0cfc88d9a4b9,
         type: 3}
       propertyPath: WAVE_MANAGER

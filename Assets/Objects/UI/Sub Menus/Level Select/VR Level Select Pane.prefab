@@ -153,6 +153,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604571758101275603, guid: 1e80eefb02153734e81721461e96bc74,
         type: 3}
+      propertyPath: DATA_PATH
+      value: VRLevel1.dat
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604571758101275603, guid: 1e80eefb02153734e81721461e96bc74,
+        type: 3}
       propertyPath: LOAD_PATH
       value: Assets/Scenes/VR/VRLevel01.unity
       objectReference: {fileID: 0}
@@ -161,15 +166,40 @@ PrefabInstance:
       propertyPath: LOAD_SCENE
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1604571758101275603, guid: 1e80eefb02153734e81721461e96bc74,
+        type: 3}
+      propertyPath: SCENE_PATH
+      value: Assets/Scenes/VR/VRLevel1.unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 4254042183574105532, guid: 1e80eefb02153734e81721461e96bc74,
+        type: 3}
+      propertyPath: DATA_PATH
+      value: VRLevel2.dat
+      objectReference: {fileID: 0}
     - target: {fileID: 4254042183574105532, guid: 1e80eefb02153734e81721461e96bc74,
         type: 3}
       propertyPath: LOAD_SCENE
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4254042183574105532, guid: 1e80eefb02153734e81721461e96bc74,
+        type: 3}
+      propertyPath: SCENE_PATH
+      value: Assets/Scenes/VR/VRLevel2.unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858736523914434830, guid: 1e80eefb02153734e81721461e96bc74,
+        type: 3}
+      propertyPath: DATA_PATH
+      value: VRLevel3.dat
+      objectReference: {fileID: 0}
     - target: {fileID: 8858736523914434830, guid: 1e80eefb02153734e81721461e96bc74,
         type: 3}
       propertyPath: LOAD_SCENE
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858736523914434830, guid: 1e80eefb02153734e81721461e96bc74,
+        type: 3}
+      propertyPath: SCENE_PATH
+      value: Assets/Scenes/VR/VRLevel3.unity
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1240855303395966458, guid: 1e80eefb02153734e81721461e96bc74, type: 3}

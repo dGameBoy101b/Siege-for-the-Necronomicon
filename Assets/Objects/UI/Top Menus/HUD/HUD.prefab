@@ -400,7 +400,8 @@ AudioSource:
   m_GameObject: {fileID: 1486806848637536696}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 957018524465099227, guid: 1dd706bb85d8aef4e83a6229dbd62c36,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 73fd28d1a08bf224e86fc93474bc34d1, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -658,7 +659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42f7683171068a644bfdc1848b5929ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentScoreLabel: {fileID: 0}
+  currentScoreLabel: {fileID: 5576233322108148245}
   endScoreLabel: {fileID: 0}
   currentScore: 0
   endScore: 0
@@ -1101,7 +1102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WAVE_MANAGER: {fileID: 0}
-  TIME: 200
+  TIME: 300
   TIME_TEXT: {fileID: 0}
   LEVEL_COMPLETE: {fileID: 0}
   HUD: {fileID: 3101303567896912569}
