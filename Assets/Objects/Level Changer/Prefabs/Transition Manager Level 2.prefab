@@ -7,6 +7,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 415212961620074964, guid: 98394590a3ad36f4baaa54f86ff66e28,
+        type: 3}
+      propertyPath: cloudAnim.y
+      value: 0.38675088
+      objectReference: {fileID: 0}
+    - target: {fileID: 415212961620074964, guid: 98394590a3ad36f4baaa54f86ff66e28,
+        type: 3}
+      propertyPath: cloudAnim.z
+      value: 0.2504261
+      objectReference: {fileID: 0}
+    - target: {fileID: 415212961620074964, guid: 98394590a3ad36f4baaa54f86ff66e28,
+        type: 3}
+      propertyPath: cirrusAnim.y
+      value: -0.11685525
+      objectReference: {fileID: 0}
+    - target: {fileID: 415212961620074964, guid: 98394590a3ad36f4baaa54f86ff66e28,
+        type: 3}
+      propertyPath: cloudFlatBaseAnim.y
+      value: -0.171471
+      objectReference: {fileID: 0}
+    - target: {fileID: 415212961620074964, guid: 98394590a3ad36f4baaa54f86ff66e28,
+        type: 3}
+      propertyPath: cloudAnimNonScaled.y
+      value: -2.171288
+      objectReference: {fileID: 0}
+    - target: {fileID: 415212961620074964, guid: 98394590a3ad36f4baaa54f86ff66e28,
+        type: 3}
+      propertyPath: cloudFlatDetailAnim.y
+      value: 0.19521478
+      objectReference: {fileID: 0}
     - target: {fileID: 3967004261639164031, guid: 98394590a3ad36f4baaa54f86ff66e28,
         type: 3}
       propertyPath: m_audioClip
@@ -15,7 +45,7 @@ PrefabInstance:
     - target: {fileID: 3967004261720488551, guid: 98394590a3ad36f4baaa54f86ff66e28,
         type: 3}
       propertyPath: m_Name
-      value: Transition Manager Variant 1
+      value: Transition Manager Level 2
       objectReference: {fileID: 0}
     - target: {fileID: 3967004261720488552, guid: 98394590a3ad36f4baaa54f86ff66e28,
         type: 3}
