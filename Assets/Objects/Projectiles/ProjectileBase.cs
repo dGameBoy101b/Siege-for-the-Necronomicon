@@ -212,7 +212,6 @@ public abstract class ProjectileBase : MonoBehaviour
 	
 	protected virtual void OnTriggerEnter(Collider col)
 	{
-		Debug.Log("collided with " + col.gameObject.layer.ToString());
 		if (this.shouldAttack(col))
 		{
 			this.attack();
