@@ -273,7 +273,7 @@ MonoBehaviour:
   maxHealth: 3
   currentHealthLabel: {fileID: 3920166415367796424}
   LEVEL_FAIL: {fileID: 0}
-  HUD: {fileID: 0}
+  HUD: {fileID: 3101303567896912569}
   TIMER: {fileID: 2341569430607418504}
   TIME_DISPLAY: {fileID: 0}
   EMERGENCY_SHIELD: {fileID: 0}
