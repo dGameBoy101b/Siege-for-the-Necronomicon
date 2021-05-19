@@ -693,6 +693,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8427612832897011723, guid: 790b4648ac5191d4db9f96994321b056,
         type: 3}
+      propertyPath: lifeSpanTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8427612832897011723, guid: 790b4648ac5191d4db9f96994321b056,
+        type: 3}
       propertyPath: cinematicMode
       value: 1
       objectReference: {fileID: 0}
