@@ -481,23 +481,43 @@ MonoBehaviour:
 
     POLYPERFECT
 
-    ASSET
-    STORE ORIGINALS
+    SYNTY
+    STUDIOS
+
+    ASSET STORE ORIGINALS
 
     CAFOFO
 
     PLACEHOLDER SOFTWARE
 
-    HOVL STUDIO
+    HOVL
+    STUDIO
 
     BECOMING
 
     IMPHENZIA
 
-    JHON
-    LEONARD FRENCH
+    JOHN LEONARD FRENCH
 
-    KRIPTO289'
+    KRIPTO289
+
+    255
+    PIXEL STUDIOS
+
+    DYNAMIC ART
+
+    A DOG''S LIFE SOFTWARE
+
+    LEASTSQUARES
+
+    SIDEARM
+    STUDIOS
+
+    HENDRIK HAUPT
+
+    GREGORY BROWN
+
+    BRACKEYS'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3ce23184d01df0c499153f5a2497bc3e, type: 2}
   m_sharedMaterial: {fileID: -3454194694103127600, guid: 3ce23184d01df0c499153f5a2497bc3e,
@@ -561,7 +581,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -58.708008, w: -134.53918}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
