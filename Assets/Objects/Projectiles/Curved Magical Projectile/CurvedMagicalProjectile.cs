@@ -116,7 +116,6 @@ public class CurvedMagicalProjectile : MagicalProjectileBase
 	{
 		Vector3 d = this.TARGET - this.start_pos;
 		float angle = (float)System.Math.Atan(this.calcGradient(t)) / (float)System.Math.PI * -180f;
-		Debug.Log("angle = " + angle.ToString());
 		Quaternion r = Quaternion.AngleAxis(angle, Vector3.Cross(this.start_up, d).normalized) * Quaternion.LookRotation(d, this.start_up);
 		return r;
 	}

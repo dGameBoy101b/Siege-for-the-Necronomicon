@@ -73,7 +73,6 @@ public class OptionSlider : MonoBehaviour
 		this.MAX_TEXT.text = this.ensurePlus(this.ensurePrecision(this.MAX.ToString()));
 		this.SLIDER.minValue = this.MIN;
 		this.SLIDER.maxValue = this.MAX;
-		Debug.Log(this.gameObject.name + ": range update");
 	}
 	
 	/**

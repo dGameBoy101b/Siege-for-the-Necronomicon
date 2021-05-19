@@ -90,7 +90,7 @@ MonoBehaviour:
   - {fileID: 5725756658466489939}
   DESTROY_SOUNDS:
   - {fileID: 5725756658466489939}
-  DAMAGE: 0
+  DAMAGE: 1
   POINTS: 0
   TARGET: {x: 0, y: 0, z: 0}
   SPEED: 1e-45
