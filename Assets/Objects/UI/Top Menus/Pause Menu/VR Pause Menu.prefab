@@ -80,11 +80,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 34
       objectReference: {fileID: 0}
-    - target: {fileID: 1299488406688632109, guid: 256a4f72cbeeb014db33baabc7f2e7b1,
-        type: 3}
-      propertyPath: m_text
-      value: Level Select
-      objectReference: {fileID: 0}
     - target: {fileID: 3503373338271813867, guid: 256a4f72cbeeb014db33baabc7f2e7b1,
         type: 3}
       propertyPath: m_text

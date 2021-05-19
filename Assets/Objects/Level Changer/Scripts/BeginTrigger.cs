@@ -23,8 +23,12 @@ public class BeginTrigger : MonoBehaviour
      */
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Begin Trigger Activated");
-        Destroy(STARTING_ORB);
-        TRANSITION_MANAGER.begin();
+        if(other.gameObject.layer == 13)
+        {
+            Debug.Log("Begin Trigger Activated");
+            Destroy(STARTING_ORB);
+            TRANSITION_MANAGER.begin();
+        }
+       
     }
 }
