@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: d225df8147cf0184cb8948a9da8b0945
+guid: e21456eb7a6b18e4480b596463b9692a
+labels:
+- road
+- tile
+- set
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 0
