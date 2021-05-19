@@ -31,35 +31,6 @@ public class LevelChanger : MonoBehaviour
     [Tooltip("The amount of time before the next level loads.")]
     public float DelayToNextLevel;
 
-    [Header("Cinematic Mode Components.")]
-
-    [SerializeField()]
-    [Tooltip("If true, enables the cinematic mode where the above components are irrelevant. Instead the scene will be active for intro time length before heading to the next scene")]
-    public bool cinematicMode;
-
-    [SerializeField()]
-    [Tooltip("Tick this if the scene is the outro scene / credit scroll. Also set / 'Level To Load' to index of the Main Menu or the scene that is loaded after the outro.")]
-    public bool isOutro;
-
-    [SerializeField()]
-    [Tooltip("The amount of time the scene plays for.")]
-    public float lifeSpanTime;
-
-    void Start()
-    {
-        if(cinematicMode == true)
-        {
-            if (isOutro == true)
-            {
-                Invoke("loadAfterOutro", lifeSpanTime);
-            }
-            else
-            {
-                Invoke("nextLevel", lifeSpanTime);
-            }
-        }
-    }
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.H) && goToNextLevelInstead == true)
@@ -74,7 +45,7 @@ public class LevelChanger : MonoBehaviour
                 BARRIER.shatterBarrier();
                 Debug.Log("Loading level " + LevelToLoad);
                 FadeToLevel(LevelToLoad);
-            }
+             }
     }
     /*
      * Is the trigger for the end barrier.
@@ -119,13 +90,5 @@ public class LevelChanger : MonoBehaviour
     {
         Debug.Log("OnFadeComplete Called");
         SceneManager.LoadScene(LevelToLoad);
-    }
-
-    /*
-     * After the outro life span, the level to load index will load the corresponding scene.
-     */
-    public void loadAfterOutro()
-    {
-        FadeToLevel(LevelToLoad);
     }
 }
