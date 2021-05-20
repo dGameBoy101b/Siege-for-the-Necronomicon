@@ -2700,12 +2700,12 @@ PrefabInstance:
     - target: {fileID: 99314547290441341, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.01
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 99314547290441341, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.61
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 272878502084006007, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
@@ -2807,6 +2807,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: 4d2bd79e04349da49b1f1c4046e33799, type: 2}
+    - target: {fileID: 2009457993279119888, guid: a0744885476152647aedfc5585d41d45,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2188952716572086773, guid: a0744885476152647aedfc5585d41d45,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2358228838676426361, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
       propertyPath: WAVE_MANAGER
@@ -2837,6 +2847,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3645489692684021005, guid: a0744885476152647aedfc5585d41d45,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3952739095190031921, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
       propertyPath: m_Layer
@@ -2846,6 +2861,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3969041329804549864, guid: a0744885476152647aedfc5585d41d45,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4236662146758232390, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
@@ -2982,6 +3002,11 @@ PrefabInstance:
       propertyPath: m_Height
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4702755671086219342, guid: a0744885476152647aedfc5585d41d45,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4797376446613612968, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
       propertyPath: m_IsActive
@@ -3007,6 +3032,11 @@ PrefabInstance:
       propertyPath: InitialModule.startSize.minScalar
       value: 0.25626582
       objectReference: {fileID: 0}
+    - target: {fileID: 5826597290832071176, guid: a0744885476152647aedfc5585d41d45,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5963247205181951527, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
@@ -3031,6 +3061,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VR Avatar With UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 6320528657892907234, guid: a0744885476152647aedfc5585d41d45,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6341494054138667281, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
@@ -3272,6 +3307,11 @@ PrefabInstance:
       propertyPath: m_CullingMask.m_Bits
       value: 130839
       objectReference: {fileID: 0}
+    - target: {fileID: 7509732276921667411, guid: a0744885476152647aedfc5585d41d45,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7641279977294408899, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -3292,10 +3332,20 @@ PrefabInstance:
       propertyPath: WAVE_MANAGER
       value: 
       objectReference: {fileID: 830185753}
+    - target: {fileID: 8077330383363059798, guid: a0744885476152647aedfc5585d41d45,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8470568064797648499, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
       propertyPath: WAVE_MANAGER
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8766359719094994197, guid: a0744885476152647aedfc5585d41d45,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8926647814610895908, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
@@ -3311,6 +3361,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134251919837878271, guid: a0744885476152647aedfc5585d41d45,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 43185631345689843, guid: a0744885476152647aedfc5585d41d45, type: 3}
