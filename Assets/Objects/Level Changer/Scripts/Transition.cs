@@ -109,7 +109,7 @@ public class Transition : MonoBehaviour
 		WAVE_MANAGER.SetActive(false);
 	}
 
-	 /*
+	/*
 	 * Manages all the functions that help begin the combat phase.
 	 */
 	public void begin()
