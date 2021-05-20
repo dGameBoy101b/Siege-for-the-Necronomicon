@@ -54,8 +54,9 @@ public sealed class Sword : EquipmentBase
 	 */
 	private void startSlash()
 	{
-		this.slash_start = this.transform.position + this.transform.rotation * this.SLASH_OFFSET;
+		this.slash_start = this.transform.position + (this.transform.rotation * this.SLASH_OFFSET);
 		GameObject start_point = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+		start_point.transform.position = this.slash_start;
 		Object.DestroyImmediate(start_point.GetComponent<Collider>());
 	}
 	
@@ -64,8 +65,10 @@ public sealed class Sword : EquipmentBase
 	 */
 	private void endSlash()
 	{
-		this.createSlash(this.slash_start, this.transform.position + this.transform.rotation * this.SLASH_OFFSET);
+		Vector3 slash_end = this.transform.position + (this.transform.rotation * this.SLASH_OFFSET);
+		this.createSlash(this.slash_start, slash_end);
 		GameObject start_point = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+		start_point.transform.position = slash_end;
 		Object.DestroyImmediate(start_point.GetComponent<Collider>());
 	}
 	
