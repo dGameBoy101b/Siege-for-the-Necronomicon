@@ -50,7 +50,6 @@ public class BeginTrigger : MonoBehaviour
     {
         if (!this.hasBegun)
 		{
-            GameObject.CreatePrimitive(PrimitiveType.Cube).GetComponent<Renderer>().material.color = Color.green;
             this.TRANSITION_MANAGER.begin();
             GameObject.Destroy(STARTING_ORB);
             this.hasBegun = true;
