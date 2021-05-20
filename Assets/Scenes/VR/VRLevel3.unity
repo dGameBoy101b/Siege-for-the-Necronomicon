@@ -136,6 +136,11 @@ PrefabInstance:
       objectReference: {fileID: 1369148360}
     - target: {fileID: 4383825907215680094, guid: d049e403b5b15974d9605cbb66b6c3c7,
         type: 3}
+      propertyPath: MAX_ACTIVE
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4383825907215680094, guid: d049e403b5b15974d9605cbb66b6c3c7,
+        type: 3}
       propertyPath: PLAYER_SCORE
       value: 
       objectReference: {fileID: 1369148356}
@@ -152,7 +157,7 @@ PrefabInstance:
     - target: {fileID: 4509671748909101396, guid: d049e403b5b15974d9605cbb66b6c3c7,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5311400675904224595, guid: d049e403b5b15974d9605cbb66b6c3c7,
         type: 3}
@@ -464,6 +469,11 @@ PrefabInstance:
       propertyPath: WAVE_MANAGER
       value: 
       objectReference: {fileID: 4046063}
+    - target: {fileID: 3952739095190031921, guid: a0744885476152647aedfc5585d41d45,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4132797303466359233, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
       propertyPath: DATA_PATH
