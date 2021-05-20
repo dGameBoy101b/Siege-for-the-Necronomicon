@@ -18,6 +18,10 @@ public class BeginTrigger : MonoBehaviour
     [Tooltip("The Starting Orb / Trigger the player touches to begin.")]
     public GameObject STARTING_ORB;
 
+    [SerializeField()]
+    [Tooltip("The name of the collision layer that needs to collide with this to begin.")]
+    public string START_LAYER;
+
     private bool hasBegun = false;
 
     /*
@@ -25,10 +29,9 @@ public class BeginTrigger : MonoBehaviour
      */
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.layer == 13)
+        if(other.gameObject.layer == LayerMask.NameToLayer(this.START_LAYER))
         {
-            TRANSITION_MANAGER.begin();
-            Destroy(STARTING_ORB);
+            this.begin();
         }
     }
 
@@ -37,11 +40,20 @@ public class BeginTrigger : MonoBehaviour
     */
     void Update()
 	{
-		if (Input.GetMouseButtonDown(0) && hasBegun == false)
+		if (Input.GetButtonDown("PC Gauntlet"))
 		{
-            TRANSITION_MANAGER.begin();
-            Destroy(STARTING_ORB);
-			hasBegun = true;
+            this.begin();
 		}
 	}
+
+    private void begin()
+    {
+        if (!this.hasBegun)
+		{
+            GameObject.CreatePrimitive(PrimitiveType.Cube).GetComponent<Renderer>().material.color = Color.green;
+            this.TRANSITION_MANAGER.begin();
+            GameObject.Destroy(STARTING_ORB);
+            this.hasBegun = true;
+        }
+    }
 }

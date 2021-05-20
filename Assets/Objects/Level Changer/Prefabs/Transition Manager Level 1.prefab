@@ -9451,6 +9451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LEVEL_CHANGER: {fileID: 8038162132046324653}
   ENDING_BARRIER: {fileID: 7446873238258373853}
+  END_LAYER: Gauntlet
 --- !u!1001 &6839489691719917041
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -17,12 +17,16 @@ public class EndTrigger : MonoBehaviour
     [Tooltip("The End Barrier")]
     public GameObject ENDING_BARRIER;
 
+    [SerializeField()]
+    [Tooltip("The name of the collision layer that needs to collide with this to end.")]
+    public string END_LAYER;
+
     /*
      * Is the trigger for the end barrier.
      */
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 13)
+        if (other.gameObject.layer == LayerMask.NameToLayer(this.END_LAYER))
         {
             Debug.Log("End Trigger Activated");
             Destroy(ENDING_BARRIER);
