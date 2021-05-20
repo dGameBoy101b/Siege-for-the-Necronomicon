@@ -48,7 +48,7 @@ public class Defeated : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetButtonDown("PC Gauntlet"))
         {
             defeatNeronomicon();
         }
@@ -83,7 +83,7 @@ public class Defeated : MonoBehaviour
     */
     public void levelCompleted()
     {
-        LEVEL_CHANGER.nextLevel();
+        LEVEL_CHANGER.progress();
     }
 
     /*

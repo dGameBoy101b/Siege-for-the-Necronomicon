@@ -379,6 +379,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5311400675904224595}
     m_Modifications:
+    - target: {fileID: 3784572114630202001, guid: 3cac2a68744637b4880486cb51deb074,
+        type: 3}
+      propertyPath: MAX_LAT
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3784572114630202001, guid: 3cac2a68744637b4880486cb51deb074,
+        type: 3}
+      propertyPath: MAX_LON
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3784572114630202001, guid: 3cac2a68744637b4880486cb51deb074,
+        type: 3}
+      propertyPath: MAX_DIST
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3784572114630202001, guid: 3cac2a68744637b4880486cb51deb074,
+        type: 3}
+      propertyPath: MIN_DIST
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3784572114630202001, guid: 3cac2a68744637b4880486cb51deb074,
+        type: 3}
+      propertyPath: MAX_SPEED
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3784572114630202001, guid: 3cac2a68744637b4880486cb51deb074,
+        type: 3}
+      propertyPath: MIN_SPEED
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7005531029132716859, guid: 3cac2a68744637b4880486cb51deb074,
         type: 3}
       propertyPath: m_Name

@@ -62,26 +62,18 @@ public class LevelChanger : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("PC Gauntlet") && goToNextLevelInstead)
+        if (Input.GetButtonDown("PC Gauntlet") && this.BARRIER != null)
         {
-            BARRIER.shatterBarrier();
-            Debug.Log("Load next level");
-            Invoke("nextLevel", DelayToNextLevel);
+            this.progress();
         }
-        else
-            if(Input.GetButtonDown("PC Gauntlet"))
-        {
-                BARRIER.shatterBarrier();
-                Debug.Log("Loading level " + LevelToLoad);
-                FadeToLevel(LevelToLoad);
-            }
     }
+
     /*
      * Is the trigger for the end barrier.
      */
     public void progress()
     {
-        BARRIER.shatterBarrier();
+        BARRIER?.shatterBarrier();
         if (goToNextLevelInstead == true)
         {
             Debug.Log("Load next level");

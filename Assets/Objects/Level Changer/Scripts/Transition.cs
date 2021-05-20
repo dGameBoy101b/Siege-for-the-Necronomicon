@@ -104,7 +104,9 @@ public class Transition : MonoBehaviour
 	[Tooltip("The level changer to enable when the level is complete.")]
 	public LevelChanger LEVEL_CHANGER;
 
-	private bool level_complete = false;
+	[SerializeField()]
+	[Tooltip("The defeated scrtipt to enable when the level is complete.")]
+	public Defeated DEFEATED;
 
 	/*
 	 * Disables Wave manager and sets TOD
@@ -137,8 +139,8 @@ public class Transition : MonoBehaviour
 	 */
 	public void levelCompleted()
 	{
-		this.level_complete = true;
 		this.LEVEL_CHANGER.gameObject.SetActive(true);
+		this.DEFEATED?.gameObject.SetActive(true);
 		stopCombatTheme();
 		playSurvivedTheme();
 		Invoke("playTeleportationAnimation", 7);

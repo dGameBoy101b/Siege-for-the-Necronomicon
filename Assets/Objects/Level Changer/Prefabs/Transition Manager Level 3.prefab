@@ -11932,11 +11932,11 @@ MonoBehaviour:
   LST: 641.30035
   lastHourUpdate: 12
   hourTime: 0
-  cloudAnim: {x: 0.1, y: 0.15642604, z: -0.3071597}
-  cloudFlatBaseAnim: {x: 0, y: -0.39450637}
-  cloudFlatDetailAnim: {x: 0, y: 0.62126106}
-  cloudAnimNonScaled: {x: 0, y: -2.3942966}
-  cirrusAnim: {x: 0, y: -0.12800816}
+  cloudAnim: {x: 0.1, y: 0.14616378, z: -0.30972525}
+  cloudFlatBaseAnim: {x: 0, y: -0.39553264}
+  cloudFlatDetailAnim: {x: 0, y: 0.5956053}
+  cloudAnimNonScaled: {x: 0, y: -2.3953228}
+  cirrusAnim: {x: 0, y: -0.12805942}
   windIntensity: 0.20000002
   shadowIntensityMod: 0
   interiorMode: 0
@@ -23545,6 +23545,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: book-open
       objectReference: {fileID: 0}
+    - target: {fileID: 1403005516184392, guid: b1b9abc705ea34f8da57cbaf61ffbef7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4750582319295530, guid: b1b9abc705ea34f8da57cbaf61ffbef7, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -24029,6 +24033,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Transition Manager Level 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1105873670216015016, guid: f39d06f3f270cbb448ab97ccf6d24983,
+        type: 3}
+      propertyPath: DEFEATED
+      value: 
+      objectReference: {fileID: 6887936895838884606}
+    - target: {fileID: 1105873670216015016, guid: f39d06f3f270cbb448ab97ccf6d24983,
+        type: 3}
+      propertyPath: DEFEAT_TRIGGER
+      value: 
+      objectReference: {fileID: 5640125037571092508}
     - target: {fileID: 1105873670216015017, guid: f39d06f3f270cbb448ab97ccf6d24983,
         type: 3}
       propertyPath: m_RootOrder
@@ -24082,6 +24096,11 @@ PrefabInstance:
     - target: {fileID: 1105873670216015017, guid: f39d06f3f270cbb448ab97ccf6d24983,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1105873670356642212, guid: f39d06f3f270cbb448ab97ccf6d24983,
+        type: 3}
+      propertyPath: LevelToLoad
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
