@@ -594,6 +594,11 @@ PrefabInstance:
       propertyPath: DATA_PATH
       value: VRlevel3.dat
       objectReference: {fileID: 0}
+    - target: {fileID: 7002672121951449080, guid: a0744885476152647aedfc5585d41d45,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7641279977294408899, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -979,7 +984,7 @@ PrefabInstance:
     - target: {fileID: 2655263964204342269, guid: 7dfe8ad29746c144f9fa7db1d50004a2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.330002
+      value: -0.58
       objectReference: {fileID: 0}
     - target: {fileID: 2815940461012462254, guid: 7dfe8ad29746c144f9fa7db1d50004a2,
         type: 3}
