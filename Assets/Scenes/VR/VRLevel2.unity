@@ -390,6 +390,11 @@ PrefabInstance:
       propertyPath: WAVE_MANAGER
       value: 
       objectReference: {fileID: 56001566}
+    - target: {fileID: 4924747880823997778, guid: a0744885476152647aedfc5585d41d45,
+        type: 3}
+      propertyPath: DATA_PATH
+      value: VRlevel2.dat
+      objectReference: {fileID: 0}
     - target: {fileID: 6172643387873473574, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
       propertyPath: m_Name
@@ -414,6 +419,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6728168171785303117, guid: a0744885476152647aedfc5585d41d45,
+        type: 3}
+      propertyPath: DATA_PATH
+      value: VRlevel2.dat
       objectReference: {fileID: 0}
     - target: {fileID: 7641279977294408899, guid: a0744885476152647aedfc5585d41d45,
         type: 3}

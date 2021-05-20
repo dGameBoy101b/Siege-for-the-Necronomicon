@@ -136,11 +136,6 @@ PrefabInstance:
       objectReference: {fileID: 1369148360}
     - target: {fileID: 4383825907215680094, guid: d049e403b5b15974d9605cbb66b6c3c7,
         type: 3}
-      propertyPath: MAX_ACTIVE
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4383825907215680094, guid: d049e403b5b15974d9605cbb66b6c3c7,
-        type: 3}
       propertyPath: PLAYER_SCORE
       value: 
       objectReference: {fileID: 1369148357}
@@ -564,10 +559,10 @@ PrefabInstance:
       propertyPath: WAVE_MANAGER
       value: 
       objectReference: {fileID: 4046063}
-    - target: {fileID: 5501610627389602297, guid: a0744885476152647aedfc5585d41d45,
+    - target: {fileID: 4924747880823997778, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
-      propertyPath: m_Enabled
-      value: 1
+      propertyPath: DATA_PATH
+      value: VRlevel3.dat
       objectReference: {fileID: 0}
     - target: {fileID: 6172643387873473574, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
@@ -594,6 +589,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6728168171785303117, guid: a0744885476152647aedfc5585d41d45,
+        type: 3}
+      propertyPath: DATA_PATH
+      value: VRlevel3.dat
+      objectReference: {fileID: 0}
     - target: {fileID: 7641279977294408899, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -619,11 +619,6 @@ PrefabInstance:
       propertyPath: WAVE_MANAGER
       value: 
       objectReference: {fileID: 4046063}
-    - target: {fileID: 9203992135065966657, guid: a0744885476152647aedfc5585d41d45,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 43185631345689843, guid: a0744885476152647aedfc5585d41d45, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a0744885476152647aedfc5585d41d45, type: 3}
@@ -635,7 +630,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1369148356 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6728168171785303117, guid: a0744885476152647aedfc5585d41d45,
+  m_CorrespondingSourceObject: {fileID: 4924747880823997778, guid: a0744885476152647aedfc5585d41d45,
     type: 3}
   m_PrefabInstance: {fileID: 1369148354}
   m_PrefabAsset: {fileID: 0}
@@ -1291,21 +1286,6 @@ PrefabInstance:
       propertyPath: BROKEN_WORLD
       value: 
       objectReference: {fileID: 1988163569}
-    - target: {fileID: 6887936895838884606, guid: 7dfe8ad29746c144f9fa7db1d50004a2,
-        type: 3}
-      propertyPath: LEVEL_CHANGER
-      value: 
-      objectReference: {fileID: 2054331140}
-    - target: {fileID: 6887936895838884606, guid: 7dfe8ad29746c144f9fa7db1d50004a2,
-        type: 3}
-      propertyPath: DEFEATED_SOUNDS.Array.data[0]
-      value: 
-      objectReference: {fileID: 2054331141}
-    - target: {fileID: 6887936895838884606, guid: 7dfe8ad29746c144f9fa7db1d50004a2,
-        type: 3}
-      propertyPath: DEFEATED_SOUNDS.Array.data[1]
-      value: 
-      objectReference: {fileID: 2054331139}
     - target: {fileID: 7065173345804017005, guid: 7dfe8ad29746c144f9fa7db1d50004a2,
         type: 3}
       propertyPath: m_IsActive
@@ -1427,27 +1407,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1b2448d7ad76ff46bab248a00cec2dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!82 &2054331139 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 5137600505382002418, guid: 7dfe8ad29746c144f9fa7db1d50004a2,
-    type: 3}
-  m_PrefabInstance: {fileID: 2054331131}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2054331140 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5193976719838073107, guid: 7dfe8ad29746c144f9fa7db1d50004a2,
-    type: 3}
-  m_PrefabInstance: {fileID: 2054331131}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 040b5e91c12bc6d428b7395945573ce4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!82 &2054331141 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 5137600506704059991, guid: 7dfe8ad29746c144f9fa7db1d50004a2,
-    type: 3}
-  m_PrefabInstance: {fileID: 2054331131}
-  m_PrefabAsset: {fileID: 0}

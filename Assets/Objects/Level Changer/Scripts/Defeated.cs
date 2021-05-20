@@ -72,8 +72,8 @@ public class Defeated : MonoBehaviour
     */
     public void changeWorld()
     {
-        EnviroSkyMgr.instance.SetTimeOfDay(TOD);
-        EnviroSkyMgr.instance.ChangeWeatherInstant(ENVIRO_PRESET_INDEX);
+        EnviroSkyMgr.instance?.SetTimeOfDay(TOD);
+        EnviroSkyMgr.instance?.ChangeWeatherInstant(ENVIRO_PRESET_INDEX);
         Destroy(BROKEN_WORLD);
         FIXED_WORLD.SetActive(true);
     }
