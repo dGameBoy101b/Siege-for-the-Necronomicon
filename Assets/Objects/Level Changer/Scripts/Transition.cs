@@ -110,18 +110,6 @@ public class Transition : MonoBehaviour
 	}
 
 	 /*
-	 * Uses G as a PC testing tool.
-	 */
-	void Update()
-	{
-		if (Input.GetAxis("PC Gauntlet") > 0)
-		{
-			Destroy(STARTING_ORB);
-			this.begin();
-		}
-	}
-
-	 /*
 	 * Manages all the functions that help begin the combat phase.
 	 */
 	public void begin()

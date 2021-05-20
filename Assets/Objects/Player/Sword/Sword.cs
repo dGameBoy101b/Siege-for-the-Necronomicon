@@ -13,6 +13,10 @@ public sealed class Sword : EquipmentBase
 	[SerializeField()]
 	[Tooltip("The offset from this game object that sword slashes should be generated.")]
 	public Vector3 SLASH_OFFSET;
+
+	[SerializeField()]
+	[Tooltip("The amount in degrees to rotate the created slash")]
+	public float SLASH_ROTATION_OFFSET;
 	
 	[SerializeField()]
 	[Tooltip("The VR controller button used to draw a slash.")]
@@ -40,7 +44,7 @@ public sealed class Sword : EquipmentBase
 		}
 		GameObject slash = GameObject.Instantiate(this.SLASH_PREFAB, midpoint, Quaternion.LookRotation(midpoint - this.PLAYER.position, end - start));
 		slash.transform.localScale = Vector3.Scale(new Vector3(Vector3.Distance(start, end) / slash.GetComponent<Collider>().bounds.size.x, Vector3.Distance(start, end) / slash.GetComponent<Collider>().bounds.size.y, 1f), slash.transform.localScale);
-		slash.transform.Rotate(0f, -30f, 0f, Space.Self);
+		slash.transform.Rotate(0f, SLASH_ROTATION_OFFSET, 0f, Space.Self);
 		slash.GetComponent<SwordSlash>().SPEED *= speed_scale;
 		return slash;
 	}

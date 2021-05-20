@@ -582,6 +582,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 653921411137192182, guid: 3a4a627116e386b4da9b0097fd902c36,
         type: 3}
+      propertyPath: DATA_PATH
+      value: PClevel2.dat
+      objectReference: {fileID: 0}
+    - target: {fileID: 653921411137192182, guid: 3a4a627116e386b4da9b0097fd902c36,
+        type: 3}
       propertyPath: SCENE_PATH
       value: Assets/Scenes/PC/PCLevel2.unity
       objectReference: {fileID: 0}
@@ -623,7 +628,7 @@ PrefabInstance:
     - target: {fileID: 2620746848329846425, guid: 3a4a627116e386b4da9b0097fd902c36,
         type: 3}
       propertyPath: DATA_PATH
-      value: PClevel1.unity.meta
+      value: PClevel1.dat
       objectReference: {fileID: 0}
     - target: {fileID: 2688712044902035316, guid: 3a4a627116e386b4da9b0097fd902c36,
         type: 3}
@@ -809,6 +814,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5254252924755653700, guid: 3a4a627116e386b4da9b0097fd902c36,
+        type: 3}
+      propertyPath: DATA_PATH
+      value: PClevel3.dat
       objectReference: {fileID: 0}
     - target: {fileID: 5275909181386515427, guid: 3a4a627116e386b4da9b0097fd902c36,
         type: 3}

@@ -18,6 +18,8 @@ public class BeginTrigger : MonoBehaviour
     [Tooltip("The Starting Orb / Trigger the player touches to begin.")]
     public GameObject STARTING_ORB;
 
+    private bool hasBegun = false;
+
     /*
      * Is the trigger of the starting orb.
      */
@@ -25,10 +27,21 @@ public class BeginTrigger : MonoBehaviour
     {
         if(other.gameObject.layer == 13)
         {
-            Debug.Log("Begin Trigger Activated");
             Destroy(STARTING_ORB);
             TRANSITION_MANAGER.begin();
         }
-       
     }
+
+    /*
+    *   trigger for the starting orb on pc
+    */
+    void Update()
+	{
+		if (Input.GetAxis("PC Gauntlet") > 0 && hasBegun == false)
+		{
+            Destroy(STARTING_ORB);
+			TRANSITION_MANAGER.begin();
+			hasBegun = true;
+		}
+	}
 }
