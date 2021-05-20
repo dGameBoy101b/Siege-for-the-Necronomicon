@@ -329,12 +329,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 137e803ef05799d4a9421e6ccdd779d9, type: 3}
---- !u!1 &791104736 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7376109082870694661, guid: a0744885476152647aedfc5585d41d45,
-    type: 3}
-  m_PrefabInstance: {fileID: 3166626830146382081}
-  m_PrefabAsset: {fileID: 0}
 --- !u!23 &823868782 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 7022577253667830174, guid: a0744885476152647aedfc5585d41d45,
@@ -392,7 +386,7 @@ PrefabInstance:
         type: 3}
       propertyPath: PLAYER
       value: 
-      objectReference: {fileID: 791104736}
+      objectReference: {fileID: 1341095901}
     - target: {fileID: 1523386711593564407, guid: 9dbc55e096b392d4f90bfb78c7ff919b,
         type: 3}
       propertyPath: PLAYER_SCORE
@@ -1930,6 +1924,12 @@ Material:
     - _HorizonColor: {r: 0.9511452, g: 0.9511452, b: 0.9511452, a: 1}
     - _SkyColor: {r: 0.38252658, g: 0.55919576, b: 0.72395134, a: 0.87389904}
     - _SunColor: {r: 0.9666419, g: 0.8672625, b: 0.7670391, a: 1}
+--- !u!1 &1341095901 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7376109082870694659, guid: a0744885476152647aedfc5585d41d45,
+    type: 3}
+  m_PrefabInstance: {fileID: 3166626830146382081}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1358259481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1967,6 +1967,11 @@ PrefabInstance:
       propertyPath: BARRIER_SHATTER.Array.data[2]
       value: 
       objectReference: {fileID: 1358259489}
+    - target: {fileID: 5729163080172008813, guid: 70f52691ec4d19d45a185a0565402202,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6977645791119793328, guid: 70f52691ec4d19d45a185a0565402202,
         type: 3}
       propertyPath: m_Materials.Array.size
@@ -1977,6 +1982,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 556ff5ec7cf3fb04299f5e89faba9dd0, type: 2}
+    - target: {fileID: 6977645791119793329, guid: 70f52691ec4d19d45a185a0565402202,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6977645791119793342, guid: 70f52691ec4d19d45a185a0565402202,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2257,6 +2267,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 105.72
       objectReference: {fileID: 0}
+    - target: {fileID: 8038162131866287828, guid: 70f52691ec4d19d45a185a0565402202,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8038162132046324653, guid: 70f52691ec4d19d45a185a0565402202,
         type: 3}
       propertyPath: BARRIER
@@ -2412,7 +2427,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 3166626830146382081}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1341095901}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25662192fc626eb47a5e9eb586e7fd50, type: 3}
@@ -2424,7 +2439,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 3166626830146382081}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1341095901}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f89b6d3142b38d9409bf73b28187f9fa, type: 3}
@@ -2650,8 +2665,13 @@ PrefabInstance:
       objectReference: {fileID: 105866116}
     - target: {fileID: 3416965672187281775, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
+      propertyPath: SLASH_OFFSET.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3416965672187281775, guid: a0744885476152647aedfc5585d41d45,
+        type: 3}
       propertyPath: SLASH_ROTATION_OFFSET
-      value: -30
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3451251176681247085, guid: a0744885476152647aedfc5585d41d45,
         type: 3}

@@ -330,7 +330,7 @@ PrefabInstance:
     - target: {fileID: 6647931331587036975, guid: be88e258c95692f429534d732aecc618,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: -1.1
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 6647931331587036975, guid: be88e258c95692f429534d732aecc618,
         type: 3}
@@ -878,7 +878,7 @@ PrefabInstance:
         type: 3}
       propertyPath: PLAYER
       value: 
-      objectReference: {fileID: 4236662146758232390}
+      objectReference: {fileID: 7376109082870931235}
     - target: {fileID: 8803981874312920709, guid: d6e7c83eba41a274c93dcf902bccb773,
         type: 3}
       propertyPath: LEFT_HAND

@@ -113,7 +113,10 @@ public class Transition : MonoBehaviour
 	 */
 	void Start()
 	{
-		EnviroSkyMgr.instance.SetTimeOfDay(TOD);
+		if(EnviroSkyMgr.instance != null)
+		{
+			EnviroSkyMgr.instance.SetTimeOfDay(TOD);
+		}
 		WAVE_MANAGER.SetActive(false);
 	}
 
@@ -127,7 +130,10 @@ public class Transition : MonoBehaviour
 		playEarthquakeSounds();
 		stopNeutralTheme();
 		playCombatTheme();
-		EnviroSkyMgr.instance.ChangeWeather(ENVIRO_PRESET_INDEX);
+		if(EnviroSkyMgr.instance != null)
+		{
+			EnviroSkyMgr.instance.ChangeWeather(ENVIRO_PRESET_INDEX);
+		}
 		TRAPPED_ANIMATION.Play();
 		playSpawnSounds();
 		Invoke("StopTrapAnimation", ANIMATION_LENGTH);
