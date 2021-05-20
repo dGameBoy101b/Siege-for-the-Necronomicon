@@ -107,6 +107,6 @@ public class Health : MonoBehaviour
 		this.WAVE_MANAGER.gameObject.SetActive(false);
 		this.LEVEL_FAIL.gameObject.SetActive(true);
 		FindObjectOfType<LaserPointer>().GetComponent<LineRenderer>().enabled = true;
-		this.HUD.gameObject.SetActive(false);
+		this.HUD.enabled = false;
 	}
 }

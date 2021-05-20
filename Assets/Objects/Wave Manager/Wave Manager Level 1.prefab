@@ -85,6 +85,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8481111717606564974, guid: 39d76bf6d434c954ba8f5a2e870f7e90,
         type: 3}
+      propertyPath: MAX_LAT
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481111717606564974, guid: 39d76bf6d434c954ba8f5a2e870f7e90,
+        type: 3}
       propertyPath: MAX_LON
       value: 10
       objectReference: {fileID: 0}
