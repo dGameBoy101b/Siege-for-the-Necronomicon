@@ -27,8 +27,8 @@ public class BeginTrigger : MonoBehaviour
     {
         if(other.gameObject.layer == 13)
         {
-            Destroy(STARTING_ORB);
             TRANSITION_MANAGER.begin();
+            Destroy(STARTING_ORB);
         }
     }
 
@@ -37,10 +37,10 @@ public class BeginTrigger : MonoBehaviour
     */
     void Update()
 	{
-		if (Input.GetAxis("PC Gauntlet") > 0 && hasBegun == false)
+		if (Input.GetMouseButtonDown(0) && hasBegun == false)
 		{
+            TRANSITION_MANAGER.begin();
             Destroy(STARTING_ORB);
-			TRANSITION_MANAGER.begin();
 			hasBegun = true;
 		}
 	}

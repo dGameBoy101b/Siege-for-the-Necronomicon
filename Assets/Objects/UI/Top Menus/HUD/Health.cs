@@ -106,6 +106,7 @@ public class Health : MonoBehaviour
 		Cursor.lockState = CursorLockMode.Confined;
 		this.WAVE_MANAGER.gameObject.SetActive(false);
 		this.LEVEL_FAIL.gameObject.SetActive(true);
+		FindObjectOfType<LaserPointer>().GetComponent<LineRenderer>().enabled = true;
 		this.HUD.gameObject.SetActive(false);
 	}
 }

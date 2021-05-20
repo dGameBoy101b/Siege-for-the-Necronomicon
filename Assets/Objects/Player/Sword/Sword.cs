@@ -63,23 +63,15 @@ public sealed class Sword : EquipmentBase
 	private void endSlash()
 	{
 		this.createSlash(this.slash_start, this.transform.position + this.SLASH_OFFSET);
-		Debug.Log("End slash " + this.transform.position);
 	}
 	
 	protected override void Update()
 	{
-		if (/*(OVRInput.GetDominantHand() == OVRInput.Handedness.LeftHanded && OVRInput.GetDown(this.SLASH_BUTTON, OVRInput.Controller.LHand))
-			|| (OVRInput.GetDominantHand() == OVRInput.Handedness.RightHanded && OVRInput.GetDown(this.SLASH_BUTTON, OVRInput.Controller.RHand))
-			|| (OVRInput.GetDominantHand() == OVRInput.Handedness.Unsupported && OVRInput.GetDown(this.SLASH_BUTTON, OVRInput.Controller.Active))*/
-			OVRInput.GetDown(this.SLASH_BUTTON))
+		if (OVRInput.GetDown(this.SLASH_BUTTON))
 		{
 			this.startSlash();
-			Debug.Log("start slash position " + slash_start);
 		}
-		if (/*(OVRInput.GetDominantHand() == OVRInput.Handedness.LeftHanded && OVRInput.GetUp(this.SLASH_BUTTON, OVRInput.Controller.LHand))
-			|| (OVRInput.GetDominantHand() == OVRInput.Handedness.RightHanded && OVRInput.GetUp(this.SLASH_BUTTON, OVRInput.Controller.RHand))
-			|| (OVRInput.GetDominantHand() == OVRInput.Handedness.Unsupported && OVRInput.GetUp(this.SLASH_BUTTON, OVRInput.Controller.Active))*/
-			OVRInput.GetUp(this.SLASH_BUTTON))
+		if (OVRInput.GetUp(this.SLASH_BUTTON))
 		{
 			this.endSlash();
 		}

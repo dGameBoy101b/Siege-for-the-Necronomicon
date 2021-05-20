@@ -132,7 +132,7 @@ PrefabInstance:
     - target: {fileID: 4527444059524491378, guid: e0cdbee808a772a4890d105d4e4311f3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4527444059524491378, guid: e0cdbee808a772a4890d105d4e4311f3,
         type: 3}
@@ -735,7 +735,7 @@ PrefabInstance:
     - target: {fileID: 8546555320631667842, guid: e3de63308f55ee64781bf8a16114631e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8546555320631667842, guid: e3de63308f55ee64781bf8a16114631e,
         type: 3}
@@ -1001,6 +1001,11 @@ PrefabInstance:
       propertyPath: BARRIER_SHATTER.Array.data[2]
       value: 
       objectReference: {fileID: 2017263619}
+    - target: {fileID: 4413316423800404000, guid: dc7a0340632deda4ea38e6d24ce7cec1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4413316423800404001, guid: dc7a0340632deda4ea38e6d24ce7cec1,
         type: 3}
       propertyPath: m_LocalPosition.x

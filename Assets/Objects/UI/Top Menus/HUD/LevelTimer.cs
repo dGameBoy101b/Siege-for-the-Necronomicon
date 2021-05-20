@@ -85,6 +85,7 @@ public class LevelTimer : MonoBehaviour
 		this.WAVE_MANAGER.gameObject.SetActive(false);
 		this.TRANSITION.levelCompleted();
 		this.HUD.gameObject.SetActive(false);
+		FindObjectOfType<LaserPointer>().GetComponent<LineRenderer>().enabled = true;
 		Cursor.lockState = CursorLockMode.Confined;
 	}
 }
