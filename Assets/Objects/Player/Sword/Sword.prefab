@@ -82,8 +82,7 @@ MonoBehaviour:
   HANDEDNESS: Left Handed
   SLASH_PREFAB: {fileID: 8774340922648115260, guid: f5cae4f705646644c8e221d81bc4343a,
     type: 3}
-  SLASH_OFFSET: {x: 0, y: 5, z: 0}
-  SLASH_ROTATION_OFFSET: 0
+  SLASH_OFFSET: {x: 0, y: 1, z: 0}
   SLASH_BUTTON: 2097152
 --- !u!1001 &3775275013447818674
 PrefabInstance:

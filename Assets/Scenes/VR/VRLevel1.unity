@@ -2097,12 +2097,12 @@ PrefabInstance:
     - target: {fileID: 6977645791119793342, guid: 70f52691ec4d19d45a185a0565402202,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.35
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6977645791119793342, guid: 70f52691ec4d19d45a185a0565402202,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.455
+      value: 1.21
       objectReference: {fileID: 0}
     - target: {fileID: 6977645791119793343, guid: 70f52691ec4d19d45a185a0565402202,
         type: 3}
@@ -2776,13 +2776,8 @@ PrefabInstance:
       objectReference: {fileID: 105866116}
     - target: {fileID: 3416965672187281775, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
-      propertyPath: SLASH_OFFSET.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3416965672187281775, guid: a0744885476152647aedfc5585d41d45,
-        type: 3}
       propertyPath: SLASH_ROTATION_OFFSET
-      value: -30
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3451251176681247085, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
@@ -2812,7 +2807,7 @@ PrefabInstance:
     - target: {fileID: 4236662146758232390, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.83
       objectReference: {fileID: 0}
     - target: {fileID: 4236662146758232390, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
@@ -3222,17 +3217,12 @@ PrefabInstance:
     - target: {fileID: 7376109082870931237, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.67
       objectReference: {fileID: 0}
     - target: {fileID: 7376109082871386361, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 130839
-      objectReference: {fileID: 0}
-    - target: {fileID: 7376109082880915169, guid: a0744885476152647aedfc5585d41d45,
-        type: 3}
-      propertyPath: LateControllerUpdate
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7641279977294408899, guid: a0744885476152647aedfc5585d41d45,
         type: 3}

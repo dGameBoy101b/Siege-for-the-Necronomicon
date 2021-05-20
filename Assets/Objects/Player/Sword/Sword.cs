@@ -13,10 +13,6 @@ public sealed class Sword : EquipmentBase
 	[SerializeField()]
 	[Tooltip("The offset from this game object that sword slashes should be generated.")]
 	public Vector3 SLASH_OFFSET;
-
-	[SerializeField()]
-	[Tooltip("The amount in degrees to rotate the created slash")]
-	public float SLASH_ROTATION_OFFSET;
 	
 	[SerializeField()]
 	[Tooltip("The VR controller button used to draw a slash.")]
@@ -43,8 +39,7 @@ public sealed class Sword : EquipmentBase
 			end = temp;
 		}
 		GameObject slash = GameObject.Instantiate(this.SLASH_PREFAB, midpoint, Quaternion.LookRotation(midpoint - this.PLAYER.position, end - start));
-		//slash.transform.localScale = Vector3.Scale(new Vector3(Vector3.Distance(start, end) / slash.GetComponent<Collider>().bounds.size.x, Vector3.Distance(start, end) / slash.GetComponent<Collider>().bounds.size.y, 1f), slash.transform.localScale);
-		//slash.transform.Rotate(0f, SLASH_ROTATION_OFFSET, 0f, Space.Self);
+		slash.transform.localScale = new Vector3(1f, Vector3.Distance(start, end), 1f);
 		slash.GetComponent<SwordSlash>().SPEED *= speed_scale;
 		return slash;
 	}
@@ -54,11 +49,23 @@ public sealed class Sword : EquipmentBase
 	 */
 	private void startSlash()
 	{
+		if (this.start_point != null)
+        {
+			GameObject.DestroyImmediate(this.start_point);
+        }
+		if (this.end_point != null)
+        {
+			GameObject.DestroyImmediate(this.end_point);
+        }
 		this.slash_start = this.transform.position + (this.transform.rotation * this.SLASH_OFFSET);
-		GameObject start_point = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-		start_point.transform.position = this.slash_start;
-		Object.DestroyImmediate(start_point.GetComponent<Collider>());
+		this.start_point = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+		this.start_point.transform.position = this.slash_start;
+		this.start_point.transform.localScale = Vector3.one * .1f;
+		Object.DestroyImmediate(this.start_point.GetComponent<Collider>());
 	}
+
+	private GameObject start_point;
+	private GameObject end_point = null;
 	
 	/**
 	 * Called when a slash ends.
@@ -67,9 +74,11 @@ public sealed class Sword : EquipmentBase
 	{
 		Vector3 slash_end = this.transform.position + (this.transform.rotation * this.SLASH_OFFSET);
 		this.createSlash(this.slash_start, slash_end);
-		GameObject start_point = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-		start_point.transform.position = slash_end;
-		Object.DestroyImmediate(start_point.GetComponent<Collider>());
+		this.end_point = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+		this.end_point.transform.position = slash_end;
+		this.end_point.transform.localScale = Vector3.one * .1f;
+		this.end_point.GetComponent<Renderer>().material.color = Color.red;
+		Object.DestroyImmediate(this.end_point.GetComponent<Collider>());
 	}
 	
 	protected override void Update()
