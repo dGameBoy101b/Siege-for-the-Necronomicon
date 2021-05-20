@@ -24,6 +24,16 @@ public sealed class TrackingSpaceScaler : MonoBehaviour
 	[SerializeField()]
 	[Tooltip("The name of the height adjustment option.")]
 	public string HEIGHT;
+
+	/**
+	 * The original local scale of the linked tracking space.
+	 */
+	private Vector3 origin_scale;
+
+	/**
+	 * The original local position of the linked tracking space.
+	 */
+	private Vector3 origin_pos;
 	
 	/**
 	 * Rescale the linked tracking space to account for the reach adjustment.
@@ -39,7 +49,7 @@ public sealed class TrackingSpaceScaler : MonoBehaviour
 		{
 			reach += 1f;
 		}
-		this.TRACKING_SPACE.transform.localScale = reach * Vector3.one;
+		this.TRACKING_SPACE.transform.localScale = Vector3.Scale(this.origin_scale, reach * Vector3.one);
 	}
 	
 	/**
@@ -48,11 +58,13 @@ public sealed class TrackingSpaceScaler : MonoBehaviour
 	private void translateHeight()
 	{
 		float height = (float)OptionStore.Instance.getOption(this.HEIGHT);
-		this.TRACKING_SPACE.transform.localPosition += height * Vector3.up;
+		this.TRACKING_SPACE.transform.localPosition = this.origin_pos + height * Vector3.up;
 	}
 	
 	private void Start()
 	{
+		this.origin_pos = this.TRACKING_SPACE.transform.localPosition;
+		this.origin_scale = this.TRACKING_SPACE.transform.localScale;
 		this.scaleReach();
 		this.translateHeight();
 	}

@@ -410,6 +410,16 @@ PrefabInstance:
       propertyPath: WAVE_MANAGER
       value: 
       objectReference: {fileID: 56001566}
+    - target: {fileID: 6716065065648578406, guid: a0744885476152647aedfc5585d41d45,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716065065648578406, guid: a0744885476152647aedfc5585d41d45,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7641279977294408899, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -419,6 +429,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7965271619843361715, guid: a0744885476152647aedfc5585d41d45,
+        type: 3}
+      propertyPath: TIME
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7965271619843361715, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
@@ -492,6 +507,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 863959460}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &863959467 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4924747880823997778, guid: a0744885476152647aedfc5585d41d45,
+    type: 3}
+  m_PrefabInstance: {fileID: 863959460}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848f921d6ba53224d9e9a9615bac2d20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1396787620
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1015,13 +1042,18 @@ PrefabInstance:
     - target: {fileID: 3632124348205505100, guid: dc7a0340632deda4ea38e6d24ce7cec1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 105.9
+      value: 105.71
       objectReference: {fileID: 0}
     - target: {fileID: 3632124348320106290, guid: dc7a0340632deda4ea38e6d24ce7cec1,
         type: 3}
       propertyPath: BARRIER
       value: 
       objectReference: {fileID: 2017263618}
+    - target: {fileID: 3632124348320106290, guid: dc7a0340632deda4ea38e6d24ce7cec1,
+        type: 3}
+      propertyPath: DATA_SAVER
+      value: 
+      objectReference: {fileID: 863959467}
     - target: {fileID: 3632124348320106290, guid: dc7a0340632deda4ea38e6d24ce7cec1,
         type: 3}
       propertyPath: DelayToNextLevel
@@ -1076,6 +1108,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821325156715695580, guid: dc7a0340632deda4ea38e6d24ce7cec1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.19
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc7a0340632deda4ea38e6d24ce7cec1, type: 3}

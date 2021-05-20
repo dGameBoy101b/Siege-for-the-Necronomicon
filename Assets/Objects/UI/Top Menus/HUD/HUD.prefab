@@ -1103,7 +1103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WAVE_MANAGER: {fileID: 0}
   TIME: 300
-  TIME_TEXT: {fileID: 0}
+  TIME_TEXT: {fileID: 190086133982184500}
   LEVEL_COMPLETE: {fileID: 0}
   HUD: {fileID: 3101303567896912569}
   TRANSITION: {fileID: 0}
