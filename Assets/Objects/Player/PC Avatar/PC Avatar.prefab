@@ -260,6 +260,16 @@ PrefabInstance:
       objectReference: {fileID: 3927743051225765332}
     - target: {fileID: 8803981874312920709, guid: d6e7c83eba41a274c93dcf902bccb773,
         type: 3}
+      propertyPath: LEFT_HAND
+      value: 
+      objectReference: {fileID: 3927743051225765332}
+    - target: {fileID: 8803981874312920709, guid: d6e7c83eba41a274c93dcf902bccb773,
+        type: 3}
+      propertyPath: RIGHT_HAND
+      value: 
+      objectReference: {fileID: 3927743051225765332}
+    - target: {fileID: 8803981874312920709, guid: d6e7c83eba41a274c93dcf902bccb773,
+        type: 3}
       propertyPath: DEFAULT_HAND
       value: 
       objectReference: {fileID: 3927743051225765332}
@@ -378,6 +388,16 @@ PrefabInstance:
     - target: {fileID: 4797882252756488277, guid: be88e258c95692f429534d732aecc618,
         type: 3}
       propertyPath: PLAYER
+      value: 
+      objectReference: {fileID: 3927743051225765332}
+    - target: {fileID: 4797882252756488277, guid: be88e258c95692f429534d732aecc618,
+        type: 3}
+      propertyPath: LEFT_HAND
+      value: 
+      objectReference: {fileID: 3927743051225765332}
+    - target: {fileID: 4797882252756488277, guid: be88e258c95692f429534d732aecc618,
+        type: 3}
+      propertyPath: RIGHT_HAND
       value: 
       objectReference: {fileID: 3927743051225765332}
     - target: {fileID: 4797882252756488277, guid: be88e258c95692f429534d732aecc618,
