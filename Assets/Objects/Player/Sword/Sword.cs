@@ -43,8 +43,8 @@ public sealed class Sword : EquipmentBase
 			end = temp;
 		}
 		GameObject slash = GameObject.Instantiate(this.SLASH_PREFAB, midpoint, Quaternion.LookRotation(midpoint - this.PLAYER.position, end - start));
-		slash.transform.localScale = Vector3.Scale(new Vector3(Vector3.Distance(start, end) / slash.GetComponent<Collider>().bounds.size.x, Vector3.Distance(start, end) / slash.GetComponent<Collider>().bounds.size.y, 1f), slash.transform.localScale);
-		slash.transform.Rotate(0f, SLASH_ROTATION_OFFSET, 0f, Space.Self);
+		//slash.transform.localScale = Vector3.Scale(new Vector3(Vector3.Distance(start, end) / slash.GetComponent<Collider>().bounds.size.x, Vector3.Distance(start, end) / slash.GetComponent<Collider>().bounds.size.y, 1f), slash.transform.localScale);
+		//slash.transform.Rotate(0f, SLASH_ROTATION_OFFSET, 0f, Space.Self);
 		slash.GetComponent<SwordSlash>().SPEED *= speed_scale;
 		return slash;
 	}
@@ -54,7 +54,9 @@ public sealed class Sword : EquipmentBase
 	 */
 	private void startSlash()
 	{
-		this.slash_start = this.transform.position + this.SLASH_OFFSET;
+		this.slash_start = this.transform.position + this.transform.rotation * this.SLASH_OFFSET;
+		GameObject start_point = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+		Object.DestroyImmediate(start_point.GetComponent<Collider>());
 	}
 	
 	/**
@@ -62,7 +64,9 @@ public sealed class Sword : EquipmentBase
 	 */
 	private void endSlash()
 	{
-		this.createSlash(this.slash_start, this.transform.position + this.SLASH_OFFSET);
+		this.createSlash(this.slash_start, this.transform.position + this.transform.rotation * this.SLASH_OFFSET);
+		GameObject start_point = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+		Object.DestroyImmediate(start_point.GetComponent<Collider>());
 	}
 	
 	protected override void Update()

@@ -116,7 +116,7 @@ PrefabInstance:
         type: 3}
       propertyPath: RET_MENU
       value: 
-      objectReference: {fileID: 4659191057473420078}
+      objectReference: {fileID: 115888727997457562}
     - target: {fileID: 9214129254077996642, guid: 94a44219c7e103d47bd493da5626826a,
         type: 3}
       propertyPath: m_Pivot.x
@@ -263,6 +263,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1183709027077082895, guid: 08059852ff4f667479a231e9dc6e2e49,
+        type: 3}
+      propertyPath: RET_MENU
+      value: 
+      objectReference: {fileID: 115888727997457562}
     - target: {fileID: 3141154697636127813, guid: 08059852ff4f667479a231e9dc6e2e49,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -981,6 +986,12 @@ RectTransform:
 --- !u!223 &4659191057473420078 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 2205614624869837827, guid: 454aed307567b0e459c372e5118db0bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 6787821032811321133}
+  m_PrefabAsset: {fileID: 0}
+--- !u!223 &115888727997457562 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 6892925716353414071, guid: 454aed307567b0e459c372e5118db0bf,
     type: 3}
   m_PrefabInstance: {fileID: 6787821032811321133}
   m_PrefabAsset: {fileID: 0}
