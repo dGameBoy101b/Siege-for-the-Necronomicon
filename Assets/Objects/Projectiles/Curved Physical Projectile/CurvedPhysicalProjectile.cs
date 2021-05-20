@@ -196,7 +196,7 @@ public class CurvedPhysicalProjectile : PhysicalProjectileBase
 	{
 		this.setup();
 	}
-	
+#if UNITY_EDITOR
 	private void OnDrawGizmosSelected()
 	{
 		if (this.SHOW_TRAJECTORY)
@@ -208,7 +208,8 @@ public class CurvedPhysicalProjectile : PhysicalProjectileBase
 			this.drawTrajectoryGizmo();
 		}
 	}
-	
+#endif
+
 	private void Update()
 	{
 		this.moveCurved(Time.deltaTime);

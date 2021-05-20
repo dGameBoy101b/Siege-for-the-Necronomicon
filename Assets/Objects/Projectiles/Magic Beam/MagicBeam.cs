@@ -233,7 +233,7 @@ public sealed class MagicBeam : MagicalProjectileBase
 		this.timer = this.CHARGE_TIME;
 		this.CurrentState = State.Charging;
 	}
-	
+#if UNITY_EDITOR
 	private void OnDrawGizmosSelected()
 	{
 		if (!UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode)
@@ -245,4 +245,5 @@ public sealed class MagicBeam : MagicalProjectileBase
 		Gizmos.color = Color.blue;
 		Gizmos.DrawWireSphere(this.calcNextHit(), this.col.radius);
 	}
+#endif
 }

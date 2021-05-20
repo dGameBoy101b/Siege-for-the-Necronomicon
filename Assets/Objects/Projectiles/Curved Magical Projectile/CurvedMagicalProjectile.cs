@@ -196,7 +196,7 @@ public class CurvedMagicalProjectile : MagicalProjectileBase
 	{
 		this.setup();
 	}
-	
+#if UNITY_EDITOR
 	private void OnDrawGizmosSelected()
 	{
 		if (this.SHOW_TRAJECTORY)
@@ -208,7 +208,8 @@ public class CurvedMagicalProjectile : MagicalProjectileBase
 			this.drawTrajectoryGizmo();
 		}
 	}
-	
+#endif
+
 	private void Update()
 	{
 		this.moveCurved(Time.deltaTime);
