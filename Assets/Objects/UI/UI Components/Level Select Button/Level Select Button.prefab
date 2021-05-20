@@ -150,6 +150,8 @@ MonoBehaviour:
   SCORE_DISPLAY: {fileID: 1776897673824340917}
   TIME_DISPLAY: {fileID: 790384480632809746}
   LEVEL_NAME: 
+  UNLOCKED: 0
+  DEPENDENT: {fileID: 0}
 --- !u!1 &6580161769499777138
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,6 +330,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Score Display
+      objectReference: {fileID: 0}
+    - target: {fileID: 6866201454287311180, guid: 5d6b0c619fd0a1040b75230b1467adbf,
+        type: 3}
+      propertyPath: m_text
+      value: Top Score
       objectReference: {fileID: 0}
     - target: {fileID: 6866201454287311180, guid: 5d6b0c619fd0a1040b75230b1467adbf,
         type: 3}
@@ -560,6 +567,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Time Display
+      objectReference: {fileID: 0}
+    - target: {fileID: 6866201454287311180, guid: 5d6b0c619fd0a1040b75230b1467adbf,
+        type: 3}
+      propertyPath: m_text
+      value: Seconds Left
       objectReference: {fileID: 0}
     - target: {fileID: 6866201454287311180, guid: 5d6b0c619fd0a1040b75230b1467adbf,
         type: 3}
