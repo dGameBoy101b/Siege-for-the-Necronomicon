@@ -611,11 +611,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7965271619843361715, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
-      propertyPath: TIME
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 7965271619843361715, guid: a0744885476152647aedfc5585d41d45,
-        type: 3}
       propertyPath: TRANSITION
       value: 
       objectReference: {fileID: 2054331132}
