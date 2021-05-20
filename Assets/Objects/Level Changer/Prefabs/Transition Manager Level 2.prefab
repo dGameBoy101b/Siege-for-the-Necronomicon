@@ -9534,12 +9534,12 @@ PrefabInstance:
     - target: {fileID: 3661005000406937448, guid: f68b937f4fd18c047b742171e86360c1,
         type: 3}
       propertyPath: cloudAnim.y
-      value: 0.39934766
+      value: 0.37549347
       objectReference: {fileID: 0}
     - target: {fileID: 3661005000406937448, guid: f68b937f4fd18c047b742171e86360c1,
         type: 3}
       propertyPath: cloudAnim.z
-      value: 0.25357544
+      value: 0.24761176
       objectReference: {fileID: 0}
     - target: {fileID: 3661005000406937448, guid: f68b937f4fd18c047b742171e86360c1,
         type: 3}
@@ -9549,7 +9549,7 @@ PrefabInstance:
     - target: {fileID: 3661005000406937448, guid: f68b937f4fd18c047b742171e86360c1,
         type: 3}
       propertyPath: cirrusAnim.y
-      value: -0.11679225
+      value: -0.116911545
       objectReference: {fileID: 0}
     - target: {fileID: 3661005000406937448, guid: f68b937f4fd18c047b742171e86360c1,
         type: 3}
@@ -9559,12 +9559,12 @@ PrefabInstance:
     - target: {fileID: 3661005000406937448, guid: f68b937f4fd18c047b742171e86360c1,
         type: 3}
       propertyPath: cloudFlatBaseAnim.y
-      value: -0.17021132
+      value: -0.17259677
       objectReference: {fileID: 0}
     - target: {fileID: 3661005000406937448, guid: f68b937f4fd18c047b742171e86360c1,
         type: 3}
       propertyPath: cloudAnimNonScaled.y
-      value: -2.1700282
+      value: -2.1724129
       objectReference: {fileID: 0}
     - target: {fileID: 3661005000406937448, guid: f68b937f4fd18c047b742171e86360c1,
         type: 3}
@@ -9574,7 +9574,7 @@ PrefabInstance:
     - target: {fileID: 3661005000406937448, guid: f68b937f4fd18c047b742171e86360c1,
         type: 3}
       propertyPath: cloudFlatDetailAnim.y
-      value: 0.22670697
+      value: 0.1670713
       objectReference: {fileID: 0}
     - target: {fileID: 3661005000406937448, guid: f68b937f4fd18c047b742171e86360c1,
         type: 3}
@@ -9693,6 +9693,16 @@ PrefabInstance:
     - target: {fileID: 1105873670216015017, guid: f39d06f3f270cbb448ab97ccf6d24983,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1105873670356642212, guid: f39d06f3f270cbb448ab97ccf6d24983,
+        type: 3}
+      propertyPath: BARRIER
+      value: 
+      objectReference: {fileID: 4320135496861088056}
+    - target: {fileID: 1105873670356642213, guid: f39d06f3f270cbb448ab97ccf6d24983,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

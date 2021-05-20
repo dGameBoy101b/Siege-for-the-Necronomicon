@@ -100,6 +100,12 @@ public class Transition : MonoBehaviour
 	[Tooltip("All the sounds for when the camera shakes / the wave manager begins")]
 	public AudioSource[] EARTHQUAKE_SOUNDS;
 
+	[SerializeField()]
+	[Tooltip("The level changer to enable when the level is complete.")]
+	public LevelChanger LEVEL_CHANGER;
+
+	private bool level_complete = false;
+
 	/*
 	 * Disables Wave manager and sets TOD
 	 */
@@ -131,6 +137,8 @@ public class Transition : MonoBehaviour
 	 */
 	public void levelCompleted()
 	{
+		this.level_complete = true;
+		this.LEVEL_CHANGER.gameObject.SetActive(true);
 		stopCombatTheme();
 		playSurvivedTheme();
 		Invoke("playTeleportationAnimation", 7);

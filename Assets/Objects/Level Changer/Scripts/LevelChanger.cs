@@ -62,15 +62,15 @@ public class LevelChanger : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.H) && goToNextLevelInstead == true)
+        if (Input.GetButtonDown("PC Gauntlet") && goToNextLevelInstead)
         {
             BARRIER.shatterBarrier();
             Debug.Log("Load next level");
             Invoke("nextLevel", DelayToNextLevel);
         }
         else
-            if(Input.GetKeyDown(KeyCode.H))
-            {
+            if(Input.GetButtonDown("PC Gauntlet"))
+        {
                 BARRIER.shatterBarrier();
                 Debug.Log("Loading level " + LevelToLoad);
                 FadeToLevel(LevelToLoad);
