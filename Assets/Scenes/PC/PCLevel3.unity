@@ -146,6 +146,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cc9288c40187804a9afcf0839a190be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &300060360 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5980492664250646246, guid: 9ab7941042e233041b24e74aa51dd304,
+    type: 3}
+  m_PrefabInstance: {fileID: 435148583}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11d19f94f3603149bcf026f0dcc416d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &342043517 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5640099022376924734, guid: 9ab7941042e233041b24e74aa51dd304,
@@ -440,6 +452,11 @@ PrefabInstance:
       propertyPath: WAVE_MANAGER
       value: 
       objectReference: {fileID: 2043669075}
+    - target: {fileID: 6012170565912538546, guid: 9ab7941042e233041b24e74aa51dd304,
+        type: 3}
+      propertyPath: TIME_DISPLAY
+      value: 
+      objectReference: {fileID: 300060360}
     - target: {fileID: 6012170565912538546, guid: 9ab7941042e233041b24e74aa51dd304,
         type: 3}
       propertyPath: WAVE_MANAGER
