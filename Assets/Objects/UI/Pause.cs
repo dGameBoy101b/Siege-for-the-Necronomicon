@@ -29,6 +29,7 @@ public class Pause : MonoBehaviour
 	[Tooltip("The pointer used in VR menus.")]
 	public LaserPointer POINTER;
 	
+	private bool ispaused = false;
 	/**
 	 * Pause the game.
 	 */
@@ -55,9 +56,15 @@ public class Pause : MonoBehaviour
 	
 	private void Update()
 	{
-		if (Input.GetButtonDown(this.PAUSE_BUTTON) || OVRInput.GetDown(OVRInput.Button.Start))
+		if (Input.GetButtonDown(this.PAUSE_BUTTON) || OVRInput.GetDown(OVRInput.Button.Start) && ispaused == false)
 		{
 			this.pause();
+			ispaused = true;
+		}
+		if (Input.GetButtonDown(this.PAUSE_BUTTON) || OVRInput.GetDown(OVRInput.Button.Start) && ispaused == true)
+		{
+			this.unpause();
+			ispaused = false;
 		}
 	}
 	
