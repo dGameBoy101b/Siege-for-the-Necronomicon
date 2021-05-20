@@ -9449,7 +9449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31ce7e2664139b40b8f11d389385c1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LEVEL_CHANGER: {fileID: 0}
+  LEVEL_CHANGER: {fileID: 8038162132046324653}
   ENDING_BARRIER: {fileID: 7446873238258373853}
 --- !u!1001 &6839489691719917041
 PrefabInstance:
@@ -9882,6 +9882,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f39d06f3f270cbb448ab97ccf6d24983, type: 3}
+--- !u!114 &8038162132046324653 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1105873670356642212, guid: f39d06f3f270cbb448ab97ccf6d24983,
+    type: 3}
+  m_PrefabInstance: {fileID: 6977645790236674569}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 040b5e91c12bc6d428b7395945573ce4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8038162131652204192 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1105873670216015017, guid: f39d06f3f270cbb448ab97ccf6d24983,

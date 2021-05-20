@@ -22,8 +22,11 @@ public class EndTrigger : MonoBehaviour
      */
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("End Trigger Activated");
-        Destroy(ENDING_BARRIER);
-        LEVEL_CHANGER.progress();
+        if (other.gameObject.layer == 13)
+        {
+            Debug.Log("End Trigger Activated");
+            Destroy(ENDING_BARRIER);
+            LEVEL_CHANGER.progress();
+        }
     }
 }
