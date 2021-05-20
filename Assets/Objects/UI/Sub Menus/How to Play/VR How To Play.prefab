@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2196927279760704331}
   - component: {fileID: 7389027562835571075}
   - component: {fileID: 3509210133025788693}
+  - component: {fileID: 3496720406921438328}
   m_Layer: 5
   m_Name: VR How To Play
   m_TagString: Untagged
@@ -81,6 +82,25 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3496720406921438328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415866532930640479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aaf960227867044282d921171d2d7ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  pointer: {fileID: 0}
+  sortOrder: 0
 --- !u!1 &1532122109009480149
 GameObject:
   m_ObjectHideFlags: 0
