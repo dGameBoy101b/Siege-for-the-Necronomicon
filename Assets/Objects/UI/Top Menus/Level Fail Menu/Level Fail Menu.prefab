@@ -625,6 +625,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6866201454287311180, guid: 5d6b0c619fd0a1040b75230b1467adbf,
         type: 3}
+      propertyPath: m_text
+      value: Seconds Remaining
+      objectReference: {fileID: 0}
+    - target: {fileID: 6866201454287311180, guid: 5d6b0c619fd0a1040b75230b1467adbf,
+        type: 3}
       propertyPath: m_fontColor.b
       value: 0
       objectReference: {fileID: 0}
