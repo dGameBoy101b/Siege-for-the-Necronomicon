@@ -17,16 +17,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VR/VRLevel3.unity
     guid: c5f622d37c4f45949bf24159e56fce91
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/PC/PCMainMenu.unity
     guid: fa449470100c49e4aab1ab4a2bd475f8
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/PC/PCLevel1.unity
     guid: 245bf8fcd2c5c674895e926e153a5618
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/PC/PCLevel2.unity
     guid: bbff233faf205c643adca302efcdd31c
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/PC/PCLevel3.unity
     guid: 74cbfb57bd1bcd046bd1cddff3c54074
   m_configObjects:

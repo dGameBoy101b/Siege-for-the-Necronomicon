@@ -35,6 +35,14 @@ public sealed class LevelSelectButton : MonoBehaviour
 	[SerializeField()]
 	[Tooltip("The displayed name of the level.")]
 	public string LEVEL_NAME;
+
+	[SerializeField()]
+	[Tooltip("Should this level be unlocked?")]
+	public bool UNLOCKED;
+
+	[SerializeField()]
+	[Tooltip("The level to unlock when this one is completed.")]
+	public LevelSelectButton DEPENDENT;
 	
 	/**
 	 * The data about the linked level.
@@ -77,10 +85,14 @@ public sealed class LevelSelectButton : MonoBehaviour
 			this.SCORE_DISPLAY.updateText();
 			this.TIME_DISPLAY.Value = this.Data.TimeLeft;
 			this.TIME_DISPLAY.updateText();
+			if (this.DEPENDENT != null)
+			{
+				this.DEPENDENT.UNLOCKED = this.Data.isComplete();
+			}
 		}
 		this.TIME_DISPLAY.gameObject.SetActive(this.Data != null && !this.Data.isComplete());
 		this.SCORE_DISPLAY.gameObject.SetActive(this.Data != null && this.Data.isComplete());
-		this.button.interactable = this.ValidScene;
+		this.button.interactable = this.ValidScene && this.UNLOCKED;
 	}
 	
 	/**
@@ -110,7 +122,15 @@ public sealed class LevelSelectButton : MonoBehaviour
 	 */
 	private void fetchData()
 	{
-		this.Data = SaveLoad.loadData(this.DATA_PATH);
+		LevelData data = SaveLoad.loadData(this.DATA_PATH);
+		if (data == null)
+		{
+			this.Data = null;
+		}
+		else
+		{
+			this.Data = new LevelData(data);
+		}
 		if (this.Data != null && this.Data.Path != this.SCENE_PATH)
 		{
 			Debug.LogWarning("Mismatched level path in level data (\"" + this.Data.Path + "\") and linked scene (\"" + this.SCENE_PATH + "\").");

@@ -40,6 +40,17 @@ public class LevelData
 		this.TimeLeft = time;
 		this.HighScore = score;
 	}
+
+	/**
+	 * Construct a copy of the given level data.
+	 * @param data The level data to copy.
+	 */
+	public LevelData(LevelData data)
+    {
+		this.Path = data.Path;
+		this.TimeLeft = data.TimeLeft;
+		this.HighScore = data.HighScore;
+    }
 	
 	/**
 	 * Test if the level linked to this data is complete.
