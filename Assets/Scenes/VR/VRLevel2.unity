@@ -305,11 +305,6 @@ PrefabInstance:
       propertyPath: WAVE_MANAGER
       value: 
       objectReference: {fileID: 56001566}
-    - target: {fileID: 2358228838676426361, guid: a0744885476152647aedfc5585d41d45,
-        type: 3}
-      propertyPath: EMERGENCY_SHIELD
-      value: 
-      objectReference: {fileID: 863959462}
     - target: {fileID: 2656814105554187059, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
       propertyPath: fogMat
@@ -348,7 +343,7 @@ PrefabInstance:
     - target: {fileID: 4236662146758232390, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.329
       objectReference: {fileID: 0}
     - target: {fileID: 4236662146758232390, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
@@ -453,18 +448,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 863959460}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &863959462 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1450669756072767706, guid: a0744885476152647aedfc5585d41d45,
-    type: 3}
-  m_PrefabInstance: {fileID: 863959460}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8772861dfd5ed34f85cf73f1a4db422, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &863959463 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7965271619843361715, guid: a0744885476152647aedfc5585d41d45,
@@ -1112,7 +1095,7 @@ PrefabInstance:
     - target: {fileID: 6821325156715695580, guid: dc7a0340632deda4ea38e6d24ce7cec1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.19
+      value: -0.211
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc7a0340632deda4ea38e6d24ce7cec1, type: 3}
