@@ -38,7 +38,7 @@ public class Pause : MonoBehaviour
 		this.HUD.gameObject.SetActive(false);
 		this.PAUSE_MENU.gameObject.SetActive(true);
 		this.WAVE_MANAGER.pauseAttacks();
-		this.POINTER?.gameObject.SetActive(true);
+		this.POINTER.GetComponent<LineRenderer>().enabled = true;
 	}
 	
 	/**
@@ -50,7 +50,7 @@ public class Pause : MonoBehaviour
 		this.PAUSE_MENU.gameObject.SetActive(false);
 		this.HUD.gameObject.SetActive(true);
 		this.WAVE_MANAGER.unpauseAttacks();
-		this.POINTER?.gameObject.SetActive(false);
+		this.POINTER.GetComponent<LineRenderer>().enabled = false;
 	}
 	
 	private void Update()

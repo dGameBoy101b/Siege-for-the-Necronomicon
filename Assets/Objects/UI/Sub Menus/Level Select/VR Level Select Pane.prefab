@@ -201,6 +201,11 @@ PrefabInstance:
       propertyPath: SCENE_PATH
       value: Assets/Scenes/VR/VRLevel2.unity
       objectReference: {fileID: 0}
+    - target: {fileID: 6075849066536718772, guid: 1e80eefb02153734e81721461e96bc74,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8858736523914434830, guid: 1e80eefb02153734e81721461e96bc74,
         type: 3}
       propertyPath: DATA_PATH

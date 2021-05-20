@@ -152,11 +152,6 @@ PrefabInstance:
       propertyPath: DATA_PATH
       value: VRLevel1.dat
       objectReference: {fileID: 0}
-    - target: {fileID: 7920327042862588758, guid: 94a44219c7e103d47bd493da5626826a,
-        type: 3}
-      propertyPath: SCENE_PATH
-      value: Assets\Scenes\VR\VRLevel1.unity
-      objectReference: {fileID: 0}
     - target: {fileID: 9214129254077996642, guid: 94a44219c7e103d47bd493da5626826a,
         type: 3}
       propertyPath: m_Pivot.x

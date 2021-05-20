@@ -2345,11 +2345,11 @@ MonoBehaviour:
   LST: 641.30035
   lastHourUpdate: 12
   hourTime: 0
-  cloudAnim: {x: 0.1, y: 0.4231636, z: 0.25952956}
-  cloudFlatBaseAnim: {x: 0, y: -0.16782966}
-  cloudFlatDetailAnim: {x: 0, y: 0.28624707}
-  cloudAnimNonScaled: {x: 0, y: -2.1676476}
-  cirrusAnim: {x: 0, y: -0.116673134}
+  cloudAnim: {x: 0.1, y: 0.42183027, z: 0.25919622}
+  cloudFlatBaseAnim: {x: 0, y: -0.167963}
+  cloudFlatDetailAnim: {x: 0, y: 0.28291374}
+  cloudAnimNonScaled: {x: 0, y: -2.1677809}
+  cirrusAnim: {x: 0, y: -0.1166798}
   windIntensity: 0.20000002
   shadowIntensityMod: 0
   interiorMode: 0
@@ -2390,15 +2390,15 @@ MonoBehaviour:
     SFXHolderPrefab: {fileID: 126800, guid: 9c3f35feb7ea8e84bbdbd37d8bb2ddf0, type: 3}
     ambientSFXVolume: 0.3
     weatherSFXVolume: 1
-    currentAmbientSource: {fileID: 3661005001444460147}
+    currentAmbientSource: {fileID: 0}
     ambientSFXVolumeMod: 0
     weatherSFXVolumeMod: 0
-    AudioSourceWeather: {fileID: 3661005001162753326}
-    AudioSourceWeather2: {fileID: 3661005000574544322}
-    AudioSourceAmbient: {fileID: 3661005001444460147}
-    AudioSourceAmbient2: {fileID: 3661005001065447660}
-    AudioSourceThunder: {fileID: 3661005000508714021}
-    AudioSourceZone: {fileID: 3661005000053126275}
+    AudioSourceWeather: {fileID: 0}
+    AudioSourceWeather2: {fileID: 0}
+    AudioSourceAmbient: {fileID: 0}
+    AudioSourceAmbient2: {fileID: 0}
+    AudioSourceThunder: {fileID: 0}
+    AudioSourceZone: {fileID: 0}
   Weather:
     updateWeather: 1
     weatherPresets: []
@@ -2418,7 +2418,7 @@ MonoBehaviour:
     snowStrength: 0
     curSnowStrength: 0
     thundersfx: 0
-    currentAudioSource: {fileID: 3661005001162753326}
+    currentAudioSource: {fileID: 0}
     weatherFullyChanged: 0
     currentTemperature: 4.9960127
     temperatureModifier: 0

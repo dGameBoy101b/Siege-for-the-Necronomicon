@@ -160,6 +160,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VR Level Select Pane
       objectReference: {fileID: 0}
+    - target: {fileID: 9214129254077996647, guid: 94a44219c7e103d47bd493da5626826a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94a44219c7e103d47bd493da5626826a, type: 3}
 --- !u!223 &7226266639885086963 stripped
