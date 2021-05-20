@@ -3332,11 +3332,6 @@ PrefabInstance:
       propertyPath: WAVE_MANAGER
       value: 
       objectReference: {fileID: 830185753}
-    - target: {fileID: 8077330383363059798, guid: a0744885476152647aedfc5585d41d45,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8470568064797648499, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
       propertyPath: WAVE_MANAGER

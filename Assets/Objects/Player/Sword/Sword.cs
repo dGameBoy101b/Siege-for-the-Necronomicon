@@ -15,13 +15,26 @@ public sealed class Sword : EquipmentBase
 	public Vector3 SLASH_OFFSET;
 	
 	[SerializeField()]
-	[Tooltip("The VR controller button used to draw a slash.")]
-	public OVRInput.Button SLASH_BUTTON;
-	
+	[Tooltip("The VR controller button used to draw a slash when left handed.")]
+	public OVRInput.Button LEFT_SLASH_BUTTON;
+
+	[SerializeField()]
+	[Tooltip("The VR controller button used to draw a slash when right handed.")]
+	public OVRInput.Button RIGHT_SLASH_BUTTON;
+
+	[SerializeField()]
+	[Tooltip("The VR controller button used to draw a slash when neither right nor left handed.")]
+	public OVRInput.Button DEFAULT_SLASH_BUTTON;
+
 	/**
 	 * The global point at which the next slash should start.
 	 */
 	private Vector3 slash_start;
+
+	/**
+	 * The button to use for creating sword slashes.
+	 */
+	private OVRInput.Button slash_button;
 	
 	/**
 	 * Create a slash between the given global points facing away from the player.
@@ -83,13 +96,54 @@ public sealed class Sword : EquipmentBase
 	
 	protected override void Update()
 	{
-		if (OVRInput.GetDown(this.SLASH_BUTTON))
+		if (OVRInput.GetDown(this.slash_button))
 		{
 			this.startSlash();
 		}
-		if (OVRInput.GetUp(this.SLASH_BUTTON))
+		if (OVRInput.GetUp(this.slash_button))
 		{
 			this.endSlash();
+		}
+	}
+
+    protected override void Start()
+    {
+        base.Start();
+		this.updateButtonHandedness();
+    }
+
+    /**
+	 * Update the button this sword use to create slashes.
+	 */
+    public void updateButtonHandedness()
+	{
+		try
+		{
+			if ((bool)OptionStore.Instance.getOption(this.HANDEDNESS))
+			{
+				this.slash_button = this.LEFT_SLASH_BUTTON;
+			}
+			else
+			{
+				this.slash_button = this.RIGHT_SLASH_BUTTON;
+			}
+		}
+		catch (OptionStore.OptionDoesNotExistException)
+		{
+			Debug.LogWarning("Could not find handedness option. Falling back on OVRInput.");
+			switch (OVRInput.GetDominantHand())
+			{
+				case OVRInput.Handedness.LeftHanded:
+					this.slash_button = this.LEFT_SLASH_BUTTON;
+					break;
+				case OVRInput.Handedness.RightHanded:
+					this.slash_button = this.RIGHT_SLASH_BUTTON;
+					break;
+				default:
+					Debug.LogWarning("No OVRInput handedness found.");
+					this.slash_button = this.DEFAULT_SLASH_BUTTON;
+					break;
+			}
 		}
 	}
 }
