@@ -114,7 +114,7 @@ public class Transition : MonoBehaviour
 	 */
 	void Update()
 	{
-		if (Input.GetAxis("PC Gauntlet") > 0)
+		if (this.STARTING_ORB != null && Input.GetAxis("PC Gauntlet") > 0)
 		{
 			Destroy(STARTING_ORB);
 			this.begin();

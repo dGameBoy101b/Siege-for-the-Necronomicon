@@ -17,7 +17,6 @@ public class ResumeButton : MonoBehaviour
 	 */
 	public void resumeGame()
 	{
-		Debug.Log("resume");
 		this.PAUSE.unpause();
 		this.CUR_MENU.gameObject.SetActive(false);
 	}
