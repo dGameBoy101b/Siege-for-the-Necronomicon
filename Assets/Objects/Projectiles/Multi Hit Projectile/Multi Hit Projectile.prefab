@@ -90,7 +90,7 @@ BoxCollider:
   m_GameObject: {fileID: 2231845067724243450}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -398,8 +398,8 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3435337722333881355}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
+  m_IsTrigger: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 2.5
   m_Direction: 1
@@ -494,7 +494,7 @@ SphereCollider:
   m_GameObject: {fileID: 5057036593075985047}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -928,6 +928,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 64440621521864890, guid: 81cff15d8508941e1aed5ca97a1ef7f1,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64440621521864890, guid: 81cff15d8508941e1aed5ca97a1ef7f1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64440621521864890, guid: 81cff15d8508941e1aed5ca97a1ef7f1,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81cff15d8508941e1aed5ca97a1ef7f1, type: 3}
 --- !u!4 &3007729104546068420 stripped
@@ -991,6 +1006,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 36.337
       objectReference: {fileID: 0}
+    - target: {fileID: 23112820424113758, guid: 964b483fe9bfc492090cb74a46420ba6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64600062048690686, guid: 964b483fe9bfc492090cb74a46420ba6,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64600062048690686, guid: 964b483fe9bfc492090cb74a46420ba6,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 964b483fe9bfc492090cb74a46420ba6, type: 3}
 --- !u!4 &3661748254802347941 stripped
@@ -1053,6 +1083,21 @@ PrefabInstance:
     - target: {fileID: 4732034387660690, guid: b788c4b1172704ca08dca5cff733063d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 26.058
+      objectReference: {fileID: 0}
+    - target: {fileID: 23309092922266290, guid: b788c4b1172704ca08dca5cff733063d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64688088020372372, guid: b788c4b1172704ca08dca5cff733063d,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64688088020372372, guid: b788c4b1172704ca08dca5cff733063d,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b788c4b1172704ca08dca5cff733063d, type: 3}
