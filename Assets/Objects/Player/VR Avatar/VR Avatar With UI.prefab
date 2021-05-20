@@ -908,11 +908,6 @@ PrefabInstance:
       propertyPath: SLASH_OFFSET.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8803981874312920709, guid: d6e7c83eba41a274c93dcf902bccb773,
-        type: 3}
-      propertyPath: SLASH_ROTATION_OFFSET
-      value: -30
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6e7c83eba41a274c93dcf902bccb773, type: 3}
 --- !u!4 &788141804427541998 stripped

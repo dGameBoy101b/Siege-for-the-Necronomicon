@@ -426,6 +426,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 2978085224378959993}
   m_PrefabAsset: {fileID: 0}
+--- !u!223 &7834889926048009628 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 5039341460476020197, guid: 08059852ff4f667479a231e9dc6e2e49,
+    type: 3}
+  m_PrefabInstance: {fileID: 2978085224378959993}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5861127300114038512
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -919,6 +925,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -44
       objectReference: {fileID: 0}
+    - target: {fileID: 2470225586858475868, guid: 454aed307567b0e459c372e5118db0bf,
+        type: 3}
+      propertyPath: RET_MENU
+      value: 
+      objectReference: {fileID: 7834889926048009628}
     - target: {fileID: 2656697901871767483, guid: 454aed307567b0e459c372e5118db0bf,
         type: 3}
       propertyPath: m_AnchoredPosition.y
