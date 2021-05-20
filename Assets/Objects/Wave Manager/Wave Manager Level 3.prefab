@@ -221,7 +221,7 @@ PrefabInstance:
     - target: {fileID: 6940270593080199882, guid: 9e05387321e45ef4a8c4088323aeeed2,
         type: 3}
       propertyPath: MAX_CHARGE
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6940270593080199882, guid: 9e05387321e45ef4a8c4088323aeeed2,
         type: 3}
@@ -231,7 +231,7 @@ PrefabInstance:
     - target: {fileID: 6940270593080199882, guid: 9e05387321e45ef4a8c4088323aeeed2,
         type: 3}
       propertyPath: MIN_CHARGE
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e05387321e45ef4a8c4088323aeeed2, type: 3}

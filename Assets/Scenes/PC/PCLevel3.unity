@@ -379,6 +379,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2116636517939464312, guid: 9ab7941042e233041b24e74aa51dd304,
         type: 3}
+      propertyPath: TIME
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2116636517939464312, guid: 9ab7941042e233041b24e74aa51dd304,
+        type: 3}
       propertyPath: TIME_TEXT
       value: 
       objectReference: {fileID: 1340054649}
