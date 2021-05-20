@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 4236662146758232390}
   - component: {fileID: 5501610627389602297}
   - component: {fileID: 6702810934463785663}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: VR Avatar With UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -2937,11 +2937,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: VR Avatar With UI
       objectReference: {fileID: 0}
-    - target: {fileID: 6172643387873473574, guid: a0744885476152647aedfc5585d41d45,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6341494054138667281, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3045,7 +3040,7 @@ PrefabInstance:
     - target: {fileID: 6999943626253527008, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7002672121951449080, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
@@ -3161,11 +3156,6 @@ PrefabInstance:
         type: 3}
       propertyPath: LateControllerUpdate
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7516226635835282151, guid: a0744885476152647aedfc5585d41d45,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7641279977294408899, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
