@@ -88,6 +88,7 @@ public sealed class LevelSelectButton : MonoBehaviour
 			if (this.DEPENDENT != null)
 			{
 				this.DEPENDENT.UNLOCKED = this.Data.isComplete();
+				this.DEPENDENT.updateText();
 			}
 		}
 		this.TIME_DISPLAY.gameObject.SetActive(this.Data != null && !this.Data.isComplete());
