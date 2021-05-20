@@ -218,7 +218,7 @@ PrefabInstance:
         type: 3}
       propertyPath: PLAYER_SCORE
       value: 
-      objectReference: {fileID: 863959463}
+      objectReference: {fileID: 863959464}
     - target: {fileID: 5455880926416099199, guid: e0cdbee808a772a4890d105d4e4311f3,
         type: 3}
       propertyPath: PLAYER_HEALTH
@@ -300,6 +300,16 @@ PrefabInstance:
       propertyPath: WAVE_MANAGER
       value: 
       objectReference: {fileID: 56001566}
+    - target: {fileID: 2358228838676426361, guid: a0744885476152647aedfc5585d41d45,
+        type: 3}
+      propertyPath: WAVE_MANAGER
+      value: 
+      objectReference: {fileID: 56001566}
+    - target: {fileID: 2358228838676426361, guid: a0744885476152647aedfc5585d41d45,
+        type: 3}
+      propertyPath: EMERGENCY_SHIELD
+      value: 
+      objectReference: {fileID: 863959462}
     - target: {fileID: 2656814105554187059, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
       propertyPath: fogMat
@@ -379,7 +389,12 @@ PrefabInstance:
         type: 3}
       propertyPath: currentScoreLabel
       value: 
-      objectReference: {fileID: 1406078532}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436100373876880885, guid: a0744885476152647aedfc5585d41d45,
+        type: 3}
+      propertyPath: WAVE_MANAGER
+      value: 
+      objectReference: {fileID: 56001566}
     - target: {fileID: 6172643387873473574, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
       propertyPath: m_Name
@@ -405,6 +420,16 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7965271619843361715, guid: a0744885476152647aedfc5585d41d45,
+        type: 3}
+      propertyPath: TRANSITION
+      value: 
+      objectReference: {fileID: 2017263617}
+    - target: {fileID: 7965271619843361715, guid: a0744885476152647aedfc5585d41d45,
+        type: 3}
+      propertyPath: WAVE_MANAGER
+      value: 
+      objectReference: {fileID: 56001566}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0744885476152647aedfc5585d41d45, type: 3}
 --- !u!1 &863959461 stripped
@@ -413,21 +438,21 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 863959460}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &863959463 stripped
+--- !u!114 &863959462 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4321502816601013914, guid: a0744885476152647aedfc5585d41d45,
+  m_CorrespondingSourceObject: {fileID: 1450669756072767706, guid: a0744885476152647aedfc5585d41d45,
     type: 3}
   m_PrefabInstance: {fileID: 863959460}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42f7683171068a644bfdc1848b5929ce, type: 3}
+  m_Script: {fileID: 11500000, guid: d8772861dfd5ed34f85cf73f1a4db422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &863959464 stripped
+--- !u!114 &863959463 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6464163452659660822, guid: a0744885476152647aedfc5585d41d45,
+  m_CorrespondingSourceObject: {fileID: 7965271619843361715, guid: a0744885476152647aedfc5585d41d45,
     type: 3}
   m_PrefabInstance: {fileID: 863959460}
   m_PrefabAsset: {fileID: 0}
@@ -437,9 +462,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cc9288c40187804a9afcf0839a190be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &863959464 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 920433984994708799, guid: a0744885476152647aedfc5585d41d45,
+    type: 3}
+  m_PrefabInstance: {fileID: 863959460}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42f7683171068a644bfdc1848b5929ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &863959465 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1694790096822672860, guid: a0744885476152647aedfc5585d41d45,
+  m_CorrespondingSourceObject: {fileID: 2358228838676426361, guid: a0744885476152647aedfc5585d41d45,
     type: 3}
   m_PrefabInstance: {fileID: 863959460}
   m_PrefabAsset: {fileID: 0}
@@ -529,18 +566,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 137e803ef05799d4a9421e6ccdd779d9, type: 3}
---- !u!114 &1406078532 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8843951158224201458, guid: a0744885476152647aedfc5585d41d45,
-    type: 3}
-  m_PrefabInstance: {fileID: 863959460}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2007693271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -926,7 +951,7 @@ PrefabInstance:
         type: 3}
       propertyPath: LEVEL_TIMER
       value: 
-      objectReference: {fileID: 863959464}
+      objectReference: {fileID: 863959463}
     - target: {fileID: 3632124348125721150, guid: dc7a0340632deda4ea38e6d24ce7cec1,
         type: 3}
       propertyPath: WAVE_MANAGER
