@@ -45,6 +45,10 @@ public class LevelChanger : MonoBehaviour
     [Tooltip("The amount of time the scene plays for.")]
     public float lifeSpanTime;
 
+    [SerializeField()]
+    [Tooltip("The data saver to trigger when the level is complete.")]
+    public DataSaver DATA_SAVER;
+
     void Start()
     {
         if(cinematicMode == true)
@@ -73,6 +77,7 @@ public class LevelChanger : MonoBehaviour
      */
     public void progress()
     {
+        this.DATA_SAVER.saveData();
         BARRIER?.shatterBarrier();
         if (goToNextLevelInstead == true)
         {
