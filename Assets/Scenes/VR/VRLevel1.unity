@@ -2182,6 +2182,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8038162131307383072, guid: 70f52691ec4d19d45a185a0565402202,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 105.81
+      objectReference: {fileID: 0}
     - target: {fileID: 8038162131652204192, guid: 70f52691ec4d19d45a185a0565402202,
         type: 3}
       propertyPath: m_RootOrder
@@ -2265,7 +2270,7 @@ PrefabInstance:
     - target: {fileID: 8038162131866287827, guid: 70f52691ec4d19d45a185a0565402202,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 105.72
+      value: 105.828
       objectReference: {fileID: 0}
     - target: {fileID: 8038162131866287828, guid: 70f52691ec4d19d45a185a0565402202,
         type: 3}
@@ -2701,7 +2706,7 @@ PrefabInstance:
     - target: {fileID: 4236662146758232390, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.284
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4236662146758232390, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
@@ -2802,6 +2807,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VR Avatar With UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 6172643387873473574, guid: a0744885476152647aedfc5585d41d45,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6341494054138667281, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
@@ -2986,7 +2996,7 @@ PrefabInstance:
     - target: {fileID: 7376109082870694659, guid: a0744885476152647aedfc5585d41d45,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7376109082870694661, guid: a0744885476152647aedfc5585d41d45,
         type: 3}

@@ -198,7 +198,7 @@ PrefabInstance:
         type: 3}
       propertyPath: PLAYER
       value: 
-      objectReference: {fileID: 863959461}
+      objectReference: {fileID: 863959466}
     - target: {fileID: 5455880926416099199, guid: e0cdbee808a772a4890d105d4e4311f3,
         type: 3}
       propertyPath: MAX_ACTIVE
@@ -446,6 +446,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf77a7b7e89c7764ab6f89edcc418d58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &863959466 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7376109082870694659, guid: a0744885476152647aedfc5585d41d45,
+    type: 3}
+  m_PrefabInstance: {fileID: 863959460}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1396787620
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -966,6 +972,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3632124348205505100, guid: dc7a0340632deda4ea38e6d24ce7cec1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 105.9
+      objectReference: {fileID: 0}
     - target: {fileID: 3632124348320106290, guid: dc7a0340632deda4ea38e6d24ce7cec1,
         type: 3}
       propertyPath: BARRIER
@@ -980,6 +991,11 @@ PrefabInstance:
         type: 3}
       propertyPath: goToNextLevelInstead
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3632124348789566911, guid: dc7a0340632deda4ea38e6d24ce7cec1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 105.881996
       objectReference: {fileID: 0}
     - target: {fileID: 4320135496861088056, guid: dc7a0340632deda4ea38e6d24ce7cec1,
         type: 3}

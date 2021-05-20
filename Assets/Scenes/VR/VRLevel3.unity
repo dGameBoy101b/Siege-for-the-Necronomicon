@@ -133,7 +133,7 @@ PrefabInstance:
         type: 3}
       propertyPath: PLAYER
       value: 
-      objectReference: {fileID: 1369148355}
+      objectReference: {fileID: 1369148360}
     - target: {fileID: 4383825907215680094, guid: d049e403b5b15974d9605cbb66b6c3c7,
         type: 3}
       propertyPath: PLAYER_SCORE
