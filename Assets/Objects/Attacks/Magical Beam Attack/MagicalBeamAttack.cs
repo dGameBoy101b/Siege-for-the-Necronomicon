@@ -149,7 +149,7 @@ public sealed class MagicalBeamAttack : AttackBase
 	{
 		Quaternion lon = Quaternion.AngleAxis(this.randLon(rng), Vector3.up);
 		Quaternion lat = Quaternion.AngleAxis(this.randLat(rng), Vector3.right);
-		Vector3 dir = lon * lat * player_rot * Vector3.forward;
+		Vector3 dir = lon * lat * Vector3.forward;
 		float dist = this.randDist(rng);
 		RaycastHit hit;
 		if (Physics.Raycast(player_pos, dir, out hit, dist, LayerMask.GetMask(new string[]{"Default", "Level Bounds"}), QueryTriggerInteraction.Ignore))

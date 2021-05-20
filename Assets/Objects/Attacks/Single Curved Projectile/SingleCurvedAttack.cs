@@ -151,7 +151,7 @@ public sealed class SingleCurvedAttack : AttackBase
 	{
 		Quaternion lon = Quaternion.AngleAxis(this.randLon(rng), Vector3.up);
 		Quaternion lat = Quaternion.AngleAxis(this.randLat(rng), Vector3.right);
-		return lon * lat * player_rot * Vector3.forward * this.randDist(rng) + player_pos;
+		return lon * lat * Vector3.forward * this.randDist(rng) + player_pos;
 	}
 	
 	/**
